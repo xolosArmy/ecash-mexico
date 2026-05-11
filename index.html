@@ -1,210 +1,324 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0C5SHBHW2P');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0C5SHBHW2P');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eCash México | Guía Comunitaria de Adopción XEC</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>eCash México | Guía para aprender, comprar y usar XEC</title>
+    <meta name="description" content="Guía comunitaria de eCash México para aprender qué es XEC, crear una wallet, comprar XEC en México, usar pagos digitales y explorar infraestructura abierta.">
+    <meta name="theme-color" content="#05070a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
-        body { font-family: 'Lexend', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #001e62 0%, #004a99 100%); }
-        .accent-border { border-left: 4px solid #00abe7; }
-        .blog-card:hover img { transform: scale(1.05); }
+        :root {
+            --bg: #05070a;
+            --cyan: #00abe7;
+            --blue: #001e62;
+            --gold: #ffcc00;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --panel: rgba(9, 18, 32, 0.82);
+            --panel-strong: rgba(0, 30, 98, 0.42);
+            --line: rgba(0, 171, 231, 0.26);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 12% 18%, rgba(0, 171, 231, 0.2), transparent 28rem),
+                radial-gradient(circle at 86% 8%, rgba(255, 204, 0, 0.12), transparent 24rem),
+                linear-gradient(135deg, #05070a 0%, #07111d 48%, #05070a 100%);
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.22;
+            background-image:
+                linear-gradient(30deg, transparent 48%, rgba(0, 171, 231, 0.18) 49%, rgba(0, 171, 231, 0.18) 51%, transparent 52%),
+                linear-gradient(150deg, transparent 48%, rgba(255, 204, 0, 0.12) 49%, rgba(255, 204, 0, 0.12) 51%, transparent 52%);
+            background-size: 92px 92px;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+        .mono { font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid rgba(0, 171, 231, 0.18);
+            background: rgba(5, 7, 10, 0.84);
+            backdrop-filter: blur(18px);
+        }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 0; }
+        .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.04em; }
+        .brand img { width: 46px; height: 46px; border-radius: 16px; box-shadow: 0 0 28px rgba(0, 171, 231, 0.34); }
+        .brand span span { color: var(--cyan); }
+        .nav-links { display: none; gap: 22px; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.16em; }
+        .nav-links a:hover { color: var(--gold); }
+
+        .hero { position: relative; padding: 80px 0 64px; overflow: hidden; }
+        .hero-grid { display: grid; gap: 34px; align-items: center; }
+        .kicker { color: var(--gold); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
+        h1 {
+            margin: 14px 0 18px;
+            font-size: clamp(3.2rem, 14vw, 7.8rem);
+            line-height: 0.88;
+            letter-spacing: -0.09em;
+            text-transform: uppercase;
+            max-width: 850px;
+            text-shadow: 0 0 32px rgba(0, 171, 231, 0.24);
+        }
+        .hero-copy { max-width: 720px; color: #cbd5e1; font-size: clamp(1.05rem, 2.2vw, 1.35rem); line-height: 1.7; }
+        .actions { display: flex; flex-direction: column; gap: 14px; margin-top: 32px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 54px;
+            padding: 0 22px;
+            border-radius: 999px;
+            font-weight: 800;
+            transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--cyan); color: #031018; box-shadow: 0 0 36px rgba(0, 171, 231, 0.35); }
+        .btn-secondary { border: 1px solid rgba(255, 204, 0, 0.48); color: var(--gold); font-family: 'Space Mono', monospace; font-size: 0.9rem; }
+        .glyph-panel {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 28px;
+            background: linear-gradient(145deg, rgba(0, 30, 98, 0.5), rgba(5, 7, 10, 0.74));
+            box-shadow: inset 0 0 0 1px rgba(255, 204, 0, 0.08), 0 24px 80px rgba(0, 0, 0, 0.34);
+        }
+        .terminal-line { color: var(--muted); font-size: 0.82rem; line-height: 1.9; }
+        .terminal-line strong { color: var(--cyan); }
+
+        section { position: relative; padding: 64px 0; }
+        .section-head { display: grid; gap: 12px; margin-bottom: 30px; max-width: 780px; }
+        .section-head h2 { margin: 0; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1; letter-spacing: -0.06em; }
+        .section-head p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+        .mission-grid { display: grid; gap: 22px; }
+        .panel, .card, .disclaimer {
+            border: 1px solid rgba(0, 171, 231, 0.18);
+            background: var(--panel);
+            border-radius: 24px;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+        }
+        .panel { padding: 28px; }
+        .panel p { color: #cbd5e1; line-height: 1.75; margin: 0 0 16px; }
+        .panel p:last-child { margin-bottom: 0; }
+        .quote { color: var(--gold) !important; font-weight: 700; }
+
+        .knowledge-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        .card { display: flex; flex-direction: column; min-height: 210px; padding: 24px; overflow: hidden; position: relative; }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 171, 231, 0.16), transparent 46%, rgba(255, 204, 0, 0.08));
+            opacity: 0;
+            transition: opacity 180ms ease;
+        }
+        .card:hover::before { opacity: 1; }
+        .card:hover { border-color: rgba(255, 204, 0, 0.5); transform: translateY(-3px); }
+        .card { transition: transform 180ms ease, border-color 180ms ease; }
+        .card small { position: relative; color: var(--cyan); letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.72rem; }
+        .card h3 { position: relative; margin: auto 0 18px; font-size: 1.55rem; line-height: 1.12; letter-spacing: -0.04em; }
+        .card span { position: relative; color: var(--gold); font-size: 0.82rem; }
+
+        .ecosystem-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        .mini { padding: 22px; border-left: 3px solid var(--cyan); }
+        .mini h3 { margin: 8px 0; }
+        .mini p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+        .disclaimer { padding: 22px; border-color: rgba(255, 204, 0, 0.32); background: rgba(32, 25, 5, 0.42); }
+        .disclaimer strong { color: var(--gold); }
+
+        footer { padding: 54px 0; border-top: 1px solid rgba(0, 171, 231, 0.18); color: var(--muted); }
+        .footer-grid { display: grid; gap: 28px; }
+        .wallet { margin-top: 18px; padding: 16px; border: 1px solid rgba(0, 171, 231, 0.18); border-radius: 18px; background: rgba(0, 30, 98, 0.22); word-break: break-all; }
+        .footer-links { display: grid; gap: 12px; }
+        .footer-links a:hover { color: var(--gold); }
+        .copyright { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(148, 163, 184, 0.14); font-size: 0.78rem; }
+
+        @media (min-width: 640px) {
+            .actions { flex-direction: row; }
+            .knowledge-grid, .ecosystem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (min-width: 900px) {
+            .nav-links { display: flex; }
+            .hero { padding: 112px 0 84px; }
+            .hero-grid { grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr); }
+            .mission-grid, .footer-grid { grid-template-columns: 1.4fr 0.6fr; }
+            .knowledge-grid, .ecosystem-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-
-    <nav class="p-5 max-w-7xl mx-auto flex justify-between items-center border-b border-slate-200 bg-white sticky top-0 z-50">
-        <a href="#" class="flex items-center gap-3">
-            <img src="https://i.imgur.com/UaAx4EK.png" alt="Logo eCash México" class="h-10 w-auto rounded-full shadow-sm border border-slate-100">
-            <div class="flex items-center gap-2 text-2xl font-bold text-[#001e62]">
-                <span>eCash</span><span class="text-[#00abe7]">México</span>
+<body>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand" aria-label="Inicio de eCash México">
+                <img src="assets/ecash-mexico-logo.svg" alt="Logo eCash México" width="46" height="46">
+                <span>eCash <span>México</span></span>
+            </a>
+            <div class="nav-links mono">
+                <a href="#aprende">Aprende</a>
+                <a href="#blog">Archivo</a>
+                <a href="#construye">Ecosistema</a>
             </div>
-        </a>
-        <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
-            <a href="#aprende" class="hover:text-[#00abe7] transition font-bold">Aprende</a>
-            <a href="blog/index.html" class="hover:text-[#00abe7] transition font-bold">Blog</a>
-            <a href="#construye" class="hover:text-[#00abe7] transition font-bold">Ecosistema</a>
         </div>
     </nav>
 
-    <header class="hero-gradient text-white py-24 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 italic text-balance tracking-tight">Aprende a usar XEC en México.</h1>
-            <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto leading-relaxed text-pretty">
-                La puerta técnica y educativa para la adopción soberana de eCash. Recibe pagos, gestiona activos y construye infraestructura abierta.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-5">
-                <a href="https://cartera.xolosarmy.xyz" target="_blank" class="bg-[#00abe7] hover:bg-white hover:text-[#001e62] text-white px-10 py-4 rounded-lg font-bold shadow-xl transition-all flex items-center justify-center">
-                    <i class="fas fa-wallet mr-3"></i> Abrir Tonalli Wallet
-                </a>
-                <a href="#blog" class="bg-white/10 hover:bg-white/20 border border-white/30 px-10 py-4 rounded-lg font-bold transition flex items-center justify-center">
-                    Ver Artículos
-                </a>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="kicker mono">XEC // México // Autocustodia</div>
+                <h1>Cultura XEC<br>Código Soberano</h1>
+                <p class="hero-copy">Reconstruyendo el efectivo electrónico desde México: educación, autocustodia, pagos digitales e infraestructura abierta para XEC.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="https://cartera.xolosarmy.xyz" target="_blank" rel="noopener">Crear mi wallet XEC</a>
+                    <a class="btn btn-secondary" href="#blog">Explorar guías</a>
+                </div>
             </div>
+            <aside class="glyph-panel" aria-label="Resumen técnico de eCash México">
+                <p class="terminal-line mono"><strong>&gt;</strong> red: eCash / XEC</p>
+                <p class="terminal-line mono"><strong>&gt;</strong> misión: educación + pagos + builders</p>
+                <p class="terminal-line mono"><strong>&gt;</strong> stack: wallet, Chronik, crowdfunding</p>
+                <p class="terminal-line mono"><strong>&gt;</strong> principio: llaves propias, comunidad abierta</p>
+            </aside>
         </div>
     </header>
 
-    <section id="aprende" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-10 italic">
-            <div class="lg:col-span-2">
-                <h2 class="text-3xl font-bold mb-8 accent-border pl-4 border-[#00abe7]">Nuestra Misión Soberana</h2>
-                <div class="prose prose-slate max-w-none text-lg text-slate-700 space-y-4 leading-relaxed">
-                    <p>
-                        <strong>eCash México</strong> nace para reconstruir la cultura alrededor de XEC desde una visión comunitaria y abierta. No buscamos simplemente adaptar eCash al sistema tradicional; buscamos fortalecer su utilidad nativa.
-                    </p>
-                    <p class="font-semibold">
-                        "Sin cultura no hay adopción. Sin comunidad no hay red. Sin infraestructura no hay soberanía."
-                    </p>
+    <main>
+        <section id="aprende">
+            <div class="container mission-grid">
+                <div class="panel">
+                    <div class="section-head">
+                        <span class="kicker mono">Manifiesto comunitario</span>
+                        <h2>Infraestructura clara para adopción real.</h2>
+                    </div>
+                    <p><strong>eCash México</strong> organiza recursos en español para que cualquier persona pueda entender XEC, crear una wallet, proteger sus llaves, recibir pagos y explorar herramientas abiertas sin perderse en jerga técnica.</p>
+                    <p class="quote">Sin cultura no hay adopción. Sin comunidad no hay red. Sin infraestructura no hay soberanía.</p>
+                </div>
+                <div class="disclaimer">
+                    <strong class="mono">Aviso importante</strong>
+                    <p>eCash México es una iniciativa comunitaria independiente. No representa al sitio oficial global de eCash ni a Bitcoin ABC. Su contenido es educativo y no constituye asesoría financiera.</p>
                 </div>
             </div>
-            <div class="bg-orange-50 p-6 rounded-xl border border-orange-100 self-start shadow-sm">
-                <h3 class="text-orange-800 font-bold mb-3 flex items-center text-sm uppercase tracking-wider">
-                    <i class="fas fa-exclamation-triangle mr-2"></i> Aviso Importante
-                </h3>
-                <p class="text-orange-900 text-sm leading-snug">
-                    Contenido puramente educativo e informativo. <strong>No constituye asesoría financiera</strong>.
-                </p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="blog" class="py-20 px-6 bg-slate-100 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-12">
-                <div>
-                    <span class="text-[#00abe7] font-bold text-xs uppercase tracking-widest">Primeros Pasos en México</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#001e62] mt-2 italic">Tu ruta para usar XEC con soberanía</h2>
-                    <p class="text-slate-600 mt-3 max-w-2xl">Empieza por los fundamentos, avanza hacia autocustodia y explora herramientas comunitarias para pagos, coordinación e infraestructura abierta.</p>
+        <section id="blog" aria-labelledby="archivo-title">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker mono">Archivo de Conocimiento</span>
+                    <h2 id="archivo-title">Guías para aprender, comprar y usar XEC.</h2>
+                    <p>Una ruta editorial clara para usuarios nuevos, comerciantes y builders: fundamentos, compra local, autocustodia, pagos, coordinación comunitaria e infraestructura.</p>
                 </div>
-                <a href="blog/index.html" class="text-[#00abe7] font-bold text-sm uppercase tracking-widest hover:underline md:text-right">Ver todos los artículos →</a>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 italic">
-                <a href="blog/que-es-ecash.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-circle-question"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">¿Qué es XEC?</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Entiende qué es eCash, qué es XEC y por qué importa el efectivo electrónico.</p>
-                </a>
-
-                <a href="blog/comprar-xec-en-mexico.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-cart-shopping"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">Compra XEC en México</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Aprende rutas seguras para adquirir eCash desde México y usar autocustodia.</p>
-                </a>
-
-                <a href="blog/tutorial-tonalli-wallet.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-wallet"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">Crea tu Tonalli Wallet</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Configura tu wallet, guarda tu seed y toma control de tus llaves privadas.</p>
-                </a>
-
-                <a href="blog/pagos-con-ecash.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-green-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">Pagos con eCash</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Aprende a enviar, recibir y cobrar con XEC usando pagos rápidos y de bajo costo.</p>
-                </a>
-
-                <a href="blog/teyolia-crowdfunding-xec.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-people-carry-box"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">Teyolia Crowdfunding</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Conoce la coordinación comunitaria y el crowdfunding no custodial con XEC.</p>
-                </a>
-
-                <a href="blog/chronik-builders-ecash.html" class="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-12 h-12 rounded-2xl bg-orange-100 text-[#00abe7] flex items-center justify-center mb-5 group-hover:bg-[#00abe7] group-hover:text-white transition-colors">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-[#001e62] mb-3 group-hover:text-[#00abe7] transition-colors">Infraestructura</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Explora Chronik y las herramientas abiertas para builders y usuarios avanzados.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="construye" class="py-20 px-6 max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-12 text-[#001e62] italic">Infraestructura y Ecosistema</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left italic">
-            <a href="https://cartera.xolosarmy.xyz" target="_blank" class="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#00abe7] transition group">
-                <div class="text-[#00abe7] font-bold text-xs uppercase mb-2 tracking-tighter">Wallet Soberana</div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-[#00abe7]">Tonalli Wallet</h3>
-                <p class="text-slate-500 text-sm">Autocustodia y entrada simple para nuevos usuarios.</p>
-            </a>
-            <a href="https://teyolia.cash" target="_blank" class="p-8 bg-white border border-slate-200 rounded-2xl hover:border-[#00abe7] transition group">
-                <div class="text-[#00abe7] font-bold text-xs uppercase mb-2 tracking-tighter">Coordinación</div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-[#00abe7]">Teyolia</h3>
-                <p class="text-slate-500 text-sm">Crowdfunding no custodial y coordinación comunitaria.</p>
-            </a>
-            <a href="https://chronik.xolosarmy.xyz" target="_blank" class="p-8 bg-white border border-slate-200 rounded-2xl hover:border-orange-500 transition group border-l-4 border-l-orange-500">
-                <div class="text-orange-500 font-bold text-xs uppercase mb-2 tracking-tighter">Public Endpoint</div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-orange-500">Chronik API</h3>
-                <p class="text-slate-500 text-sm">Infraestructura para indexación de datos y builders.</p>
-            </a>
-            <a href="https://explorer.xolosarmy.xyz" target="_blank" class="p-8 bg-white border border-slate-200 rounded-2xl hover:border-blue-500 transition group">
-                <div class="text-blue-500 font-bold text-xs uppercase mb-2 tracking-tighter">Utilidad</div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-blue-500">Xolos eCash Explorer</h3>
-                <p class="text-slate-500 text-sm">Verificación pública de transacciones y eTokens de linaje.</p>
-            </a>
-            <a href="https://xolosarmy.xyz" target="_blank" class="p-8 bg-white border border-slate-200 rounded-2xl hover:border-purple-500 transition group lg:col-span-1 border-l-4 border-l-purple-500">
-                <div class="text-purple-500 font-bold text-xs uppercase mb-2 tracking-tighter">Capa Cultural</div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-purple-500">xolosArmy Network</h3>
-                <p class="text-slate-500 text-sm italic">Identidad, linaje xoloitzcuintle y comunidad.</p>
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6 italic">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 mb-12 text-left">
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="https://i.imgur.com/UaAx4EK.png" alt="Logo eCash México" class="h-8 w-auto rounded-full opacity-80 border border-slate-700">
-                        <h4 class="text-white font-bold uppercase tracking-widest text-sm">eCash México</h4>
-                    </div>
-                    <p class="text-sm leading-relaxed mb-6">
-                        Iniciativa independiente dedicada a la educación e infraestructura soberana de eCash en México.
-                    </p>
-                    <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-inner">
-                        <span class="text-[10px] font-bold text-blue-400 uppercase block mb-3 tracking-widest">Apoya el proyecto (XEC)</span>
-                        <code class="text-[9px] sm:text-[11px] break-all text-slate-300 font-mono">ecash:qq7qn90ev23ecastqmn8as00u8mcp4tzsspvt5dtlk</code>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-6">Enlaces de Infraestructura</h4>
-                    <ul class="text-sm space-y-4">
-                        <li><a href="https://explorer.xolosarmy.xyz" target="_blank" class="hover:text-white transition flex items-center group"><i class="fas fa-search mr-3 text-[10px] text-[#00abe7]"></i> Explorador de Red</a></li>
-                        <li><a href="https://chronik.xolosarmy.xyz" target="_blank" class="hover:text-white transition flex items-center group"><i class="fas fa-code mr-3 text-[10px] text-[#00abe7]"></i> API Chronik (Public)</a></li>
-                        <li><a href="https://e.cash" target="_blank" class="hover:text-white transition flex items-center group"><i class="fas fa-globe mr-3 text-[10px] text-[#00abe7]"></i> e.cash (Sitio Oficial Global)</a></li>
-                    </ul>
+                <div class="knowledge-grid">
+                    <a class="card" href="blog/que-es-ecash.html">
+                        <small class="mono">Fundamentos</small>
+                        <h3>¿Qué es eCash y qué es XEC?</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
+                    <a class="card" href="blog/comprar-xec-en-mexico.html">
+                        <small class="mono">Entrada MX</small>
+                        <h3>Comprar XEC en México</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
+                    <a class="card" href="blog/tutorial-tonalli-wallet.html">
+                        <small class="mono">Autocustodia</small>
+                        <h3>Tonalli Wallet</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
+                    <a class="card" href="blog/pagos-con-ecash.html">
+                        <small class="mono">Comercio</small>
+                        <h3>Pagos con eCash</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
+                    <a class="card" href="blog/teyolia-crowdfunding-xec.html">
+                        <small class="mono">Coordinación</small>
+                        <h3>Teyolia Crowdfunding</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
+                    <a class="card" href="blog/chronik-builders-ecash.html">
+                        <small class="mono">Builders</small>
+                        <h3>Chronik para Builders</h3>
+                        <span class="mono">Leer guía →</span>
+                    </a>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 text-center text-[10px] opacity-60">
-                &copy; 2026 RMZ TECHNOLOGIES. Código y contenido bajo <a href="LICENSE" class="underline">Licencia MIT</a>.
+        </section>
+
+        <section id="construye">
+            <div class="container">
+                <div class="section-head">
+                    <span class="kicker mono">Ecosistema abierto</span>
+                    <h2>Herramientas para operar con soberanía.</h2>
+                    <p>La estética es oscura; la estructura sigue siendo legible para SEO y navegación humana: cada bloque explica una utilidad concreta dentro del ecosistema XEC.</p>
+                </div>
+                <div class="ecosystem-grid">
+                    <a class="panel mini" href="https://cartera.xolosarmy.xyz" target="_blank" rel="noopener">
+                        <span class="mono kicker">Wallet</span>
+                        <h3>Tonalli Wallet</h3>
+                        <p>Crea una wallet XEC y comienza a practicar autocustodia.</p>
+                    </a>
+                    <a class="panel mini" href="https://teyolia.cash" target="_blank" rel="noopener">
+                        <span class="mono kicker">Crowdfunding</span>
+                        <h3>Teyolia</h3>
+                        <p>Coordina campañas comunitarias con herramientas enfocadas en XEC.</p>
+                    </a>
+                    <a class="panel mini" href="https://chronik.xolosarmy.xyz" target="_blank" rel="noopener">
+                        <span class="mono kicker">API</span>
+                        <h3>Chronik</h3>
+                        <p>Consulta datos de red para productos, exploradores e integraciones.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <a href="index.html" class="brand">
+                    <img src="assets/ecash-mexico-logo.svg" alt="Logo eCash México" width="46" height="46">
+                    <span>eCash <span>México</span></span>
+                </a>
+                <p>Educación, autocustodia, pagos digitales e infraestructura abierta para la comunidad XEC en México.</p>
+                <div class="wallet mono">
+                    <strong>Apoya el proyecto (XEC)</strong><br>
+                    ecash:qq7qn90ev23ecastqmn8as00u8mcp4tzsspvt5dtlk
+                </div>
+            </div>
+            <div class="footer-links mono">
+                <a href="blog/index.html">Blog completo</a>
+                <a href="https://explorer.xolosarmy.xyz" target="_blank" rel="noopener">Explorador XEC</a>
+                <a href="https://e.cash" target="_blank" rel="noopener">Sitio oficial global de eCash</a>
+                <a href="LICENSE">Licencia MIT</a>
             </div>
         </div>
+        <div class="container copyright mono">© 2026 RMZ TECHNOLOGIES. Iniciativa comunitaria independiente.</div>
     </footer>
-
 </body>
 </html>

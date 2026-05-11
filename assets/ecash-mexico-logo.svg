@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo eCash México</title>
+  <desc id="desc">Símbolo circular de eCash México con acentos cyan, azul y oro.</desc>
+  <rect width="512" height="512" rx="128" fill="#05070A"/>
+  <circle cx="256" cy="256" r="194" fill="#001E62" stroke="#00ABE7" stroke-width="18"/>
+  <path d="M256 74L294 158L386 148L332 224L386 300L294 290L256 374L218 290L126 300L180 224L126 148L218 158L256 74Z" fill="#FFCC00" opacity="0.96"/>
+  <circle cx="256" cy="256" r="92" fill="#05070A" stroke="#00ABE7" stroke-width="14"/>
+  <path d="M199 234H313M199 278H313" stroke="#E2E8F0" stroke-width="28" stroke-linecap="round"/>
+  <path d="M239 177L191 256L239 335M273 177L321 256L273 335" stroke="#00ABE7" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
