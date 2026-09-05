@@ -1,0 +1,34 @@
+.reading-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 1rem max(1rem, calc((100% - 72rem) / 2));
+  background: #07121b;
+  color: #d9e6ee;
+  font:
+    0.875rem/1.6 system-ui,
+    sans-serif;
+  border-bottom: 1px solid #29404e;
+}
+.reading-path a {
+  color: #76ebe2;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  padding-block: 0.25rem;
+}
+.reading-path a:focus-visible {
+  outline: 3px solid #f0d285;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

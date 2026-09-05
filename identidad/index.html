@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,12 @@
       content="RMZ evoluciona de token de acceso a capa cultural de identidad para eCash México y xolosArmy."
     />
     <meta property="og:url" content="https://ecash.mx/identidad/" />
-    <meta
-      property="og:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
-    />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Identidad RMZ | eCash México" />
     <meta
       name="twitter:description"
       content="Un dashboard visual para la futura identidad cultural on-chain del ecosistema eCash México."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
     />
 
     <link rel="preload" href="/assets/css/tailwind.css" as="style" />
@@ -135,6 +127,43 @@
         }
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ecash.mx/identidad/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "eCash México",
+                "item": "https://ecash.mx/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Identidad RMZ | eCash México",
+                "item": "https://ecash.mx/identidad/"
+              }
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ecash.mx/identidad/#webpage",
+            "url": "https://ecash.mx/identidad/",
+            "name": "Identidad RMZ | eCash México",
+            "description": "Primer concepto visual de RMZ Identity: una capa cultural de identidad on-chain para el ecosistema eCash México y xolosArmy.",
+            "inLanguage": "es-MX",
+            "isPartOf": {
+              "@id": "https://ecash.mx/#website"
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
   <body class="min-h-screen bg-black text-gray-200">
     <div class="scanline" aria-hidden="true"></div>

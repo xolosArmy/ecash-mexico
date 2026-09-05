@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,20 +20,12 @@
       content="Votación RMZ con elegibilidad por alias .xec y firma de Tonalli Wallet."
     />
     <meta property="og:url" content="https://ecash.mx/asamblea/" />
-    <meta
-      property="og:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
-    />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Asamblea RMZ | eCash México" />
     <meta
       name="twitter:description"
       content="Vota propuestas RMZ con alias .xec confirmado y firma WalletConnect."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
     />
 
     <link rel="preload" href="/assets/css/tailwind.css" as="style" />
@@ -135,6 +127,43 @@
         }
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ecash.mx/asamblea/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "eCash México",
+                "item": "https://ecash.mx/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Asamblea RMZ | eCash México",
+                "item": "https://ecash.mx/asamblea/"
+              }
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ecash.mx/asamblea/#webpage",
+            "url": "https://ecash.mx/asamblea/",
+            "name": "Asamblea RMZ | eCash México",
+            "description": "Asamblea RMZ para votar propuestas culturales con alias .xec, Tonalli Wallet y firmas verificables.",
+            "inLanguage": "es-MX",
+            "isPartOf": {
+              "@id": "https://ecash.mx/#website"
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
   <body class="min-h-screen bg-black text-gray-200">
     <div class="scanline" aria-hidden="true"></div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,12 +23,8 @@
       content="Recibe la chispa inicial para activar tu identidad soberana en eCash México."
     />
     <meta property="og:url" content="https://ecash.mx/onboarding/" />
-    <meta
-      property="og:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
-    />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Starter Pack Guardián RMZ | eCash México"
@@ -36,10 +32,6 @@
     <meta
       name="twitter:description"
       content="Recibe XEC para gas y una señal inicial RMZ antes de registrar tu alias .xec."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
     />
 
     <link rel="preload" href="/assets/css/tailwind.css" as="style" />
@@ -146,6 +138,43 @@
         }
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ecash.mx/onboarding/#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "eCash México",
+                "item": "https://ecash.mx/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Starter Pack Guardián RMZ | eCash México",
+                "item": "https://ecash.mx/onboarding/"
+              }
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ecash.mx/onboarding/#webpage",
+            "url": "https://ecash.mx/onboarding/",
+            "name": "Starter Pack Guardián RMZ | eCash México",
+            "description": "Onboarding para recibir el Starter Pack Guardián RMZ, registrar alias .xec y activar identidad soberana en eCash México.",
+            "inLanguage": "es-MX",
+            "isPartOf": {
+              "@id": "https://ecash.mx/#website"
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
   <body class="min-h-screen bg-black text-gray-200">
     <div class="scanline" aria-hidden="true"></div>

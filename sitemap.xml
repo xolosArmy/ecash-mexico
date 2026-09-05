@@ -1,83 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ecash.mx/asamblea/</loc>
+  </url>
+  <url>
     <loc>https://ecash.mx/blog/anuncio-integracion-nativa-xec-thorchain.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/avalanche-pre-consensus.html</loc>
-    <lastmod>2026-07-06</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/chronik-builders-ecash.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/como-adquirir-el-etoken-xolos-rmz.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/comprar-xec-en-mexico.html</loc>
-    <lastmod>2026-07-06</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/cronica-weekly-update-xolosarmy.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/cultura-como-consenso-ecash-mexico.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/ecash-mexico-block-explorer.html</loc>
-    <lastmod>2026-07-06</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/integracion-ecash-en-thorchain.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/integracion-ecash-thorchain.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/mensajes-onchain-tonalli-wallet.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/mineria-ecash-mexico.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/pagos-con-ecash.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/que-es-ecash.html</loc>
-    <lastmod>2026-07-06</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/teyolia-crowdfunding-xec.html</loc>
-    <lastmod>2026-06-21</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/teyolia-es-soberania-de-financiamiento-en-ecash-mexico.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/tonalli-wallet-y-xolos-rmz-ecash-mexico.html</loc>
-    <lastmod>2026-06-22</lastmod>
   </url>
   <url>
     <loc>https://ecash.mx/blog/tutorial-tonalli-wallet.html</loc>
-    <lastmod>2026-06-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ecash.mx/identidad/</loc>
   </url>
   <url>
     <loc>https://ecash.mx/</loc>
-    <lastmod>2026-06-21</lastmod>
+  </url>
+  <url>
+    <loc>https://ecash.mx/onboarding/</loc>
   </url>
 </urlset>

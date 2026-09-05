@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <script
       async
@@ -41,12 +41,8 @@
       property="og:url"
       content="https://ecash.mx/blog/mineria-ecash-mexico.html"
     />
-    <meta
-      property="og:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
-    />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:title"
       content="Minería Soberana y Membresías RMZ - Fase 1"
@@ -54,10 +50,6 @@
     <meta
       name="twitter:description"
       content="Dashboard técnico e interactivo de minería en eCash México. Verificación de identidad con Tonalli, membresía on-chain RMZ mediante endpoints Chronik."
-    />
-    <meta
-      name="twitter:image"
-      content="https://ecash.mx/assets/images/og/ecash-mexico-default.jpg"
     />
 
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
@@ -109,6 +101,55 @@
         border-color: #d97706;
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ecash.mx/blog/mineria-ecash-mexico.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "eCash México",
+                "item": "https://ecash.mx/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://ecash.mx/blog/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Minería Soberana y Membresías RMZ - Fase 1 | eCash México",
+                "item": "https://ecash.mx/blog/mineria-ecash-mexico.html"
+              }
+            ]
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://ecash.mx/blog/mineria-ecash-mexico.html#article",
+            "headline": "Minería Soberana y Membresías RMZ - Fase 1 | eCash México",
+            "description": "Dashboard técnico e interactivo de minería en eCash México. Verificación de identidad con Tonalli, membresía on-chain RMZ mediante endpoints Chronik.",
+            "inLanguage": "es-MX",
+            "mainEntityOfPage": "https://ecash.mx/blog/mineria-ecash-mexico.html",
+            "isPartOf": {
+              "@id": "https://ecash.mx/blog/#webpage"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://ecash.mx/#organization",
+              "name": "eCash México",
+              "url": "https://ecash.mx/"
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
   <body class="bg-stone-50 text-stone-800 overflow-hidden">
     <div class="flex h-screen w-full">
@@ -117,9 +158,9 @@
       >
         <div>
           <div class="p-6 border-b border-stone-200">
-            <h1 class="text-xl font-bold text-stone-900 leading-tight">
+            <p class="text-xl font-bold text-stone-900 leading-tight">
               eCash México
-            </h1>
+            </p>
             <p
               class="text-xs text-amber-600 font-semibold mt-1 uppercase tracking-wider"
             >
@@ -166,7 +207,7 @@
           class="md:hidden bg-white border-b border-stone-200 p-4 flex justify-between items-center z-20 shadow-sm"
         >
           <div>
-            <h1 class="text-lg font-bold text-stone-900">eCash México</h1>
+            <p class="text-lg font-bold text-stone-900">eCash México</p>
             <p class="text-[10px] text-amber-600 font-semibold uppercase">
               Phase 1
             </p>
@@ -183,6 +224,13 @@
         </header>
 
         <main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12 hide-scrollbar">
+          <nav class="reading-path" aria-label="Ruta de lectura">
+            <a href="/">eCash México</a><span aria-hidden="true">/</span
+            ><a href="/blog/">Blog</a>
+          </nav>
+          <h1 class="text-3xl font-bold text-stone-900 my-6">
+            Minería eCash en México
+          </h1>
           <section
             id="view-arquitectura"
             class="view-section block animate-fade-in"

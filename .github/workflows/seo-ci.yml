@@ -29,5 +29,8 @@ jobs:
       - name: Execute HTML Hint, Code Formats and Tag Validation
         run: npm run lint
 
+      - name: Run Interaction Regression Tests
+        run: npm test
+
       - name: Run Lighthouse Continuous Integration Assertions
         run: npm run lighthouse
