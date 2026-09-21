@@ -411,6 +411,12 @@ body.network-page {
   padding: 1.75rem;
   min-height: 235px;
 }
+.network-proof-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
 .card-top {
   display: flex;
   justify-content: space-between;
@@ -665,6 +671,7 @@ body.network-page {
   }
   .guide-grid,
   .ecosystem-grid,
+  .network-proof-grid,
   .community-section,
   .archive-grid {
     grid-template-columns: 1fr;

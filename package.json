@@ -15,10 +15,11 @@
     "serve": "npx http-server -p 8080 -c-1",
     "lighthouse": "lhci autorun --config=./lighthouserc.json",
     "test:onboarding": "node --test scripts/onboarding.test.mjs",
-    "test": "npm run test:onboarding && npm run test:identidad && npm run test:asamblea && npm run test:scene",
+    "test": "npm run test:onboarding && npm run test:identidad && npm run test:asamblea && npm run test:scene && npm run test:ecosystem-links",
     "test:identidad": "node --test scripts/identidad.test.mjs",
     "test:asamblea": "node --test scripts/asamblea.test.mjs",
-    "test:scene": "node --test scripts/network-scene.test.mjs"
+    "test:scene": "node --test scripts/network-scene.test.mjs",
+    "test:ecosystem-links": "node --test scripts/ecosystem-links.test.mjs"
   },
   "devDependencies": {
     "@lhci/cli": "^0.14.0",
