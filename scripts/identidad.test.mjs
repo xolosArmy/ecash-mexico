@@ -227,3 +227,20 @@ test("identity infrastructure links to Tonalli Memo instead of the Telegram bot"
   assert.match(html, /href="https:\/\/app\.tonalli\.cash\/memo"/);
   assert.doesNotMatch(html, /href="https:\/\/t\.me\/xolosArmybot"/);
 });
+
+test("identity first-party UI no longer references Telegram", () => {
+  const html = readFileSync(
+    new URL("../identidad/index.html", import.meta.url),
+    "utf8",
+  );
+  const source = readFileSync(
+    new URL("../src/identidad/identidad.js", import.meta.url),
+    "utf8",
+  );
+
+  assert.doesNotMatch(html, /telegram/i);
+  assert.doesNotMatch(source, /telegram/i);
+  assert.match(html, /id="ui-memo-status"/);
+  assert.match(html, />Tonalli Memo<\/a>/);
+  assert.match(source, /memoStatus/);
+});
