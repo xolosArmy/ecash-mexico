@@ -320,7 +320,7 @@ if (typeof document !== "undefined") {
       alias: document.getElementById("ui-alias"),
       address: document.getElementById("ui-address"),
       rmzStatus: document.getElementById("ui-rmz-status"),
-      telegramStatus: document.getElementById("ui-telegram-status"),
+      memoStatus: document.getElementById("ui-memo-status"),
       faucetStatus: document.getElementById("ui-faucet-status"),
       votingStatus: document.getElementById("ui-voting-status"),
       reputationSection: document.getElementById("reputation-section"),
@@ -343,7 +343,7 @@ if (typeof document !== "undefined") {
       !ui.alias ||
       !ui.address ||
       !ui.rmzStatus ||
-      !ui.telegramStatus ||
+      !ui.memoStatus ||
       !ui.faucetStatus ||
       !ui.votingStatus ||
       !ui.reputationSection ||
@@ -715,7 +715,7 @@ if (typeof document !== "undefined") {
       ui.alias.textContent = "Wallet desconectada";
       ui.address.textContent = "ecash:...";
       ui.rmzStatus.textContent = "No verificado";
-      ui.telegramStatus.textContent = "Requiere RMZ";
+      ui.memoStatus.textContent = "Disponible";
       ui.faucetStatus.textContent = "Limitada";
       ui.votingStatus.textContent = "Requiere alias verificado";
       currentConnectedAddress = "";
@@ -771,7 +771,7 @@ if (typeof document !== "undefined") {
       if (status === "holder") {
         ui.alias.textContent = "Guardián RMZ";
         ui.rmzStatus.textContent = "Guardián RMZ";
-        ui.telegramStatus.textContent = "Activo";
+        ui.memoStatus.textContent = "Disponible";
         ui.faucetStatus.textContent = "Desbloqueada";
         resetReputation();
         ensureAliasInputEditable();
@@ -782,7 +782,7 @@ if (typeof document !== "undefined") {
       if (status === "error") {
         ui.alias.textContent = "Wallet conectada";
         ui.rmzStatus.textContent = "Error de red";
-        ui.telegramStatus.textContent = "Requiere RMZ";
+        ui.memoStatus.textContent = "Disponible";
         ui.faucetStatus.textContent = "Limitada";
         return;
       }
@@ -790,7 +790,7 @@ if (typeof document !== "undefined") {
       resetReputation({ hidden: true });
       ui.alias.textContent = "Wallet conectada";
       ui.rmzStatus.textContent = "No verificado";
-      ui.telegramStatus.textContent = "Requiere RMZ";
+      ui.memoStatus.textContent = "Disponible";
       ui.faucetStatus.textContent = "Limitada";
     };
 
@@ -920,7 +920,7 @@ if (typeof document !== "undefined") {
       ui.address.textContent = address;
       ui.alias.textContent = "Verificando RMZ...";
       ui.rmzStatus.textContent = "Verificando...";
-      ui.telegramStatus.textContent = "Verificando...";
+      ui.memoStatus.textContent = "Disponible";
       ui.faucetStatus.textContent = "Verificando...";
       ui.votingStatus.textContent = "Requiere alias verificado";
 
