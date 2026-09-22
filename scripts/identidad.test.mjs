@@ -217,3 +217,13 @@ test("identity HTML exposes accessible alias controls", () => {
   assert.match(html, /id="alias-helper"/);
   assert.match(html, /No se solicitará una\s+firma/);
 });
+
+test("identity infrastructure links to Tonalli Memo instead of the Telegram bot", () => {
+  const html = readFileSync(
+    new URL("../identidad/index.html", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(html, /href="https:\/\/app\.tonalli\.cash\/memo"/);
+  assert.doesNotMatch(html, /href="https:\/\/t\.me\/xolosArmybot"/);
+});
