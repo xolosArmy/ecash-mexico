@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -12,11 +12,9 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-0C5SHBHW2P");
     </script>
 
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Avalanche Pre-Consensus: Seguridad y Rapidez en eCash | eCash México
@@ -57,19 +55,16 @@
       content="Conoce cómo Avalanche Pre-Consensus coordina transacciones en segundos y complementa la seguridad histórica de Proof of Work en eCash."
     />
 
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    <link rel="stylesheet" href="articulos.css" />
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Lexend", sans-serif;
-        scroll-behavior: smooth;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/network.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -118,344 +113,243 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="bg-slate-50 text-slate-900 leading-relaxed italic">
-    <nav
-      class="p-5 max-w-7xl mx-auto flex justify-between items-center border-b border-slate-200 bg-white sticky top-0 z-50 shadow-sm"
-    >
-      <a href="/" class="flex items-center gap-3">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo eCash México"
-          class="h-10 w-auto rounded-full border border-slate-100"
-        />
-        <div class="flex items-center gap-2 text-xl font-bold text-[#001e62]">
-          <span>eCash</span><span class="text-[#00abe7]">México</span>
-        </div>
-      </a>
-      <div
-        class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wider"
-      >
-        <a href="/" class="hover:text-[#00abe7] transition">Inicio</a>
-        <a href="../index.html#blog" class="hover:text-[#00abe7] transition"
-          >Blog</a
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-        <a
-          href="https://cartera.xolosarmy.xyz"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-[#00abe7] text-white px-4 py-2 rounded-lg hover:bg-[#001e62] transition shadow-md"
-          >Tonalli Wallet</a
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
         >
       </div>
-    </nav>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <span>Consenso / Pagos</span>
+              <h1>Avalanche Pre-Consensus</h1>
+              <p class="article-lead">
+                Cómo eCash combina coordinación en segundos con la seguridad
+                histórica de Proof of Work para mejorar los pagos digitales.
+              </p>
+            </header>
 
-    <div
-      class="md:hidden grid grid-cols-2 gap-3 w-full max-w-full px-4 py-3 bg-white border-b border-slate-200 overflow-x-hidden"
-      aria-label="Acciones rápidas"
-    >
-      <a
-        href="../index.html#blog"
-        class="min-w-0 py-3 px-3 text-center text-sm font-bold text-[#001e62] border border-slate-200 rounded-lg"
-        >Ver guías →</a
-      >
-      <a
-        href="https://cartera.xolosarmy.xyz"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="min-w-0 py-3 px-3 text-center text-sm font-bold text-white bg-[#00abe7] rounded-lg"
-        >Abrir Tonalli →</a
-      >
-    </div>
+            <article>
+              <section aria-labelledby="esperar-confirmaciones">
+                <h2 id="esperar-confirmaciones">
+                  El problema de esperar confirmaciones
+                </h2>
+                <p>
+                  En redes basadas únicamente en Nakamoto Proof of Work, una
+                  transacción gana seguridad conforme se añaden bloques sobre
+                  ella. Alcanzar una alta seguridad de liquidación suele
+                  requerir varias confirmaciones, y esa espera introduce
+                  fricción en compras cotidianas. Para ver cómo se traduce esto
+                  a una experiencia de cobro, consulta la guía de
+                  <a href="pagos-con-ecash.html">pagos con eCash</a>.
+                </p>
+              </section>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="mb-12">
-        <span
-          class="bg-orange-100 text-orange-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest"
-          >Consenso / Pagos</span
-        >
-        <h1
-          class="text-4xl md:text-5xl font-extrabold text-[#001e62] mt-4 mb-6 tracking-tight leading-tight italic"
-        >
-          Avalanche Pre-Consensus
-        </h1>
-        <p class="text-xl text-slate-600 italic">
-          Cómo eCash combina coordinación en segundos con la seguridad histórica
-          de Proof of Work para mejorar los pagos digitales.
-        </p>
-      </header>
+              <section aria-labelledby="que-es-avalanche">
+                <h2 id="que-es-avalanche">¿Qué es Avalanche Pre-Consensus?</h2>
+                <p>
+                  Avalanche es un protocolo de consenso integrado con la capa
+                  Nakamoto Proof of Work de eCash. No se refiere a la blockchain
+                  AVAX ni introduce una moneda adicional: la implementación de
+                  eCash es independiente.
+                </p>
+                <p>
+                  Antes de que una transacción sea incluida en un bloque, los
+                  nodos participantes realizan sondeos repetidos entre sí y
+                  convergen sobre su orden y validez. Normalmente, la red
+                  alcanza finalidad mediante Avalanche en menos de tres
+                  segundos.
+                </p>
+              </section>
 
-      <article
-        class="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm"
-      >
-        <section aria-labelledby="esperar-confirmaciones">
-          <h2
-            id="esperar-confirmaciones"
-            class="text-2xl font-bold text-[#001e62] mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            El problema de esperar confirmaciones
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-6">
-            En redes basadas únicamente en Nakamoto Proof of Work, una
-            transacción gana seguridad conforme se añaden bloques sobre ella.
-            Alcanzar una alta seguridad de liquidación suele requerir varias
-            confirmaciones, y esa espera introduce fricción en compras
-            cotidianas. Para ver cómo se traduce esto a una experiencia de
-            cobro, consulta la guía de
-            <a
-              href="pagos-con-ecash.html"
-              class="font-semibold text-[#007ea7] hover:underline"
-              >pagos con eCash</a
-            >.
-          </p>
-        </section>
+              <section aria-labelledby="avalanche-pow">
+                <h2 id="avalanche-pow">Avalanche y Proof of Work</h2>
+                <p>
+                  Avalanche proporciona coordinación rápida y finalidad para los
+                  participantes presentes en la red. Después, Proof of Work
+                  incorpora la transacción a un bloque y conserva un registro
+                  histórico verificable para quienes se conecten más tarde.
+                </p>
+                <p>
+                  Esta arquitectura se describe mejor como
+                  <strong>Avalanche-enhanced Proof of Work</strong>: no
+                  sustituye la minería ni convierte a eCash en una cadena Proof
+                  of Stake convencional. La guía
+                  <a href="que-es-ecash.html">¿Qué es eCash?</a>
+                  ofrece más contexto sobre la red y XEC.
+                </p>
+              </section>
 
-        <section aria-labelledby="que-es-avalanche">
-          <h2
-            id="que-es-avalanche"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            ¿Qué es Avalanche Pre-Consensus?
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-4">
-            Avalanche es un protocolo de consenso integrado con la capa Nakamoto
-            Proof of Work de eCash. No se refiere a la blockchain AVAX ni
-            introduce una moneda adicional: la implementación de eCash es
-            independiente.
-          </p>
-          <p class="text-slate-700 leading-relaxed mb-6">
-            Antes de que una transacción sea incluida en un bloque, los nodos
-            participantes realizan sondeos repetidos entre sí y convergen sobre
-            su orden y validez. Normalmente, la red alcanza finalidad mediante
-            Avalanche en menos de tres segundos.
-          </p>
-        </section>
+              <section aria-labelledby="pre-post-consensus">
+                <h2 id="pre-post-consensus">Pre-Consensus y Post-Consensus</h2>
+                <p>
+                  Ambos mecanismos están actualmente integrados en la
+                  arquitectura de eCash y cumplen funciones complementarias:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Pre-Consensus</strong> trabaja con las transacciones
+                    antes de su inclusión en bloques.
+                  </li>
+                  <li>
+                    <strong>Post-Consensus</strong> finaliza bloques y protege
+                    la red frente a reorganizaciones.
+                  </li>
+                  <li>
+                    Post-Consensus permite que los acuerdos alcanzados por
+                    Pre-Consensus sean respetados por los nodos honestos, que
+                    pueden rechazar bloques con transacciones en conflicto.
+                  </li>
+                </ul>
+              </section>
 
-        <section aria-labelledby="avalanche-pow">
-          <h2
-            id="avalanche-pow"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            Avalanche y Proof of Work
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-4">
-            Avalanche proporciona coordinación rápida y finalidad para los
-            participantes presentes en la red. Después, Proof of Work incorpora
-            la transacción a un bloque y conserva un registro histórico
-            verificable para quienes se conecten más tarde.
-          </p>
-          <p class="text-slate-700 leading-relaxed mb-6">
-            Esta arquitectura se describe mejor como
-            <strong>Avalanche-enhanced Proof of Work</strong>: no sustituye la
-            minería ni convierte a eCash en una cadena Proof of Stake
-            convencional. La guía
-            <a
-              href="que-es-ecash.html"
-              class="font-semibold text-[#007ea7] hover:underline"
-              >¿Qué es eCash?</a
-            >
-            ofrece más contexto sobre la red y XEC.
-          </p>
-        </section>
+              <section aria-labelledby="impacto-usuarios-comercios">
+                <h2 id="impacto-usuarios-comercios">
+                  Impacto para usuarios y comercios
+                </h2>
+                <p>
+                  La coordinación rápida reduce la espera de un pago y la
+                  exposición a reversiones, mejora la experiencia en el punto de
+                  venta y permite construir aplicaciones que necesitan
+                  liquidación rápida.
+                </p>
+                <p>
+                  Sin embargo, una wallet, un comercio o una aplicación debe
+                  integrar y mostrar correctamente el estado Avalanche para
+                  incorporarlo a su experiencia de usuario. Puedes conocer el
+                  flujo de una wallet en el
+                  <a href="tutorial-tonalli-wallet.html">tutorial de Tonalli</a
+                  >, consultar datos de la cadena con
+                  <a href="ecash-mexico-block-explorer.html">Xolos Explorer</a>
+                  y revisar la infraestructura de datos en la guía de
+                  <a href="chronik-builders-ecash.html">Chronik para builders</a
+                  >. Estos enlaces no implican que esas interfaces muestren hoy
+                  un indicador de finalidad Avalanche.
+                </p>
+              </section>
 
-        <section aria-labelledby="pre-post-consensus">
-          <h2
-            id="pre-post-consensus"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            Pre-Consensus y Post-Consensus
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-4">
-            Ambos mecanismos están actualmente integrados en la arquitectura de
-            eCash y cumplen funciones complementarias:
-          </p>
-          <ul class="list-disc pl-6 space-y-3 text-slate-700 mb-6">
-            <li>
-              <strong>Pre-Consensus</strong> trabaja con las transacciones antes
-              de su inclusión en bloques.
-            </li>
-            <li>
-              <strong>Post-Consensus</strong> finaliza bloques y protege la red
-              frente a reorganizaciones.
-            </li>
-            <li>
-              Post-Consensus permite que los acuerdos alcanzados por
-              Pre-Consensus sean respetados por los nodos honestos, que pueden
-              rechazar bloques con transacciones en conflicto.
-            </li>
-          </ul>
-        </section>
+              <section aria-labelledby="staking-activo">
+                <h2 id="staking-activo">Staking ya está activo</h2>
+                <p>
+                  Las recompensas de staking están activas desde noviembre de
+                  2023. La participación oficial requiere ejecutar un nodo
+                  completo con Avalanche; no existe una modalidad oficial de
+                  staking únicamente desde una wallet. El proceso usa pruebas de
+                  participación sin custodia, bloqueo de monedas ni slashing.
+                </p>
+                <aside aria-label="Advertencia sobre staking">
+                  <strong>Advertencia:</strong> existen guías falsas de staking
+                  que intentan robar fondos. Verifica siempre el dominio oficial
+                  y nunca compartas tu frase semilla. Esta explicación es
+                  educativa, no una recomendación financiera.
+                </aside>
+              </section>
 
-        <section aria-labelledby="impacto-usuarios-comercios">
-          <h2
-            id="impacto-usuarios-comercios"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            Impacto para usuarios y comercios
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-4">
-            La coordinación rápida reduce la espera de un pago y la exposición a
-            reversiones, mejora la experiencia en el punto de venta y permite
-            construir aplicaciones que necesitan liquidación rápida.
-          </p>
-          <p class="text-slate-700 leading-relaxed mb-6">
-            Sin embargo, una wallet, un comercio o una aplicación debe integrar
-            y mostrar correctamente el estado Avalanche para incorporarlo a su
-            experiencia de usuario. Puedes conocer el flujo de una wallet en el
-            <a
-              href="tutorial-tonalli-wallet.html"
-              class="font-semibold text-[#007ea7] hover:underline"
-              >tutorial de Tonalli</a
-            >, consultar datos de la cadena con
-            <a
-              href="ecash-mexico-block-explorer.html"
-              class="font-semibold text-[#007ea7] hover:underline"
-              >Xolos Explorer</a
-            >
-            y revisar la infraestructura de datos en la guía de
-            <a
-              href="chronik-builders-ecash.html"
-              class="font-semibold text-[#007ea7] hover:underline"
-              >Chronik para builders</a
-            >. Estos enlaces no implican que esas interfaces muestren hoy un
-            indicador de finalidad Avalanche.
-          </p>
-        </section>
+              <section aria-labelledby="fuentes-oficiales">
+                <h2 id="fuentes-oficiales">Fuentes oficiales</h2>
+                <ul>
+                  <li>
+                    <a
+                      href="https://e.cash/blog/avalanche-faq"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Explicación oficial de Avalanche en eCash</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://e.cash/blog/avalanche"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Avalanche-enhanced Proof of Work</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://e.cash/staking"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Página oficial de staking de eCash</a
+                    >
+                  </li>
+                </ul>
+              </section>
+            </article>
 
-        <section aria-labelledby="staking-activo">
-          <h2
-            id="staking-activo"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            Staking ya está activo
-          </h2>
-          <p class="text-slate-700 leading-relaxed mb-4">
-            Las recompensas de staking están activas desde noviembre de 2023. La
-            participación oficial requiere ejecutar un nodo completo con
-            Avalanche; no existe una modalidad oficial de staking únicamente
-            desde una wallet. El proceso usa pruebas de participación sin
-            custodia, bloqueo de monedas ni slashing.
-          </p>
-          <aside
-            class="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-sm text-amber-900 mb-6"
-            aria-label="Advertencia sobre staking"
-          >
-            <strong>Advertencia:</strong> existen guías falsas de staking que
-            intentan robar fondos. Verifica siempre el dominio oficial y nunca
-            compartas tu frase semilla. Esta explicación es educativa, no una
-            recomendación financiera.
-          </aside>
-        </section>
+            <section aria-labelledby="continua-camino-soberano">
+              <h2 id="continua-camino-soberano">Continúa tu camino soberano</h2>
+              <div class="article-cards">
+                <a
+                  href="chronik-builders-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Infraestructura Chronik</h3>
+                  <p>
+                    Explora herramientas abiertas para builders y usuarios
+                    avanzados.
+                  </p>
+                </a>
+                <a
+                  href="pagos-con-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Pagos con eCash</h3>
+                  <p>Conecta consenso, rapidez y pagos cotidianos.</p>
+                </a>
+                <a
+                  href="que-es-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>¿Qué es XEC?</h3>
+                  <p>Repasa los fundamentos de eCash.</p>
+                </a>
+              </div>
+            </section>
+          </div>
 
-        <section aria-labelledby="fuentes-oficiales">
-          <h2
-            id="fuentes-oficiales"
-            class="text-2xl font-bold text-[#001e62] mt-10 mb-4 italic border-l-4 border-[#00abe7] pl-4"
-          >
-            Fuentes oficiales
-          </h2>
-          <ul class="list-disc pl-6 space-y-3 text-slate-700">
-            <li>
-              <a
-                href="https://e.cash/blog/avalanche-faq"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-semibold text-[#007ea7] hover:underline"
-                >Explicación oficial de Avalanche en eCash</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://e.cash/blog/avalanche"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-semibold text-[#007ea7] hover:underline"
-                >Avalanche-enhanced Proof of Work</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://e.cash/staking"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-semibold text-[#007ea7] hover:underline"
-                >Página oficial de staking de eCash</a
-              >
-            </li>
-          </ul>
-        </section>
-      </article>
-
-      <section
-        class="mt-16 border-t border-slate-200 pt-10"
-        aria-labelledby="continua-camino-soberano"
-      >
-        <h2
-          id="continua-camino-soberano"
-          class="text-2xl font-bold text-[#001e62] mb-6 italic border-l-4 border-[#00abe7] pl-4"
-        >
-          Continúa tu camino soberano
-        </h2>
-        <div class="grid md:grid-cols-3 gap-5 italic">
-          <a
-            href="chronik-builders-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Infraestructura Chronik
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Explora herramientas abiertas para builders y usuarios avanzados.
-            </p>
-          </a>
-          <a
-            href="pagos-con-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Pagos con eCash
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Conecta consenso, rapidez y pagos cotidianos.
-            </p>
-          </a>
-          <a
-            href="que-es-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              ¿Qué es XEC?
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Repasa los fundamentos de eCash.
-            </p>
-          </a>
+          <section class="article-callout">
+            <div>
+              <p>
+                Iniciativa Independiente impulsada por xolosArmy Network.<br />Contenido
+                educativo bajo Licencia MIT. No es asesoría financiera.
+              </p>
+            </div>
+          </section>
         </div>
-      </section>
-    </main>
-
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6 mt-20 italic">
-      <div class="max-w-4xl mx-auto text-center">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo"
-          class="h-12 mx-auto mb-6 rounded-full opacity-80 border border-slate-700"
-        />
-        <p class="text-[10px] uppercase tracking-widest leading-loose">
-          Iniciativa Independiente impulsada por xolosArmy Network.<br />Contenido
-          educativo bajo Licencia MIT. No es asesoría financiera.
+        <p class="article-support">
+          <a
+            class="button"
+            href="https://cartera.xolosarmy.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Tonalli Wallet</a
+          >
         </p>
+      </article>
+    </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
       </div>
     </footer>
   </body>

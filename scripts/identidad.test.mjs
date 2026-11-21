@@ -241,6 +241,6 @@ test("identity first-party UI no longer references Telegram", () => {
   assert.doesNotMatch(html, /telegram/i);
   assert.doesNotMatch(source, /telegram/i);
   assert.match(html, /id="ui-memo-status"/);
-  assert.match(html, />Tonalli Memo<\/a>/);
+  assert.match(html, />Tonalli Memo<\/a\s*>/);
   assert.match(source, /memoStatus/);
 });

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Crónica: El Futuro Soberano de eCash y xolosArmy | eCash México
@@ -53,319 +54,17 @@
       name="twitter:description"
       content="Análisis del Weekly Update de xolosArmy Network: la integración de eCash (XEC) en THORChain, el nuevo Pool de Minería y el futuro de Tonalli Wallet."
     />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
-    <style>
-      :root {
-        --bg-main: #05070b;
-        --bg-card: #0d111a;
-        --bg-soft: #111827;
-        --text-main: #f5f7fa;
-        --text-muted: #a7b0c0;
-        --xec-blue: #00a3ff;
-        --xec-cyan: #00e0ff;
-        --gold: #d4af37;
-        --border-soft: rgba(255, 255, 255, 0.08);
-        --shadow-blue: rgba(0, 163, 255, 0.18);
-        --max-width: 980px;
-      }
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(0, 163, 255, 0.16),
-            transparent 32%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(212, 175, 55, 0.12),
-            transparent 30%
-          ),
-          var(--bg-main);
-        color: var(--text-main);
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        line-height: 1.7;
-      }
-
-      .article-wrapper {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 48px 20px 72px;
-      }
-
-      .article-hero {
-        padding: 42px 28px;
-        border: 1px solid var(--border-soft);
-        border-radius: 28px;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(0, 163, 255, 0.12),
-            rgba(212, 175, 55, 0.07)
-          ),
-          rgba(13, 17, 26, 0.92);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-        margin-bottom: 34px;
-      }
-
-      .article-kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: var(--xec-cyan);
-        background: rgba(0, 224, 255, 0.08);
-        border: 1px solid rgba(0, 224, 255, 0.25);
-        padding: 7px 12px;
-        border-radius: 999px;
-        font-size: 0.82rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 18px;
-      }
-
-      .article-hero h1 {
-        font-size: clamp(2.1rem, 6vw, 4.5rem);
-        line-height: 1.02;
-        letter-spacing: -0.06em;
-        margin: 0 0 18px;
-      }
-
-      .article-hero h1 span {
-        color: var(--gold);
-      }
-
-      .article-subtitle {
-        color: var(--text-muted);
-        font-size: clamp(1rem, 2vw, 1.22rem);
-        max-width: 760px;
-        margin: 0;
-      }
-
-      .article-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 24px;
-        color: var(--text-muted);
-        font-size: 0.92rem;
-      }
-
-      .article-meta span {
-        border: 1px solid var(--border-soft);
-        background: rgba(255, 255, 255, 0.04);
-        padding: 6px 11px;
-        border-radius: 999px;
-      }
-
-      .video-section {
-        margin: 34px 0 40px;
-        padding: 14px;
-        border-radius: 26px;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 163, 255, 0.16),
-          rgba(212, 175, 55, 0.12)
-        );
-        box-shadow: 0 18px 60px var(--shadow-blue);
-      }
-
-      .video-frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        border-radius: 20px;
-        background: #000;
-      }
-
-      .video-frame iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      .article-card {
-        background: rgba(13, 17, 26, 0.88);
-        border: 1px solid var(--border-soft);
-        border-radius: 26px;
-        padding: 34px 28px;
-        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.32);
-      }
-
-      .article-card h2 {
-        font-size: clamp(1.5rem, 3vw, 2.15rem);
-        line-height: 1.15;
-        margin: 42px 0 16px;
-        letter-spacing: -0.035em;
-        color: var(--text-main);
-      }
-
-      .article-card h2:first-child {
-        margin-top: 0;
-      }
-
-      .article-card h3 {
-        font-size: 1.15rem;
-        margin: 28px 0 10px;
-        color: var(--gold);
-        letter-spacing: -0.02em;
-      }
-
-      .article-card p {
-        color: #dce3ee;
-        margin: 0 0 18px;
-        font-size: 1.02rem;
-      }
-
-      .article-card strong {
-        color: #ffffff;
-      }
-
-      .lead-paragraph {
-        font-size: 1.16rem !important;
-        color: #ffffff !important;
-        border-left: 4px solid var(--xec-blue);
-        padding-left: 18px;
-        margin-bottom: 28px !important;
-      }
-
-      .section-label {
-        display: inline-block;
-        color: var(--xec-cyan);
-        font-size: 0.82rem;
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-weight: 800;
-        margin-bottom: 8px;
-      }
-
-      .tech-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin: 26px 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .tech-list li {
-        padding: 20px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.045);
-        border: 1px solid var(--border-soft);
-      }
-
-      .tech-list strong {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--gold);
-        font-size: 1.04rem;
-      }
-
-      .quote {
-        margin: 34px 0;
-        padding: 28px;
-        border-radius: 24px;
-        background: rgba(212, 175, 55, 0.08);
-        border: 1px solid rgba(212, 175, 55, 0.24);
-        color: #fff6d8;
-        font-size: 1.18rem;
-        line-height: 1.55;
-        font-weight: 650;
-      }
-
-      .closing-box {
-        margin-top: 44px;
-        padding: 28px;
-        border-radius: 24px;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(212, 175, 55, 0.12),
-            rgba(0, 163, 255, 0.1)
-          ),
-          rgba(255, 255, 255, 0.035);
-        border: 1px solid var(--border-soft);
-      }
-
-      .closing-box p:last-child {
-        margin-bottom: 0;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 28px;
-      }
-
-      .cta-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        border-radius: 999px;
-        padding: 12px 18px;
-        font-weight: 800;
-        color: #041019;
-        background: linear-gradient(135deg, var(--xec-cyan), var(--xec-blue));
-        box-shadow: 0 10px 28px rgba(0, 163, 255, 0.28);
-      }
-
-      .cta-button.secondary {
-        color: var(--text-main);
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: none;
-      }
-
-      @media (min-width: 760px) {
-        .tech-list {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .article-hero {
-          padding: 56px 44px;
-        }
-
-        .article-card {
-          padding: 46px 44px;
-        }
-      }
-
-      @media (max-width: 520px) {
-        .article-wrapper {
-          padding: 28px 14px 54px;
-        }
-
-        .article-hero,
-        .article-card {
-          border-radius: 22px;
-        }
-
-        .article-hero {
-          padding: 32px 22px;
-        }
-
-        .article-card {
-          padding: 28px 20px;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -414,308 +113,269 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div class="article-meta">eCash México · xolosArmy Network</div>
 
-  <body>
-    <main class="article-wrapper">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="article-hero">
-        <div class="article-kicker">eCash México · xolosArmy Network</div>
+              <h1>
+                Construyendo Infraestructura Antifrágil:<br />
+                <span>THORChain, Minería y Swaps Nativos</span>
+              </h1>
 
-        <h1>
-          Construyendo Infraestructura Antifrágil:<br />
-          <span>THORChain, Minería y Swaps Nativos</span>
-        </h1>
+              <p class="article-lead">
+                Un repaso detallado a la actualización semanal de xolosArmy
+                Network. Exploramos el avance hacia la liquidez descentralizada
+                de eCash, la billetera Tonalli y un nuevo paradigma para los
+                mineros.
+              </p>
 
-        <p class="article-subtitle">
-          Un repaso detallado a la actualización semanal de xolosArmy Network.
-          Exploramos el avance hacia la liquidez descentralizada de eCash, la
-          billetera Tonalli y un nuevo paradigma para los mineros.
-        </p>
+              <div class="article-meta">
+                <span>Crónica editorial</span>
+                <span>eCash / XEC</span>
+                <span>THORChain</span>
+                <span>Tonalli Wallet</span>
+                <span>Minería</span>
+              </div>
+            </header>
 
-        <div class="article-meta">
-          <span>Crónica editorial</span>
-          <span>eCash / XEC</span>
-          <span>THORChain</span>
-          <span>Tonalli Wallet</span>
-          <span>Minería</span>
-        </div>
-      </header>
-
-      <section
-        class="video-section"
-        aria-label="Video del Weekly Update de xolosArmy Network"
-      >
-        <div class="video-frame">
-          <iframe
-            src="https://www.youtube.com/embed/T70O2-REbhg"
-            title="Weekly Update de xolosArmy Network"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-      </section>
-
-      <article class="article-card">
-        <p class="lead-paragraph">
-          Lejos de la retórica especulativa habitual del mundo cripto, la
-          reciente actualización semanal de <strong>xolosArmy Network</strong>,
-          presentada por Fernando en compañía de su Xoloitzcuintle, marca un
-          parteaguas técnico para el ecosistema de <strong>eCash (XEC)</strong>.
-          Es una declaración de intenciones centrada en la soberanía, la
-          liquidez descentralizada y el desarrollo de infraestructura antifrágil
-          desde México.
-        </p>
-
-        <h2>Primer Hito: La Liquidez Descentralizada en THORChain</h2>
-
-        <p>
-          El principal problema que enfrenta eCash actualmente es su dependencia
-          de los intercambios centralizados (CEX) para la liquidez,
-          particularmente su escasa presencia en mercados estadounidenses. La
-          solución propuesta por xolosArmy es audaz: la integración nativa en
-          <strong>THORChain</strong>.
-        </p>
-
-        <p>
-          Durante el video, Fernando confirma que tras más de un mes de
-          desarrollo impulsado por la campaña comunitaria <em>Teyolía</em>,
-          <strong>el código de integración está completo</strong>. La solicitud
-          de fusión (<em>merge request</em>) ya está bajo revisión formal por
-          parte de los desarrolladores principales de THORChain (como Star
-          Squid).
-        </p>
-
-        <div class="quote">
-          "THORChain es la opción natural para la liquidez. Es más antifrágil
-          que depender de intercambios centralizados que hoy concentran toda
-          nuestra liquidez."
-        </div>
-
-        <p>
-          Esta integración permitirá a los usuarios de eCash intercambiar sus
-          XEC por activos nativos como Bitcoin (BTC), Monero (XMR) o Dash,
-          directamente de billetera a billetera. Cero tokens envueltos, cero
-          puentes vulnerables, cero permisos.
-        </p>
-
-        <h2>Segundo Hito: Tonalli Wallet y los Swaps Nativos</h2>
-
-        <span class="section-label">La Interfaz de la Soberanía</span>
-
-        <p>
-          Si THORChain proporciona el motor de la liquidez,
-          <strong>Tonalli Wallet</strong> es el vehículo. Fernando anunció que
-          el siguiente gran paso en la hoja de ruta (<em>roadmap</em>) es
-          integrar la tecnología de THORChain directamente en la interfaz de
-          usuario (UX) de Tonalli.
-        </p>
-
-        <ul class="tech-list">
-          <li>
-            <strong>Swaps sin Permisos</strong>
-            Los miembros de la comunidad podrán intercambiar activos nativos sin
-            tener que recurrir a plataformas complejas. Todo ocurrirá dentro de
-            la billetera de autocustodia, garantizando que el usuario mantenga
-            el control de sus llaves en todo momento.
-          </li>
-
-          <li>
-            <strong>Product-Market Fit</strong>
-            Esta funcionalidad no solo beneficia a los usuarios avanzados, sino
-            que otorga viabilidad real al producto al abrir un mercado directo
-            de intercambio fluido y resistente a la censura.
-          </li>
-        </ul>
-
-        <h2>Tercer Hito: Un Nuevo Paradigma de Minería</h2>
-
-        <p>
-          En uno de los desarrollos más sorprendentes del video, se revela la
-          fase final de creación de un
-          <strong>Pool de Minería exclusivo para eCash</strong> desarrollado por
-          xolosArmy.
-        </p>
-
-        <p>
-          Este pool rompe con el esquema tradicional de tarifas. En lugar de
-          cobrar un porcentaje de las recompensas de minería, el pool operará
-          mediante un modelo de suscripción mensual utilizando el token
-          comunitario <strong>Xolos RMZ etoken</strong>. Esto otorga una
-          utilidad real y tangible a la economía de la comunidad, al tiempo que
-          busca inyectar mayor poder de procesamiento (<em>hash power</em>) a la
-          red de eCash de parte de mineros verdaderamente comprometidos.
-        </p>
-
-        <h2>Cuarto Hito: Educación y Comunidad en México</h2>
-
-        <p>
-          La tecnología carece de propósito si no existe una base social que la
-          comprenda y la utilice. El anuncio final de la actualización se centró
-          en la estrategia física y digital para consolidar
-          <strong>eCash México</strong> (ecash.mx).
-        </p>
-
-        <p>
-          xolosArmy Network está lanzando un frente educativo basado en
-          artículos técnicos para indexar en buscadores, con el objetivo a
-          mediano plazo de organizar reuniones físicas (<em>meetups</em>). La
-          meta es clara: enseñar a los usuarios sobre la soberanía digital, el
-          consenso descentralizado y el uso cotidiano del efectivo electrónico a
-          través de herramientas como Tonalli Wallet.
-        </p>
-
-        <div class="closing-box">
-          <p>
-            Esta actualización semanal no es simplemente un reporte de progreso;
-            es un mapa de ruta hacia la verdadera independencia financiera.
-            Mediante código abierto, integración en THORChain, billeteras
-            nativas y un nuevo modelo de minería comunitaria, xolosArmy y eCash
-            México están demostrando que la revolución del dinero electrónico se
-            puede construir, paso a paso, desde las trincheras.
-          </p>
-
-          <div class="cta-row">
-            <a
-              class="cta-button"
-              href="https://ecash.mx/"
-              target="_blank"
-              rel="noopener"
+            <section
+              aria-label="Video del Weekly Update de xolosArmy Network"
+              class="article-video"
             >
-              Explorar Guías en eCash.mx
-            </a>
+              <div class="article-video">
+                <iframe
+                  src="https://www.youtube.com/embed/T70O2-REbhg"
+                  title="Weekly Update de xolosArmy Network"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </section>
 
-            <a
-              class="cta-button secondary"
-              href="https://cartera.xolosarmy.xyz"
-              target="_blank"
-              rel="noopener"
-            >
-              Abrir Tonalli Wallet
-            </a>
+            <article>
+              <p class="article-lead">
+                Lejos de la retórica especulativa habitual del mundo cripto, la
+                reciente actualización semanal de
+                <strong>xolosArmy Network</strong>, presentada por Fernando en
+                compañía de su Xoloitzcuintle, marca un parteaguas técnico para
+                el ecosistema de <strong>eCash (XEC)</strong>. Es una
+                declaración de intenciones centrada en la soberanía, la liquidez
+                descentralizada y el desarrollo de infraestructura antifrágil
+                desde México.
+              </p>
+
+              <h2>Primer Hito: La Liquidez Descentralizada en THORChain</h2>
+
+              <p>
+                El principal problema que enfrenta eCash actualmente es su
+                dependencia de los intercambios centralizados (CEX) para la
+                liquidez, particularmente su escasa presencia en mercados
+                estadounidenses. La solución propuesta por xolosArmy es audaz:
+                la integración nativa en
+                <strong>THORChain</strong>.
+              </p>
+
+              <p>
+                Durante el video, Fernando confirma que tras más de un mes de
+                desarrollo impulsado por la campaña comunitaria
+                <em>Teyolía</em>,
+                <strong>el código de integración está completo</strong>. La
+                solicitud de fusión (<em>merge request</em>) ya está bajo
+                revisión formal por parte de los desarrolladores principales de
+                THORChain (como Star Squid).
+              </p>
+
+              <div class="article-quote">
+                "THORChain es la opción natural para la liquidez. Es más
+                antifrágil que depender de intercambios centralizados que hoy
+                concentran toda nuestra liquidez."
+              </div>
+
+              <p>
+                Esta integración permitirá a los usuarios de eCash intercambiar
+                sus XEC por activos nativos como Bitcoin (BTC), Monero (XMR) o
+                Dash, directamente de billetera a billetera. Cero tokens
+                envueltos, cero puentes vulnerables, cero permisos.
+              </p>
+
+              <h2>Segundo Hito: Tonalli Wallet y los Swaps Nativos</h2>
+
+              <span>La Interfaz de la Soberanía</span>
+
+              <p>
+                Si THORChain proporciona el motor de la liquidez,
+                <strong>Tonalli Wallet</strong> es el vehículo. Fernando anunció
+                que el siguiente gran paso en la hoja de ruta (<em>roadmap</em>)
+                es integrar la tecnología de THORChain directamente en la
+                interfaz de usuario (UX) de Tonalli.
+              </p>
+
+              <ul class="tech-list">
+                <li>
+                  <strong>Swaps sin Permisos</strong>
+                  Los miembros de la comunidad podrán intercambiar activos
+                  nativos sin tener que recurrir a plataformas complejas. Todo
+                  ocurrirá dentro de la billetera de autocustodia, garantizando
+                  que el usuario mantenga el control de sus llaves en todo
+                  momento.
+                </li>
+
+                <li>
+                  <strong>Product-Market Fit</strong>
+                  Esta funcionalidad no solo beneficia a los usuarios avanzados,
+                  sino que otorga viabilidad real al producto al abrir un
+                  mercado directo de intercambio fluido y resistente a la
+                  censura.
+                </li>
+              </ul>
+
+              <h2>Tercer Hito: Un Nuevo Paradigma de Minería</h2>
+
+              <p>
+                En uno de los desarrollos más sorprendentes del video, se revela
+                la fase final de creación de un
+                <strong>Pool de Minería exclusivo para eCash</strong>
+                desarrollado por xolosArmy.
+              </p>
+
+              <p>
+                Este pool rompe con el esquema tradicional de tarifas. En lugar
+                de cobrar un porcentaje de las recompensas de minería, el pool
+                operará mediante un modelo de suscripción mensual utilizando el
+                token comunitario <strong>Xolos RMZ etoken</strong>. Esto otorga
+                una utilidad real y tangible a la economía de la comunidad, al
+                tiempo que busca inyectar mayor poder de procesamiento (<em
+                  >hash power</em
+                >) a la red de eCash de parte de mineros verdaderamente
+                comprometidos.
+              </p>
+
+              <h2>Cuarto Hito: Educación y Comunidad en México</h2>
+
+              <p>
+                La tecnología carece de propósito si no existe una base social
+                que la comprenda y la utilice. El anuncio final de la
+                actualización se centró en la estrategia física y digital para
+                consolidar
+                <strong>eCash México</strong> (ecash.mx).
+              </p>
+
+              <p>
+                xolosArmy Network está lanzando un frente educativo basado en
+                artículos técnicos para indexar en buscadores, con el objetivo a
+                mediano plazo de organizar reuniones físicas (<em>meetups</em>).
+                La meta es clara: enseñar a los usuarios sobre la soberanía
+                digital, el consenso descentralizado y el uso cotidiano del
+                efectivo electrónico a través de herramientas como Tonalli
+                Wallet.
+              </p>
+
+              <div class="article-callout">
+                <p>
+                  Esta actualización semanal no es simplemente un reporte de
+                  progreso; es un mapa de ruta hacia la verdadera independencia
+                  financiera. Mediante código abierto, integración en THORChain,
+                  billeteras nativas y un nuevo modelo de minería comunitaria,
+                  xolosArmy y eCash México están demostrando que la revolución
+                  del dinero electrónico se puede construir, paso a paso, desde
+                  las trincheras.
+                </p>
+
+                <div>
+                  <a
+                    href="https://ecash.mx/"
+                    target="_blank"
+                    class="button"
+                    rel="noopener noreferrer"
+                  >
+                    Explorar Guías en eCash.mx
+                  </a>
+
+                  <a
+                    href="https://cartera.xolosarmy.xyz"
+                    target="_blank"
+                    class="button button-outline"
+                    rel="noopener noreferrer"
+                  >
+                    Abrir Tonalli Wallet
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <section aria-labelledby="continua-camino-soberano">
+              <h2 id="continua-camino-soberano">Continúa tu camino soberano</h2>
+              <div class="article-cards">
+                <a
+                  href="anuncio-integracion-nativa-xec-thorchain.html"
+                  class="depth-card article-link-card"
+                >
+                  <strong>Anuncio: Misión Protocolo</strong>
+                  <span>Lee el anuncio estratégico sobre XEC y THORChain.</span>
+                </a>
+                <a
+                  href="mineria-ecash-mexico.html"
+                  class="depth-card article-link-card"
+                >
+                  <strong>Minería Soberana</strong>
+                  <span
+                    >Conoce cómo funciona el sistema de membresías RMZ.</span
+                  >
+                </a>
+                <a
+                  href="tutorial-tonalli-wallet.html"
+                  class="depth-card article-link-card"
+                >
+                  <strong>Crear Tonalli Wallet</strong>
+                  <span
+                    >Obtén tu propia llave maestra y asegura tus fondos.</span
+                  >
+                </a>
+              </div>
+            </section>
           </div>
         </div>
       </article>
-
-      <section
-        aria-labelledby="continua-camino-soberano"
-        style="
-          margin-top: 56px;
-          padding-top: 34px;
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        "
-      >
-        <h2
-          id="continua-camino-soberano"
-          style="
-            color: #f5f7fa;
-            border-left: 4px solid #00e0ff;
-            padding-left: 16px;
-          "
-        >
-          Continúa tu camino soberano
-        </h2>
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-            margin-top: 22px;
-          "
-        >
-          <a
-            href="anuncio-integracion-nativa-xec-thorchain.html"
-            style="
-              display: block;
-              padding: 20px;
-              border: 1px solid rgba(255, 255, 255, 0.12);
-              border-radius: 18px;
-              background: rgba(13, 17, 26, 0.92);
-              color: inherit;
-              text-decoration: none;
-              box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-            "
-          >
-            <strong style="display: block; color: #00e0ff; margin-bottom: 8px"
-              >Anuncio: Misión Protocolo</strong
-            >
-            <span
-              style="
-                display: block;
-                color: #a7b0c0;
-                font-size: 0.95rem;
-                line-height: 1.6;
-              "
-              >Lee el anuncio estratégico sobre XEC y THORChain.</span
-            >
-          </a>
-          <a
-            href="mineria-ecash-mexico.html"
-            style="
-              display: block;
-              padding: 20px;
-              border: 1px solid rgba(255, 255, 255, 0.12);
-              border-radius: 18px;
-              background: rgba(13, 17, 26, 0.92);
-              color: inherit;
-              text-decoration: none;
-              box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-            "
-          >
-            <strong style="display: block; color: #00e0ff; margin-bottom: 8px"
-              >Minería Soberana</strong
-            >
-            <span
-              style="
-                display: block;
-                color: #a7b0c0;
-                font-size: 0.95rem;
-                line-height: 1.6;
-              "
-              >Conoce cómo funciona el sistema de membresías RMZ.</span
-            >
-          </a>
-          <a
-            href="tutorial-tonalli-wallet.html"
-            style="
-              display: block;
-              padding: 20px;
-              border: 1px solid rgba(255, 255, 255, 0.12);
-              border-radius: 18px;
-              background: rgba(13, 17, 26, 0.92);
-              color: inherit;
-              text-decoration: none;
-              box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-            "
-          >
-            <strong style="display: block; color: #00e0ff; margin-bottom: 8px"
-              >Crear Tonalli Wallet</strong
-            >
-            <span
-              style="
-                display: block;
-                color: #a7b0c0;
-                font-size: 0.95rem;
-                line-height: 1.6;
-              "
-              >Obtén tu propia llave maestra y asegura tus fondos.</span
-            >
-          </a>
-        </div>
-      </section>
     </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
   </body>
 </html>

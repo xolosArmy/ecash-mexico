@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       La Soberanía del Financiamiento: El silencio del GNC | eCash México
@@ -53,303 +54,17 @@
       name="twitter:description"
       content="El contrato de Teyolia para THORChain ha expirado. Analizamos la diferencia entre el financiamiento institucional cerrado y la infraestructura abierta sin permisos."
     />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
-    <style>
-      :root {
-        --bg-main: #05070b;
-        --bg-card: #0d111a;
-        --bg-soft: #111827;
-        --text-main: #f5f7fa;
-        --text-muted: #a7b0c0;
-        --xec-blue: #00a3ff;
-        --xec-cyan: #00e0ff;
-        --gold: #d4af37;
-        --border-soft: rgba(255, 255, 255, 0.08);
-        --shadow-cyan: rgba(0, 224, 255, 0.15);
-        --max-width: 980px;
-      }
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(
-            circle at top right,
-            rgba(0, 224, 255, 0.12),
-            transparent 35%
-          ),
-          radial-gradient(
-            circle at bottom left,
-            rgba(212, 175, 55, 0.08),
-            transparent 40%
-          ),
-          var(--bg-main);
-        color: var(--text-main);
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        line-height: 1.7;
-      }
-
-      .article-wrapper {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 40px 20px 80px;
-      }
-
-      .nav-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-        border-bottom: 1px solid var(--border-soft);
-      }
-
-      .nav-top a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        transition: color 0.3s;
-      }
-
-      .nav-top a:hover {
-        color: var(--xec-cyan);
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: white;
-        font-weight: 800;
-        font-size: 1.2rem;
-        font-style: italic;
-      }
-
-      .brand span {
-        color: var(--xec-cyan);
-      }
-
-      .article-hero {
-        padding: 50px 35px;
-        border: 1px solid var(--border-soft);
-        border-radius: 28px;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(0, 224, 255, 0.08),
-            rgba(212, 175, 55, 0.04)
-          ),
-          rgba(13, 17, 26, 0.85);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        margin-bottom: 40px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .article-hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(
-          90deg,
-          var(--xec-cyan),
-          var(--xec-blue),
-          var(--gold)
-        );
-      }
-
-      .article-kicker {
-        display: inline-block;
-        color: var(--xec-cyan);
-        background: rgba(0, 224, 255, 0.1);
-        border: 1px solid rgba(0, 224, 255, 0.3);
-        padding: 6px 14px;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-      }
-
-      .article-hero h1 {
-        font-size: clamp(2rem, 5vw, 3.8rem);
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        margin: 0 0 20px;
-        text-wrap: balance;
-      }
-
-      .article-hero h1 span {
-        color: var(--gold);
-        font-style: italic;
-      }
-
-      .article-subtitle {
-        color: var(--text-muted);
-        font-size: clamp(1.05rem, 2vw, 1.3rem);
-        max-width: 800px;
-        margin: 0;
-      }
-
-      .article-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 24px;
-        color: var(--text-muted);
-        font-size: 0.92rem;
-      }
-
-      .article-meta span {
-        border: 1px solid var(--border-soft);
-        background: rgba(255, 255, 255, 0.04);
-        padding: 6px 11px;
-        border-radius: 999px;
-      }
-
-      .article-content {
-        background: rgba(13, 17, 26, 0.75);
-        border: 1px solid var(--border-soft);
-        border-radius: 26px;
-        padding: 40px 35px;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-      }
-
-      .article-content h2 {
-        font-size: clamp(1.6rem, 3vw, 2.2rem);
-        line-height: 1.2;
-        margin: 50px 0 20px;
-        color: var(--text-main);
-        letter-spacing: -0.02em;
-      }
-
-      .article-content h2:first-child {
-        margin-top: 0;
-      }
-
-      .article-content p {
-        color: #dce3ee;
-        margin: 0 0 20px;
-        font-size: 1.1rem;
-      }
-
-      .article-content strong {
-        color: #ffffff;
-      }
-
-      .lead-paragraph {
-        font-size: 1.25rem !important;
-        color: #ffffff !important;
-        border-left: 4px solid var(--gold);
-        padding-left: 20px;
-        margin-bottom: 35px !important;
-        line-height: 1.6;
-      }
-
-      .quote-box {
-        margin: 40px 0;
-        padding: 30px;
-        border-radius: 20px;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 224, 255, 0.08),
-          transparent
-        );
-        border-left: 4px solid var(--xec-cyan);
-        font-size: 1.3rem;
-        color: white;
-        font-style: italic;
-        font-weight: 600;
-        line-height: 1.5;
-      }
-
-      .tech-list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin: 26px 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .tech-list li {
-        padding: 20px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.045);
-        border: 1px solid var(--border-soft);
-      }
-
-      .tech-list strong {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--gold);
-        font-size: 1.04rem;
-      }
-
-      .cta-box {
-        margin-top: 50px;
-        padding: 35px;
-        border-radius: 24px;
-        background: var(--bg-soft);
-        border: 1px solid rgba(0, 163, 255, 0.3);
-        text-align: center;
-      }
-
-      .cta-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, var(--xec-cyan), var(--xec-blue));
-        color: #000;
-        font-weight: 800;
-        padding: 14px 28px;
-        border-radius: 999px;
-        text-decoration: none;
-        margin-top: 20px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        box-shadow: 0 10px 25px var(--shadow-cyan);
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-      }
-
-      .cta-button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 15px 35px rgba(0, 224, 255, 0.3);
-      }
-
-      @media (min-width: 760px) {
-        .tech-list {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .article-hero {
-          padding: 35px 20px;
-        }
-        .article-content {
-          padding: 30px 20px;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -398,164 +113,192 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div class="article-meta">
+                Editorial · Financiamiento Soberano
+              </div>
 
-  <body>
-    <main class="article-wrapper">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <nav class="nav-top">
-        <a href="/" class="brand"> eCash<span>México</span> </a>
-        <a href="index.html">← Volver al Blog</a>
-      </nav>
+              <h1>
+                La Soberanía del Financiamiento:<br />
+                <span>Por qué el silencio nos hace más fuertes</span>
+              </h1>
 
-      <header class="article-hero">
-        <div class="article-kicker">Editorial · Financiamiento Soberano</div>
+              <p class="article-lead">
+                El contrato de Teyolia ha expirado y reembolsado a los
+                aportantes. El código de THORChain está listo. La lección es
+                clara: si eCash quiere ser dinero libre, su financiamiento
+                también debe serlo.
+              </p>
 
-        <h1>
-          La Soberanía del Financiamiento:<br />
-          <span>Por qué el silencio nos hace más fuertes</span>
-        </h1>
+              <div class="article-meta">
+                <span>Editorial</span>
+                <span>Teyolia</span>
+                <span>THORChain</span>
+                <span>GNC</span>
+                <span>Mayo 2026</span>
+              </div>
+            </header>
 
-        <p class="article-subtitle">
-          El contrato de Teyolia ha expirado y reembolsado a los aportantes. El
-          código de THORChain está listo. La lección es clara: si eCash quiere
-          ser dinero libre, su financiamiento también debe serlo.
-        </p>
+            <article class="article-body">
+              <p class="article-lead">
+                El contrato de garantía no-custodial en L1 de
+                <strong>Teyolia</strong> para fondear la Fase 2 de la
+                integración nativa de eCash (XEC) en THORChain ha expirado. De
+                manera automática, inmutable y determinista, el contrato ha
+                reembolsado a cada uno de los aportantes. El código no conoce de
+                promesas humanas; o se cumple la meta, o el capital regresa a su
+                dueño. Cero riesgo custodial.
+              </p>
 
-        <div class="article-meta">
-          <span>Editorial</span>
-          <span>Teyolia</span>
-          <span>THORChain</span>
-          <span>GNC</span>
-          <span>Mayo 2026</span>
-        </div>
-      </header>
+              <h2>La Victoria Técnica en las Sombras</h2>
 
-      <article class="article-content">
-        <p class="lead-paragraph">
-          El contrato de garantía no-custodial en L1 de
-          <strong>Teyolia</strong> para fondear la Fase 2 de la integración
-          nativa de eCash (XEC) en THORChain ha expirado. De manera automática,
-          inmutable y determinista, el contrato ha reembolsado a cada uno de los
-          aportantes. El código no conoce de promesas humanas; o se cumple la
-          meta, o el capital regresa a su dueño. Cero riesgo custodial.
-        </p>
+              <p>
+                ¿Significa esto que el desarrollo se detiene? En absoluto.
+                Mientras el temporizador del contrato inteligente avanzaba hacia
+                su final, la ingeniería no paró.
+              </p>
 
-        <h2>La Victoria Técnica en las Sombras</h2>
+              <p>
+                Trabajando en las sombras y colaborando directamente con los
+                <em>Core Devs</em> de THORChain (como <code>starsquid</code>) y
+                desarrolladores de Bitcoin ABC (como <code>PiRK</code>),
+                logramos estructurar el entorno de Mocknet local y simular los
+                primeros swaps nativos usando la imagen oficial de nuestro
+                daemon.
+                <strong
+                  >La tecnología está construida en un 90%, validada y
+                  resguardada en nuestro búnker local.</strong
+                >
+              </p>
 
-        <p>
-          ¿Significa esto que el desarrollo se detiene? En absoluto. Mientras el
-          temporizador del contrato inteligente avanzaba hacia su final, la
-          ingeniería no paró.
-        </p>
+              <p>
+                Presentamos la propuesta formalmente ante los canales
+                institucionales de eCash (GNC) hace semanas, aportando código
+                con integración continua (CI) en verde y validación técnica
+                externa de primer nivel. El silencio fue su única respuesta.
+              </p>
 
-        <p>
-          Trabajando en las sombras y colaborando directamente con los
-          <em>Core Devs</em> de THORChain (como <code>starsquid</code>) y
-          desarrolladores de Bitcoin ABC (como <code>PiRK</code>), logramos
-          estructurar el entorno de Mocknet local y simular los primeros swaps
-          nativos usando la imagen oficial de nuestro daemon.
-          <strong
-            >La tecnología está construida en un 90%, validada y resguardada en
-            nuestro búnker local.</strong
-          >
-        </p>
+              <h2>El Dardo Político: Dos visiones de ecosistema</h2>
 
-        <p>
-          Presentamos la propuesta formalmente ante los canales institucionales
-          de eCash (GNC) hace semanas, aportando código con integración continua
-          (CI) en verde y validación técnica externa de primer nivel. El
-          silencio fue su única respuesta.
-        </p>
+              <p>
+                Esto no es un berrinche ni una frustración técnica; es la
+                confirmación absoluta de nuestra tesis fundacional. El silencio
+                institucional expone una bifurcación clara en la visión de cómo
+                se debe construir el futuro de eCash.
+              </p>
 
-        <h2>El Dardo Político: Dos visiones de ecosistema</h2>
+              <ul class="tech-list">
+                <li>
+                  <strong>El Modelo Institucional</strong>
+                  Financiamiento cerrado, decisiones centralizadas en comités
+                  privados (GNC), tiempos burocráticos y un enfoque de arriba
+                  hacia abajo (<em>top-down</em>).
+                </li>
+                <li>
+                  <strong>El Modelo xolosArmy / Teyolia</strong>
+                  Financiamiento abierto, verificable, no custodial, impulsado
+                  por contratos inteligentes (<em>Covenants</em>) y apoyado
+                  directamente por la comunidad (<em>bottom-up</em>).
+                </li>
+              </ul>
 
-        <p>
-          Esto no es un berrinche ni una frustración técnica; es la confirmación
-          absoluta de nuestra tesis fundacional. El silencio institucional
-          expone una bifurcación clara en la visión de cómo se debe construir el
-          futuro de eCash.
-        </p>
+              <div class="article-quote">
+                “El problema no es que el GNC no haya fondeado. El problema es
+                que eCash necesita mecanismos donde las ideas puedan competir
+                por apoyo comunitario sin pedir permiso al círculo
+                institucional.”
+              </div>
 
-        <ul class="tech-list">
-          <li>
-            <strong>El Modelo Institucional</strong>
-            Financiamiento cerrado, decisiones centralizadas en comités privados
-            (GNC), tiempos burocráticos y un enfoque de arriba hacia abajo
-            (<em>top-down</em>).
-          </li>
-          <li>
-            <strong>El Modelo xolosArmy / Teyolia</strong>
-            Financiamiento abierto, verificable, no custodial, impulsado por
-            contratos inteligentes (<em>Covenants</em>) y apoyado directamente
-            por la comunidad (<em>bottom-up</em>).
-          </li>
-        </ul>
+              <h2>Si el dinero es libre, el financiamiento también</h2>
 
-        <div class="quote-box">
-          “El problema no es que el GNC no haya fondeado. El problema es que
-          eCash necesita mecanismos donde las ideas puedan competir por apoyo
-          comunitario sin pedir permiso al círculo institucional.”
-        </div>
+              <p>
+                Si eCash aspira a ser dinero verdaderamente libre y sin permisos
+                (<em>permissionless</em>), los mecanismos para financiar su
+                infraestructura pública también deben serlo. No podemos depender
+                de los tiempos, la burocracia o la falta de respuesta de comités
+                a puerta cerrada. El ecosistema necesita competir abiertamente
+                por el apoyo comunitario.
+              </p>
 
-        <h2>Si el dinero es libre, el financiamiento también</h2>
+              <p>
+                Nos acercamos al canal formal de financiamiento de eCash y no
+                recibimos respuesta a tiempo.
+                <strong
+                  >Y esa es exactamente la razón por la que Teyolia
+                  importa.</strong
+                >
+                La infraestructura del ecosistema no debe depender enteramente
+                de los calendarios de un comité privado.
+              </p>
 
-        <p>
-          Si eCash aspira a ser dinero verdaderamente libre y sin permisos
-          (<em>permissionless</em>), los mecanismos para financiar su
-          infraestructura pública también deben serlo. No podemos depender de
-          los tiempos, la burocracia o la falta de respuesta de comités a puerta
-          cerrada. El ecosistema necesita competir abiertamente por el apoyo
-          comunitario.
-        </p>
+              <h2>El Próximo Paso: La transición no pide permiso</h2>
 
-        <p>
-          Nos acercamos al canal formal de financiamiento de eCash y no
-          recibimos respuesta a tiempo.
-          <strong
-            >Y esa es exactamente la razón por la que Teyolia importa.</strong
-          >
-          La infraestructura del ecosistema no debe depender enteramente de los
-          calendarios de un comité privado.
-        </p>
+              <p>
+                El puente técnico entre eCash y THORChain ya está construido. La
+                puerta a la liquidez soberana, descentralizada y libre de
+                <em>wrapped tokens</em> está lista para abrirse.
+              </p>
 
-        <h2>El Próximo Paso: La transición no pide permiso</h2>
+              <p>
+                Este no es el final de la iniciativa, sino su clímax narrativo.
+                El próximo <strong>13 de junio</strong>, la xolosArmy Network
+                participará en el podcast oficial de THORChain con
+                <strong>Kenton</strong> para hablar a fondo sobre el valor de la
+                liquidez de supervivencia, nuestra arquitectura local y por qué
+                eCash es la cadena UTXO más rápida del mercado.
+              </p>
 
-        <p>
-          El puente técnico entre eCash y THORChain ya está construido. La
-          puerta a la liquidez soberana, descentralizada y libre de
-          <em>wrapped tokens</em> está lista para abrirse.
-        </p>
-
-        <p>
-          Este no es el final de la iniciativa, sino su clímax narrativo. El
-          próximo <strong>13 de junio</strong>, la xolosArmy Network participará
-          en el podcast oficial de THORChain con <strong>Kenton</strong> para
-          hablar a fondo sobre el valor de la liquidez de supervivencia, nuestra
-          arquitectura local y por qué eCash es la cadena UTXO más rápida del
-          mercado.
-        </p>
-
-        <div class="cta-box">
-          <h3>La integración a Capa 1 es inevitable</h3>
-          <p>
-            Sigue la discusión pública, revisa el código de nuestro explorador y
-            prepárate para la transmisión del 13 de junio.
-          </p>
-          <a
-            href="https://twitter.com/xolosarmy"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-button"
-          >
-            Sigue a xolosArmy en X
-          </a>
+              <div class="article-callout">
+                <h3>La integración a Capa 1 es inevitable</h3>
+                <p>
+                  Sigue la discusión pública, revisa el código de nuestro
+                  explorador y prepárate para la transmisión del 13 de junio.
+                </p>
+                <a
+                  href="https://twitter.com/xolosarmy"
+                  target="_blank"
+                  class="button"
+                  rel="noopener noreferrer"
+                >
+                  Sigue a xolosArmy en X
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
       </article>
     </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
   </body>
 </html>

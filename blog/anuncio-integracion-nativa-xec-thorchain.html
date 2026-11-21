@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Misión del Protocolo: eCash ingresa a THORChain | eCash México
@@ -53,349 +54,17 @@
       name="twitter:description"
       content="Anuncio estratégico de eCash México sobre el desarrollo de pasarelas de liquidez abiertas y soporte cross-chain nativo para el token XEC."
     />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
-    <style>
-      :root {
-        --bg: #05070c;
-        --bg-soft: #0b1220;
-        --card: rgba(13, 22, 38, 0.92);
-        --cyan: #00e5ff;
-        --cyan-soft: rgba(0, 229, 255, 0.18);
-        --gold: #f5c542;
-        --gold-soft: rgba(245, 197, 66, 0.16);
-        --text: #f4f7fb;
-        --muted: #a9b4c2;
-        --line: rgba(255, 255, 255, 0.12);
-        --danger: #ff6b6b;
-        --radius: 22px;
-        --shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
-        --max: 1080px;
-      }
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(0, 229, 255, 0.16),
-            transparent 34%
-          ),
-          radial-gradient(
-            circle at top right,
-            rgba(245, 197, 66, 0.12),
-            transparent 30%
-          ),
-          linear-gradient(180deg, #03050a 0%, #07101d 48%, #03050a 100%);
-        color: var(--text);
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        line-height: 1.7;
-      }
-
-      .article-wrap {
-        max-width: var(--max);
-        margin: 0 auto;
-        padding: 48px 20px 80px;
-      }
-
-      .hero {
-        position: relative;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: 32px;
-        padding: 56px 28px;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(0, 229, 255, 0.08),
-            rgba(245, 197, 66, 0.08)
-          ),
-          rgba(4, 9, 18, 0.88);
-        box-shadow: var(--shadow);
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: -2px;
-        background:
-          linear-gradient(
-            90deg,
-            transparent,
-            rgba(0, 229, 255, 0.28),
-            transparent
-          ),
-          linear-gradient(
-            180deg,
-            transparent,
-            rgba(245, 197, 66, 0.12),
-            transparent
-          );
-        opacity: 0.5;
-        pointer-events: none;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 880px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 22px;
-        padding: 8px 14px;
-        border: 1px solid rgba(0, 229, 255, 0.35);
-        border-radius: 999px;
-        background: rgba(0, 229, 255, 0.08);
-        color: var(--cyan);
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      .eyebrow span {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--cyan);
-        box-shadow: 0 0 18px var(--cyan);
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.2rem, 6vw, 5rem);
-        line-height: 0.98;
-        letter-spacing: -0.055em;
-        text-transform: uppercase;
-      }
-
-      .hero-subtitle {
-        max-width: 780px;
-        margin: 26px auto 0;
-        color: var(--muted);
-        font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-      }
-
-      .hero-subtitle strong {
-        color: var(--text);
-      }
-
-      .article-meta {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 30px;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .article-meta span {
-        padding: 7px 12px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.04);
-      }
-
-      .content-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 28px;
-        margin-top: 36px;
-      }
-
-      .article-card {
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--card);
-        box-shadow: var(--shadow);
-        padding: clamp(24px, 4vw, 44px);
-      }
-
-      .article-card h2 {
-        margin: 0 0 18px;
-        color: var(--text);
-        font-size: clamp(1.55rem, 3vw, 2.35rem);
-        line-height: 1.1;
-        letter-spacing: -0.035em;
-      }
-
-      .article-card h3 {
-        margin: 32px 0 12px;
-        color: var(--gold);
-        font-size: 1.25rem;
-        line-height: 1.25;
-      }
-
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        font-size: 1.06rem;
-      }
-
-      p strong {
-        color: var(--text);
-      }
-
-      .lead {
-        color: #d8e5f2;
-        font-size: clamp(1.12rem, 2.3vw, 1.35rem);
-        line-height: 1.65;
-      }
-
-      .quote-box {
-        margin: 32px 0;
-        padding: 28px;
-        border-left: 4px solid var(--cyan);
-        border-radius: 18px;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 229, 255, 0.11),
-          rgba(245, 197, 66, 0.06)
-        );
-        color: var(--text);
-        font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-        line-height: 1.45;
-        font-weight: 800;
-        letter-spacing: -0.025em;
-      }
-
-      .mission-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        margin: 26px 0 8px;
-        padding: 0;
-        list-style: none;
-      }
-
-      .mission-list li {
-        min-height: 100%;
-        padding: 18px;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--muted);
-      }
-
-      .mission-list strong {
-        display: block;
-        margin-bottom: 5px;
-        color: var(--cyan);
-        font-size: 0.92rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .split {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px;
-        margin: 32px 0;
-      }
-
-      .temple {
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        padding: 24px;
-        background: rgba(255, 255, 255, 0.035);
-      }
-
-      .temple h3 {
-        margin-top: 0;
-      }
-
-      .temple.culture h3 {
-        color: var(--gold);
-      }
-
-      .temple.infrastructure h3 {
-        color: var(--cyan);
-      }
-
-      .temple ul {
-        margin: 14px 0 0;
-        padding-left: 20px;
-        color: var(--muted);
-      }
-
-      .temple li {
-        margin-bottom: 8px;
-      }
-
-      .callout {
-        margin-top: 30px;
-        padding: 26px;
-        border: 1px solid rgba(245, 197, 66, 0.34);
-        border-radius: 22px;
-        background: var(--gold-soft);
-      }
-
-      .callout h2 {
-        color: var(--gold);
-      }
-
-      .signature {
-        margin-top: 38px;
-        padding-top: 28px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-      }
-
-      .signature strong {
-        display: block;
-        margin-top: 10px;
-        color: var(--text);
-        font-size: 1.1rem;
-      }
-
-      .footer-line {
-        max-width: 760px;
-        margin: 38px auto 0;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.98rem;
-      }
-
-      .footer-line strong {
-        color: var(--cyan);
-      }
-
-      @media (max-width: 760px) {
-        .article-wrap {
-          padding-top: 26px;
-        }
-
-        .hero {
-          padding: 40px 20px;
-          border-radius: 24px;
-        }
-
-        .mission-list,
-        .split {
-          grid-template-columns: 1fr;
-        }
-
-        .article-card {
-          border-radius: 20px;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -444,329 +113,372 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div>
+                <div class="eyebrow">Editorial Estratégico</div>
 
-  <body>
-    <main class="article-wrap">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="hero">
-        <div class="hero-content">
-          <div class="eyebrow"><span></span> Editorial Estratégico</div>
+                <h1>eCash México Acepta la Misión</h1>
 
-          <h1>eCash México Acepta la Misión</h1>
+                <p class="article-lead">
+                  La
+                  <strong
+                    >integración nativa de eCash (XEC) en THORChain</strong
+                  >
+                  ahora tiene un hogar definitivo: el pilar de infraestructura,
+                  educación y adopción de nuestro ecosistema.
+                </p>
 
-          <p class="hero-subtitle">
-            La
-            <strong>integración nativa de eCash (XEC) en THORChain</strong>
-            ahora tiene un hogar definitivo: el pilar de infraestructura,
-            educación y adopción de nuestro ecosistema.
-          </p>
+                <div class="article-meta">
+                  <span>Editorial eCash.mx</span>
+                  <span>Infraestructura XEC</span>
+                  <span>Tonalli Wallet</span>
+                  <span>THORChain</span>
+                </div>
+              </div>
+            </header>
 
-          <div class="article-meta">
-            <span>Editorial eCash.mx</span>
-            <span>Infraestructura XEC</span>
-            <span>Tonalli Wallet</span>
-            <span>THORChain</span>
+            <section>
+              <article>
+                <p class="article-lead">
+                  Todo ecosistema en crecimiento llega inevitablemente a un
+                  punto donde la claridad se vuelve más importante que la
+                  expansión. No todas las misiones pertenecen al mismo templo.
+                  No todos los mensajes deben dirigirse a la misma audiencia. Y
+                  no todos los símbolos deben cargar con el peso total de la
+                  infraestructura técnica.
+                </p>
+
+                <p>
+                  Por esta razón, hacemos una aclaración estratégica: la misión
+                  de llevar
+                  <strong>eCash (XEC) de forma nativa a THORChain</strong> se
+                  traslada formalmente bajo el cobijo de
+                  <strong>eCash México / ecash.mx</strong>.
+                </p>
+
+                <p>
+                  Esto no es un retroceso. No es una cancelación. No es una
+                  separación de la visión general. Es un acto necesario de
+                  organización soberana.
+                </p>
+
+                <div class="article-quote">
+                  Misma visión. Estructura más clara.
+                  <br />
+                  xolosArmy aporta el mito.
+                  <br />
+                  eCash México construye las vías.
+                  <br />
+                  Tonalli conecta ambos mundos.
+                </div>
+
+                <p>
+                  La integración de XEC en THORChain es una misión técnica,
+                  financiera y de infraestructura. Pertenece a un espacio
+                  dedicado a la educación, el trabajo de protocolo, las
+                  herramientas soberanas, las wallets, el financiamiento
+                  colectivo (crowdfunding), la experimentación on-chain y la
+                  liquidez cross-chain.
+                </p>
+
+                <p>Ese espacio es <strong>eCash México</strong>.</p>
+              </article>
+
+              <article>
+                <h2>Por qué esta misión le pertenece a eCash México</h2>
+
+                <p>
+                  El objetivo de eCash México es construir una capa pública
+                  educativa y de infraestructura alrededor de eCash en el mundo
+                  hispanohablante, aportando al mismo tiempo narrativas técnicas
+                  serias al ecosistema global de XEC.
+                </p>
+
+                <p>
+                  Esto incluye explicar, probar y promover las herramientas que
+                  hacen a eCash más útil en la vida real: wallets, protocolos de
+                  crowdfunding, mensajes on-chain, nodos públicos, rutas de
+                  liquidez e integraciones con redes más grandes de finanzas
+                  descentralizadas.
+                </p>
+
+                <ul class="mission-list">
+                  <li>
+                    <strong>THORChain</strong>
+                    Integración nativa de XEC para liquidez cross-chain sin
+                    depender de tokens envueltos o puentes custodiales.
+                  </li>
+                  <li>
+                    <strong>Tonalli Wallet</strong>
+                    Una experiencia de billetera de autocustodia diseñada para
+                    acercar XEC, RMZ y la identidad digital a los usuarios
+                    cotidianos.
+                  </li>
+                  <li>
+                    <strong>Teyolia</strong>
+                    Crowdfunding no custodial que utiliza eCash como capa de
+                    liquidación para el financiamiento comunitario transparente.
+                  </li>
+                  <li>
+                    <strong>Chronik</strong>
+                    Infraestructura pública, indexación, nodos y acceso a datos
+                    clave para builders y aplicaciones.
+                  </li>
+                  <li>
+                    <strong>OP_RETURN</strong>
+                    Mensajería on-chain, inscripciones culturales y nuevas
+                    primitivas de comunicación dentro de eCash.
+                  </li>
+                  <li>
+                    <strong>Educación</strong>
+                    Tutoriales, guías, material explicativo y adopción real para
+                    México y la comunidad global hispanohablante.
+                  </li>
+                </ul>
+
+                <p>
+                  Este es el lenguaje natural de eCash México: práctico,
+                  técnico, financiero, educativo y soberano.
+                </p>
+              </article>
+
+              <article>
+                <h2>¿Qué sucede con xolosArmy Network?</h2>
+
+                <p>
+                  xolosArmy Network no pierde importancia en esta
+                  reestructuración. De hecho, gana claridad.
+                </p>
+
+                <p>
+                  xolosArmy Network continuará desarrollándose como un Estado
+                  Red (Network State) cultural en torno al Xoloitzcuintle:
+                  linaje, mito, simbolismo, NFTs, identidad, memoria, arte y
+                  comunidad.
+                </p>
+
+                <p>
+                  Su propósito no es convertirse en un portal de noticias
+                  técnicas. Su propósito es darle alma a la cultura digital. El
+                  Xoloitzcuintle no es una simple mascota tecnológica; es un
+                  guía entre mundos.
+                </p>
+
+                <div class="article-cards">
+                  <div class="article-panel">
+                    <h3>xolosArmy Network</h3>
+                    <ul>
+                      <li>Cultura y simbolismo del Xoloitzcuintle</li>
+                      <li>Linaje e historias de Xolos Ramírez</li>
+                      <li>NFTs como códices digitales de la memoria</li>
+                      <li>Reflexiones sobre el Estado Red (Network State)</li>
+                      <li>Mito, ritual, arte y filosofía</li>
+                      <li>
+                        El Xolo como guía entre la memoria ancestral y la era
+                        digital
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="article-panel">
+                    <h3>eCash México</h3>
+                    <ul>
+                      <li>Infraestructura y adopción de XEC</li>
+                      <li>Desarrollo y educación de Tonalli Wallet</li>
+                      <li>Crowdfunding soberano con Teyolia</li>
+                      <li>Integración nativa con THORChain</li>
+                      <li>Nodos Chronik y endpoints públicos</li>
+                      <li>OP_RETURN y herramientas financieras soberanas</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p>
+                  Esta división protege ambas misiones. xolosArmy puede hablar
+                  en el idioma del mito, la cultura y la pertenencia. eCash
+                  México puede hablar en el idioma de los protocolos, las
+                  wallets, los nodos y la liquidez.
+                </p>
+              </article>
+
+              <article>
+                <h2>El Rol de Tonalli</h2>
+
+                <p>
+                  Tonalli se mantiene como el puente inquebrantable entre ambos
+                  mundos.
+                </p>
+
+                <p>
+                  Para xolosArmy Network, Tonalli representa energía,
+                  pertenencia e identidad cultural en forma digital. Es donde
+                  una persona puede recibir un NFT de linaje, custodiar RMZ,
+                  interactuar con activos simbólicos y ser parte de una memoria
+                  cultural mayor.
+                </p>
+
+                <p>
+                  Para eCash México, Tonalli es también una wallet práctica y
+                  una puerta de entrada para los usuarios hacia eCash. Se
+                  convierte en el lugar donde convergen la educación, los pagos
+                  rápidos, el crowdfunding, los mensajes, los NFTs y las
+                  herramientas digitales soberanas.
+                </p>
+
+                <p>
+                  Este rol dual no es una contradicción. Es la esencia misma del
+                  proyecto.
+                </p>
+
+                <div class="article-quote">
+                  Tonalli es el puente:
+                  <br />
+                  cultura de un lado,
+                  <br />
+                  infraestructura del otro,
+                  <br />
+                  soberanía en el centro.
+                </div>
+              </article>
+
+              <article>
+                <h2>Por qué THORChain es crucial para eCash</h2>
+
+                <p>
+                  eCash fue diseñado para ser rápido, accesible y útil como
+                  dinero electrónico. Pero para que XEC alcance una relevancia
+                  financiera más amplia, también necesita acceso a redes de
+                  liquidez más profundas, mejores experiencias de wallet y rutas
+                  más directas hacia los mercados descentralizados.
+                </p>
+
+                <p>
+                  Una integración nativa de XEC en THORChain es crucial porque
+                  apunta a algo muy específico: intercambios atómicos (swaps)
+                  cross-chain sin depender de tokens envueltos (wrapped tokens),
+                  puentes centralizados o pasarelas custodiales.
+                </p>
+
+                <p>
+                  En términos simples, la misión trata de darle a XEC una ruta
+                  robusta hacia la liquidez descentralizada. No como un activo
+                  sintético. No como una representación en otra red. Sino como
+                  eCash nativo.
+                </p>
+
+                <p>
+                  Por eso esta misión es seria. Y por eso merece un hogar
+                  enfocado.
+                </p>
+              </article>
+
+              <article>
+                <div class="article-callout">
+                  <h2>Declaración de la Misión</h2>
+
+                  <p>
+                    eCash México acepta la misión de convertirse en el hogar
+                    público para la integración nativa de XEC en THORChain, y
+                    para toda la infraestructura técnica que la rodea.
+                  </p>
+
+                  <p>
+                    Utilizaremos esta plataforma para documentar el progreso,
+                    explicar conceptos técnicos, educar a nuevos usuarios,
+                    publicar actualizaciones, respaldar el financiamiento
+                    comunitario a través de Teyolia, y conectar al público
+                    mexicano e hispanohablante con el ecosistema global de
+                    eCash.
+                  </p>
+
+                  <p>
+                    Nuestro objetivo es simple:
+                    <strong
+                      >hacer que eCash sea comprensible, útil y soberano para
+                      comunidades reales.</strong
+                    >
+                  </p>
+                </div>
+
+                <h3>Un Ecosistema más Claro</h3>
+
+                <p>
+                  A partir de este momento, eCash México llevará la misión
+                  técnica: Infraestructura XEC, Tonalli Wallet, Teyolia,
+                  THORChain, Chronik, OP_RETURN, educación y herramientas
+                  financieras soberanas.
+                </p>
+
+                <p>
+                  xolosArmy Network continuará llevando la misión cultural:
+                  linaje del Xoloitzcuintle, mito, NFTs, identidad de Estado
+                  Red, arte, simbolismo y memoria comunitaria.
+                </p>
+
+                <p>Esto no es fragmentación. Es arquitectura.</p>
+
+                <p>
+                  Un ecosistema fuerte necesita diferentes espacios para
+                  diferentes tipos de significado. El mito necesita un templo.
+                  La infraestructura necesita vías. El usuario necesita un
+                  puente.
+                </p>
+
+                <p>Ese puente es Tonalli.</p>
+
+                <div class="article-note">
+                  Arraigados en la cultura. Construidos para la soberanía.
+                  Abiertos al mundo.
+
+                  <strong>eCash México</strong>
+                  <span
+                    >Educación, infraestructura y adopción para el ecosistema
+                    eCash.</span
+                  >
+                </div>
+              </article>
+            </section>
+
+            <p>
+              <strong>Misma visión. Estructura más clara.</strong>
+              xolosArmy aporta el mito. eCash México construye las vías. Tonalli
+              conecta ambos mundos.
+            </p>
           </div>
         </div>
-      </header>
-
-      <section class="content-grid">
-        <article class="article-card">
-          <p class="lead">
-            Todo ecosistema en crecimiento llega inevitablemente a un punto
-            donde la claridad se vuelve más importante que la expansión. No
-            todas las misiones pertenecen al mismo templo. No todos los mensajes
-            deben dirigirse a la misma audiencia. Y no todos los símbolos deben
-            cargar con el peso total de la infraestructura técnica.
-          </p>
-
-          <p>
-            Por esta razón, hacemos una aclaración estratégica: la misión de
-            llevar <strong>eCash (XEC) de forma nativa a THORChain</strong> se
-            traslada formalmente bajo el cobijo de
-            <strong>eCash México / ecash.mx</strong>.
-          </p>
-
-          <p>
-            Esto no es un retroceso. No es una cancelación. No es una separación
-            de la visión general. Es un acto necesario de organización soberana.
-          </p>
-
-          <div class="quote-box">
-            Misma visión. Estructura más clara.
-            <br />
-            xolosArmy aporta el mito.
-            <br />
-            eCash México construye las vías.
-            <br />
-            Tonalli conecta ambos mundos.
-          </div>
-
-          <p>
-            La integración de XEC en THORChain es una misión técnica, financiera
-            y de infraestructura. Pertenece a un espacio dedicado a la
-            educación, el trabajo de protocolo, las herramientas soberanas, las
-            wallets, el financiamiento colectivo (crowdfunding), la
-            experimentación on-chain y la liquidez cross-chain.
-          </p>
-
-          <p>Ese espacio es <strong>eCash México</strong>.</p>
-        </article>
-
-        <article class="article-card">
-          <h2>Por qué esta misión le pertenece a eCash México</h2>
-
-          <p>
-            El objetivo de eCash México es construir una capa pública educativa
-            y de infraestructura alrededor de eCash en el mundo hispanohablante,
-            aportando al mismo tiempo narrativas técnicas serias al ecosistema
-            global de XEC.
-          </p>
-
-          <p>
-            Esto incluye explicar, probar y promover las herramientas que hacen
-            a eCash más útil en la vida real: wallets, protocolos de
-            crowdfunding, mensajes on-chain, nodos públicos, rutas de liquidez e
-            integraciones con redes más grandes de finanzas descentralizadas.
-          </p>
-
-          <ul class="mission-list">
-            <li>
-              <strong>THORChain</strong>
-              Integración nativa de XEC para liquidez cross-chain sin depender
-              de tokens envueltos o puentes custodiales.
-            </li>
-            <li>
-              <strong>Tonalli Wallet</strong>
-              Una experiencia de billetera de autocustodia diseñada para acercar
-              XEC, RMZ y la identidad digital a los usuarios cotidianos.
-            </li>
-            <li>
-              <strong>Teyolia</strong>
-              Crowdfunding no custodial que utiliza eCash como capa de
-              liquidación para el financiamiento comunitario transparente.
-            </li>
-            <li>
-              <strong>Chronik</strong>
-              Infraestructura pública, indexación, nodos y acceso a datos clave
-              para builders y aplicaciones.
-            </li>
-            <li>
-              <strong>OP_RETURN</strong>
-              Mensajería on-chain, inscripciones culturales y nuevas primitivas
-              de comunicación dentro de eCash.
-            </li>
-            <li>
-              <strong>Educación</strong>
-              Tutoriales, guías, material explicativo y adopción real para
-              México y la comunidad global hispanohablante.
-            </li>
-          </ul>
-
-          <p>
-            Este es el lenguaje natural de eCash México: práctico, técnico,
-            financiero, educativo y soberano.
-          </p>
-        </article>
-
-        <article class="article-card">
-          <h2>¿Qué sucede con xolosArmy Network?</h2>
-
-          <p>
-            xolosArmy Network no pierde importancia en esta reestructuración. De
-            hecho, gana claridad.
-          </p>
-
-          <p>
-            xolosArmy Network continuará desarrollándose como un Estado Red
-            (Network State) cultural en torno al Xoloitzcuintle: linaje, mito,
-            simbolismo, NFTs, identidad, memoria, arte y comunidad.
-          </p>
-
-          <p>
-            Su propósito no es convertirse en un portal de noticias técnicas. Su
-            propósito es darle alma a la cultura digital. El Xoloitzcuintle no
-            es una simple mascota tecnológica; es un guía entre mundos.
-          </p>
-
-          <div class="split">
-            <div class="temple culture">
-              <h3>xolosArmy Network</h3>
-              <ul>
-                <li>Cultura y simbolismo del Xoloitzcuintle</li>
-                <li>Linaje e historias de Xolos Ramírez</li>
-                <li>NFTs como códices digitales de la memoria</li>
-                <li>Reflexiones sobre el Estado Red (Network State)</li>
-                <li>Mito, ritual, arte y filosofía</li>
-                <li>
-                  El Xolo como guía entre la memoria ancestral y la era digital
-                </li>
-              </ul>
-            </div>
-
-            <div class="temple infrastructure">
-              <h3>eCash México</h3>
-              <ul>
-                <li>Infraestructura y adopción de XEC</li>
-                <li>Desarrollo y educación de Tonalli Wallet</li>
-                <li>Crowdfunding soberano con Teyolia</li>
-                <li>Integración nativa con THORChain</li>
-                <li>Nodos Chronik y endpoints públicos</li>
-                <li>OP_RETURN y herramientas financieras soberanas</li>
-              </ul>
-            </div>
-          </div>
-
-          <p>
-            Esta división protege ambas misiones. xolosArmy puede hablar en el
-            idioma del mito, la cultura y la pertenencia. eCash México puede
-            hablar en el idioma de los protocolos, las wallets, los nodos y la
-            liquidez.
-          </p>
-        </article>
-
-        <article class="article-card">
-          <h2>El Rol de Tonalli</h2>
-
-          <p>
-            Tonalli se mantiene como el puente inquebrantable entre ambos
-            mundos.
-          </p>
-
-          <p>
-            Para xolosArmy Network, Tonalli representa energía, pertenencia e
-            identidad cultural en forma digital. Es donde una persona puede
-            recibir un NFT de linaje, custodiar RMZ, interactuar con activos
-            simbólicos y ser parte de una memoria cultural mayor.
-          </p>
-
-          <p>
-            Para eCash México, Tonalli es también una wallet práctica y una
-            puerta de entrada para los usuarios hacia eCash. Se convierte en el
-            lugar donde convergen la educación, los pagos rápidos, el
-            crowdfunding, los mensajes, los NFTs y las herramientas digitales
-            soberanas.
-          </p>
-
-          <p>
-            Este rol dual no es una contradicción. Es la esencia misma del
-            proyecto.
-          </p>
-
-          <div class="quote-box">
-            Tonalli es el puente:
-            <br />
-            cultura de un lado,
-            <br />
-            infraestructura del otro,
-            <br />
-            soberanía en el centro.
-          </div>
-        </article>
-
-        <article class="article-card">
-          <h2>Por qué THORChain es crucial para eCash</h2>
-
-          <p>
-            eCash fue diseñado para ser rápido, accesible y útil como dinero
-            electrónico. Pero para que XEC alcance una relevancia financiera más
-            amplia, también necesita acceso a redes de liquidez más profundas,
-            mejores experiencias de wallet y rutas más directas hacia los
-            mercados descentralizados.
-          </p>
-
-          <p>
-            Una integración nativa de XEC en THORChain es crucial porque apunta
-            a algo muy específico: intercambios atómicos (swaps) cross-chain sin
-            depender de tokens envueltos (wrapped tokens), puentes centralizados
-            o pasarelas custodiales.
-          </p>
-
-          <p>
-            En términos simples, la misión trata de darle a XEC una ruta robusta
-            hacia la liquidez descentralizada. No como un activo sintético. No
-            como una representación en otra red. Sino como eCash nativo.
-          </p>
-
-          <p>
-            Por eso esta misión es seria. Y por eso merece un hogar enfocado.
-          </p>
-        </article>
-
-        <article class="article-card">
-          <div class="callout">
-            <h2>Declaración de la Misión</h2>
-
-            <p>
-              eCash México acepta la misión de convertirse en el hogar público
-              para la integración nativa de XEC en THORChain, y para toda la
-              infraestructura técnica que la rodea.
-            </p>
-
-            <p>
-              Utilizaremos esta plataforma para documentar el progreso, explicar
-              conceptos técnicos, educar a nuevos usuarios, publicar
-              actualizaciones, respaldar el financiamiento comunitario a través
-              de Teyolia, y conectar al público mexicano e hispanohablante con
-              el ecosistema global de eCash.
-            </p>
-
-            <p>
-              Nuestro objetivo es simple:
-              <strong
-                >hacer que eCash sea comprensible, útil y soberano para
-                comunidades reales.</strong
-              >
-            </p>
-          </div>
-
-          <h3>Un Ecosistema más Claro</h3>
-
-          <p>
-            A partir de este momento, eCash México llevará la misión técnica:
-            Infraestructura XEC, Tonalli Wallet, Teyolia, THORChain, Chronik,
-            OP_RETURN, educación y herramientas financieras soberanas.
-          </p>
-
-          <p>
-            xolosArmy Network continuará llevando la misión cultural: linaje del
-            Xoloitzcuintle, mito, NFTs, identidad de Estado Red, arte,
-            simbolismo y memoria comunitaria.
-          </p>
-
-          <p>Esto no es fragmentación. Es arquitectura.</p>
-
-          <p>
-            Un ecosistema fuerte necesita diferentes espacios para diferentes
-            tipos de significado. El mito necesita un templo. La infraestructura
-            necesita vías. El usuario necesita un puente.
-          </p>
-
-          <p>Ese puente es Tonalli.</p>
-
-          <div class="signature">
-            Arraigados en la cultura. Construidos para la soberanía. Abiertos al
-            mundo.
-
-            <strong>eCash México</strong>
-            <span
-              >Educación, infraestructura y adopción para el ecosistema
-              eCash.</span
-            >
-          </div>
-        </article>
-      </section>
-
-      <p class="footer-line">
-        <strong>Misma visión. Estructura más clara.</strong>
-        xolosArmy aporta el mito. eCash México construye las vías. Tonalli
-        conecta ambos mundos.
-      </p>
+      </article>
     </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
   </body>
 </html>

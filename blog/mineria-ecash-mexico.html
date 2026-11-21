@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minería Soberana y Membresías RMZ - Fase 1 | eCash México</title>
     <meta
@@ -52,55 +53,16 @@
       content="Dashboard técnico e interactivo de minería en eCash México. Verificación de identidad con Tonalli, membresía on-chain RMZ mediante endpoints Chronik."
     />
 
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
-
-    <!-- Chosen Palette: Warm Neutrals with Amber/Copper Accents (stone-50 background, stone-800 text, amber-600 accents for a mining/tech feel) -->
-    <!-- Application Structure Plan: Dashboard layout with side navigation. Divided into 4 thematic sections: 1. Arquitectura (Executive summary & interactive architecture flow), 2. Evolución (The 7 prototypes timeline), 3. Economía RMZ (Business model chart), 4. Roadmap (Next actions and production prep). This structure converts a linear report into an explorable command center, allowing stakeholders to easily grasp the technical achievement, the journey, the economics, and the future plan. -->
-    <!-- Visualization & Content Choices: 1. Architecture Flow: Interactive HTML/Tailwind flex layout. Goal: Inform/Organize. Justification: Clearly separates control and data planes without needing external libraries. 2. Evolución: Interactive timeline (HTML/JS). Goal: Organize. Justification: Shows progression and reveals technical JSON proofs on click. 3. Economía: Chart.js Bar chart. Goal: Compare. Justification: Best for comparing categorical tier requirements. 4. Roadmap: Interactive grid cards. Goal: Organize/Inform. Justification: Makes next steps readable and task-oriented. NO SVG/Mermaid used. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .chart-container {
-        position: relative;
-        width: 100%;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50vh;
-        max-height: 400px;
-      }
-      @media (min-width: 768px) {
-        .chart-container {
-          height: 60vh;
-          max-height: 500px;
-        }
-      }
-      .hide-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-      .hide-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      .nav-active {
-        background-color: #fef3c7;
-        color: #d97706;
-        border-right: 4px solid #d97706;
-      }
-      .arch-node:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        border-color: #d97706;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/network.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -149,406 +111,316 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="bg-stone-50 text-stone-800 overflow-hidden">
-    <div class="flex h-screen w-full">
-      <aside
-        class="w-64 bg-white border-r border-stone-200 flex flex-col justify-between shadow-sm hidden md:flex z-10"
-      >
-        <div>
-          <div class="p-6 border-b border-stone-200">
-            <p class="text-xl font-bold text-stone-900 leading-tight">
-              eCash México
-            </p>
-            <p
-              class="text-xs text-amber-600 font-semibold mt-1 uppercase tracking-wider"
-            >
-              Phase 1 Dashboard
-            </p>
-          </div>
-          <nav class="mt-6 flex flex-col" id="desktop-nav">
-            <button
-              data-target="view-arquitectura"
-              class="nav-btn w-full text-left px-6 py-3 text-sm font-medium text-stone-600 hover:bg-stone-50 hover:text-amber-600 transition-colors nav-active"
-            >
-              <span class="mr-2">⚙️</span> Arquitectura Base
-            </button>
-            <button
-              data-target="view-prototipos"
-              class="nav-btn w-full text-left px-6 py-3 text-sm font-medium text-stone-600 hover:bg-stone-50 hover:text-amber-600 transition-colors"
-            >
-              <span class="mr-2">🚀</span> Evolución (Prototipos)
-            </button>
-            <button
-              data-target="view-economia"
-              class="nav-btn w-full text-left px-6 py-3 text-sm font-medium text-stone-600 hover:bg-stone-50 hover:text-amber-600 transition-colors"
-            >
-              <span class="mr-2">📊</span> Economía RMZ
-            </button>
-            <button
-              data-target="view-roadmap"
-              class="nav-btn w-full text-left px-6 py-3 text-sm font-medium text-stone-600 hover:bg-stone-50 hover:text-amber-600 transition-colors"
-            >
-              <span class="mr-2">🗺️</span> Roadmap & Producción
-            </button>
-          </nav>
-        </div>
-        <div class="p-6 bg-stone-100 border-t border-stone-200">
-          <p class="text-xs text-stone-500">
-            Status:
-            <span class="font-bold text-green-600">Prototipo Demostrado</span>
-          </p>
-        </div>
-      </aside>
-
-      <div class="flex-1 flex flex-col h-screen overflow-hidden relative">
-        <header
-          class="md:hidden bg-white border-b border-stone-200 p-4 flex justify-between items-center z-20 shadow-sm"
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-          <div>
-            <p class="text-lg font-bold text-stone-900">eCash México</p>
-            <p class="text-[10px] text-amber-600 font-semibold uppercase">
-              Phase 1
-            </p>
-          </div>
-          <select
-            id="mobile-nav"
-            class="bg-stone-100 border border-stone-300 text-stone-800 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block p-2"
-          >
-            <option value="view-arquitectura">⚙️ Arquitectura</option>
-            <option value="view-prototipos">🚀 Evolución</option>
-            <option value="view-economia">📊 Economía RMZ</option>
-            <option value="view-roadmap">🗺️ Roadmap</option>
-          </select>
-        </header>
-
-        <main class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12 hide-scrollbar">
-          <nav class="reading-path" aria-label="Ruta de lectura">
-            <a href="/">eCash México</a><span aria-hidden="true">/</span
-            ><a href="/blog/">Blog</a>
-          </nav>
-          <h1 class="text-3xl font-bold text-stone-900 my-6">
-            Minería eCash en México
-          </h1>
-          <section
-            id="view-arquitectura"
-            class="view-section block animate-fade-in"
-          >
-            <div class="max-w-5xl mx-auto">
-              <div class="mb-8">
-                <h2 class="text-3xl font-bold text-stone-900 mb-2">
-                  Arquitectura Soberana Funcional
-                </h2>
-                <p class="text-stone-600 text-lg leading-relaxed">
-                  Esta sección presenta el núcleo del logro de la Fase 1. El
-                  objetivo aquí es demostrar el flujo técnico comprobado donde
-                  la membresía minera se controla desde un "Plano de Control"
-                  inteligente, sin recargar el "Plano de Datos" de minería.
-                  Interactúa con los nodos del diagrama para entender el ciclo
-                  de vida de la sesión minera.
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell article-shell-wide">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div class="article-dashboard">
+            <aside class="article-side">
+              <div>
+                <div>
+                  <p>eCash México</p>
+                  <p>Phase 1 Dashboard</p>
+                </div>
+                <nav id="desktop-nav">
+                  <button
+                    data-target="view-arquitectura"
+                    class="nav-btn nav-active"
+                  >
+                    <span>⚙️</span> Arquitectura Base
+                  </button>
+                  <button data-target="view-prototipos" class="nav-btn">
+                    <span>🚀</span> Evolución (Prototipos)
+                  </button>
+                  <button data-target="view-economia" class="nav-btn">
+                    <span>📊</span> Economía RMZ
+                  </button>
+                  <button data-target="view-roadmap" class="nav-btn">
+                    <span>🗺️</span> Roadmap & Producción
+                  </button>
+                </nav>
+              </div>
+              <div>
+                <p>
+                  Status:
+                  <span>Prototipo Demostrado</span>
                 </p>
               </div>
+            </aside>
 
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8"
-              >
-                <h3 class="text-xl font-bold mb-6 text-center text-stone-800">
-                  Flujo de Autorización y Revocación (Interactivo)
-                </h3>
-
-                <div
-                  class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2 mb-8"
-                >
-                  <div
-                    class="arch-node w-full md:w-40 p-4 bg-stone-50 border-2 border-stone-200 rounded-lg text-center cursor-pointer transition-all duration-300"
-                    data-info="Identidad digital del minero. Firma un 'Canonical Challenge' para solicitar acceso."
-                  >
-                    <div class="text-2xl mb-2">👛</div>
-                    <div class="font-bold text-sm text-stone-800">
-                      Tonalli Wallet
-                    </div>
-                    <div class="text-[10px] text-stone-500 mt-1">Identidad</div>
-                  </div>
-
-                  <div class="hidden md:block text-stone-400 font-bold">→</div>
-                  <div class="md:hidden text-stone-400 font-bold">↓</div>
-
-                  <div
-                    class="arch-node w-full md:w-40 p-4 bg-amber-50 border-2 border-amber-200 rounded-lg text-center cursor-pointer transition-all duration-300"
-                    data-info="El backend central. Verifica la firma, consulta la blockchain y emite un Session Token (JWT)."
-                  >
-                    <div class="text-2xl mb-2">🛡️</div>
-                    <div class="font-bold text-sm text-amber-900">
-                      Membership Gateway
-                    </div>
-                    <div class="text-[10px] text-amber-700 mt-1">
-                      Plano de Control
-                    </div>
-                  </div>
-
-                  <div class="hidden md:block text-stone-400 font-bold">↔</div>
-                  <div class="md:hidden text-stone-400 font-bold">↕</div>
-
-                  <div class="flex flex-col gap-2 w-full md:w-40">
-                    <div
-                      class="arch-node p-3 bg-blue-50 border-2 border-blue-200 rounded-lg text-center cursor-pointer transition-all duration-300"
-                      data-info="Infraestructura propia (chronik.xolosarmy.xyz). Verifica on-chain si la wallet tiene los tokens RMZ requeridos."
-                    >
-                      <div class="text-xl mb-1">🔗</div>
-                      <div class="font-bold text-xs text-blue-900">
-                        Chronik xolosArmy
-                      </div>
-                      <div class="text-[10px] text-blue-700">
-                        Verificación On-chain
-                      </div>
-                    </div>
-                    <div
-                      class="arch-node p-3 bg-red-50 border-2 border-red-200 rounded-lg text-center cursor-pointer transition-all duration-300"
-                      data-info="Caché compartido. Guarda los tokens revocados. Conecta el Gateway con el Stratum."
-                    >
-                      <div class="text-xl mb-1">🗄️</div>
-                      <div class="font-bold text-xs text-red-900">
-                        Redis Cache
-                      </div>
-                      <div class="text-[10px] text-red-700">Revocación</div>
-                    </div>
-                  </div>
-
-                  <div class="hidden md:block text-stone-400 font-bold">↔</div>
-                  <div class="md:hidden text-stone-400 font-bold">↕</div>
-
-                  <div
-                    class="arch-node w-full md:w-40 p-4 bg-stone-800 border-2 border-stone-900 rounded-lg text-center cursor-pointer transition-all duration-300"
-                    data-info="Servidor TCP (Mock actual). Recibe el worker y password (Session Token). Consulta Redis y autoriza o rechaza (mining.authorize)."
-                  >
-                    <div class="text-2xl mb-2">⛏️</div>
-                    <div class="font-bold text-sm text-white">
-                      Stratum Gateway
-                    </div>
-                    <div class="text-[10px] text-stone-300 mt-1">
-                      Plano de Datos
-                    </div>
-                  </div>
+            <div>
+              <header class="article-mobile-switch">
+                <div>
+                  <p>eCash México</p>
+                  <p>Phase 1</p>
                 </div>
+                <select id="mobile-nav">
+                  <option value="view-arquitectura">⚙️ Arquitectura</option>
+                  <option value="view-prototipos">🚀 Evolución</option>
+                  <option value="view-economia">📊 Economía RMZ</option>
+                  <option value="view-roadmap">🗺️ Roadmap</option>
+                </select>
+              </header>
 
-                <div
-                  class="bg-stone-100 p-4 rounded-lg min-h-[100px] flex items-center justify-center border border-stone-200"
-                >
-                  <p
-                    id="arch-info-text"
-                    class="text-center text-stone-600 font-medium"
-                  >
-                    Pasa el cursor sobre los componentes del diagrama para ver
-                    su función.
-                  </p>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div
-                  class="bg-white p-6 rounded-xl shadow-sm border border-green-200 border-l-4 border-l-green-500"
-                >
-                  <h4 class="font-bold text-green-800 mb-2">
-                    El Gran Logro (Tesis Comprobada)
-                  </h4>
-                  <p class="text-sm text-stone-600">
-                    El prototipo demuestra que se puede emitir una credencial
-                    minera condicionada a la verificación de identidad
-                    (Tonalli), membresía (RMZ) y estado on-chain (Chronik),
-                    permitiendo a Stratum aceptar o rechazar un worker sin
-                    necesidad de consultar la blockchain en el "hot path" (ruta
-                    crítica de procesamiento).
-                  </p>
-                </div>
-                <div
-                  class="bg-white p-6 rounded-xl shadow-sm border border-stone-200"
-                >
-                  <h4 class="font-bold text-stone-800 mb-2">
-                    Reglas de Negocio Clave
-                  </h4>
-                  <ul class="text-sm text-stone-600 space-y-2">
-                    <li>
-                      <span class="font-bold text-green-600"
-                        >✓ Token Válido:</span
-                      >
-                      <code class="bg-stone-100 px-1 rounded"
-                        >mining.authorize = true</code
-                      >
-                    </li>
-                    <li>
-                      <span class="font-bold text-red-600"
-                        >✗ Token Revocado:</span
-                      >
-                      <code class="bg-stone-100 px-1 rounded"
-                        >mining.authorize = false</code
-                      >
-                    </li>
-                    <li>
-                      <span class="font-bold text-amber-600">⚠ Sin RMZ:</span>
-                      Acceso denegado en el Gateway.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section
-            id="view-prototipos"
-            class="view-section hidden animate-fade-in"
-          >
-            <div class="max-w-5xl mx-auto">
-              <div class="mb-8">
-                <h2 class="text-3xl font-bold text-stone-900 mb-2">
-                  Evolución: Los 7 Prototipos
-                </h2>
-                <p class="text-stone-600 text-lg leading-relaxed">
-                  Esta sección documenta el paso a paso de la construcción del
-                  sistema. Cada prototipo representó un hito técnico crucial.
-                  Selecciona un prototipo en la lista para explorar qué problema
-                  resolvió, qué implementó y ver las pruebas de salida JSON que
-                  confirmaron su funcionamiento.
-                </p>
-              </div>
-
-              <div class="flex flex-col lg:flex-row gap-8">
-                <div class="w-full lg:w-1/3">
-                  <div
-                    class="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden"
-                    id="prototype-list"
-                  ></div>
-                </div>
-                <div class="w-full lg:w-2/3">
-                  <div
-                    class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 sticky top-4 h-auto min-h-[400px]"
-                    id="prototype-details"
-                  >
-                    <div
-                      class="flex flex-col items-center justify-center h-full text-stone-400"
-                    >
-                      <div class="text-4xl mb-4">👈</div>
-                      <p class="text-lg">
-                        Selecciona un prototipo para ver los detalles
+              <div>
+                <h1>Minería eCash en México</h1>
+                <section id="view-arquitectura" class="view-section">
+                  <div>
+                    <div>
+                      <h2>Arquitectura Soberana Funcional</h2>
+                      <p>
+                        Esta sección presenta el núcleo del logro de la Fase 1.
+                        El objetivo aquí es demostrar el flujo técnico
+                        comprobado donde la membresía minera se controla desde
+                        un "Plano de Control" inteligente, sin recargar el
+                        "Plano de Datos" de minería. Interactúa con los nodos
+                        del diagrama para entender el ciclo de vida de la sesión
+                        minera.
                       </p>
                     </div>
+
+                    <div>
+                      <h3>Flujo de Autorización y Revocación (Interactivo)</h3>
+
+                      <div class="article-flow">
+                        <div
+                          data-info="Identidad digital del minero. Firma un 'Canonical Challenge' para solicitar acceso."
+                          class="arch-node"
+                        >
+                          <div>👛</div>
+                          <div>Tonalli Wallet</div>
+                          <div>Identidad</div>
+                        </div>
+
+                        <div>→</div>
+                        <div>↓</div>
+
+                        <div
+                          data-info="El backend central. Verifica la firma, consulta la blockchain y emite un Session Token (JWT)."
+                          class="arch-node"
+                        >
+                          <div>🛡️</div>
+                          <div>Membership Gateway</div>
+                          <div>Plano de Control</div>
+                        </div>
+
+                        <div>↔</div>
+                        <div>↕</div>
+
+                        <div class="article-flow">
+                          <div
+                            data-info="Infraestructura propia (chronik.xolosarmy.xyz). Verifica on-chain si la wallet tiene los tokens RMZ requeridos."
+                            class="arch-node"
+                          >
+                            <div>🔗</div>
+                            <div>Chronik xolosArmy</div>
+                            <div>Verificación On-chain</div>
+                          </div>
+                          <div
+                            data-info="Caché compartido. Guarda los tokens revocados. Conecta el Gateway con el Stratum."
+                            class="arch-node"
+                          >
+                            <div>🗄️</div>
+                            <div>Redis Cache</div>
+                            <div>Revocación</div>
+                          </div>
+                        </div>
+
+                        <div>↔</div>
+                        <div>↕</div>
+
+                        <div
+                          data-info="Servidor TCP (Mock actual). Recibe el worker y password (Session Token). Consulta Redis y autoriza o rechaza (mining.authorize)."
+                          class="arch-node"
+                        >
+                          <div>⛏️</div>
+                          <div>Stratum Gateway</div>
+                          <div>Plano de Datos</div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <p id="arch-info-text">
+                          Pasa el cursor sobre los componentes del diagrama para
+                          ver su función.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <h4>El Gran Logro (Tesis Comprobada)</h4>
+                        <p>
+                          El prototipo demuestra que se puede emitir una
+                          credencial minera condicionada a la verificación de
+                          identidad (Tonalli), membresía (RMZ) y estado on-chain
+                          (Chronik), permitiendo a Stratum aceptar o rechazar un
+                          worker sin necesidad de consultar la blockchain en el
+                          "hot path" (ruta crítica de procesamiento).
+                        </p>
+                      </div>
+                      <div>
+                        <h4>Reglas de Negocio Clave</h4>
+                        <ul>
+                          <li>
+                            <span>✓ Token Válido:</span>
+                            <code>mining.authorize = true</code>
+                          </li>
+                          <li>
+                            <span>✗ Token Revocado:</span>
+                            <code>mining.authorize = false</code>
+                          </li>
+                          <li>
+                            <span>⚠ Sin RMZ:</span>
+                            Acceso denegado en el Gateway.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
+                </section>
 
-          <section
-            id="view-economia"
-            class="view-section hidden animate-fade-in"
-          >
-            <div class="max-w-5xl mx-auto">
-              <div class="mb-8">
-                <h2 class="text-3xl font-bold text-stone-900 mb-2">
-                  Economía y Membresía (RMZ)
-                </h2>
-                <p class="text-stone-600 text-lg leading-relaxed">
-                  El pivote más importante del proyecto: RMZ pasó de ser
-                  opcional a ser la membresía obligatoria. Esta sección
-                  visualiza los niveles de membresía propuestos. RMZ no es
-                  simbólico; financia servidores, nodo Chronik, mantenimiento y
-                  desarrollo.
-                </p>
-              </div>
+                <section id="view-prototipos" class="view-section">
+                  <div>
+                    <div>
+                      <h2>Evolución: Los 7 Prototipos</h2>
+                      <p>
+                        Esta sección documenta el paso a paso de la construcción
+                        del sistema. Cada prototipo representó un hito técnico
+                        crucial. Selecciona un prototipo en la lista para
+                        explorar qué problema resolvió, qué implementó y ver las
+                        pruebas de salida JSON que confirmaron su
+                        funcionamiento.
+                      </p>
+                    </div>
 
-              <div
-                class="bg-white p-6 rounded-xl shadow-sm border border-stone-200 mb-8"
-              >
-                <h3 class="text-xl font-bold mb-4 text-stone-800 text-center">
-                  Tiers de Membresía (RMZ requeridos)
-                </h3>
-                <div class="chart-container">
-                  <canvas id="rmzChart"></canvas>
-                </div>
-                <div class="mt-6 text-center text-sm text-stone-500">
-                  <p>Conversión técnica: 1 RMZ = 10,000 atoms.</p>
-                  <p>
-                    Mínimo producción inicial propuesto: 2,500 RMZ (25,000,000
-                    atoms).
-                  </p>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-stone-800 text-white p-6 rounded-xl shadow-sm">
-                  <h4 class="font-bold text-amber-400 mb-2">
-                    ¿Por qué este modelo?
-                  </h4>
-                  <p class="text-sm text-stone-300">
-                    Al exigir RMZ retenido (verificado vía Chronik), la
-                    comunidad xolosArmy asegura un flujo de valor real para
-                    sostener la infraestructura. La wallet de Tonalli actúa como
-                    la llave de acceso, mientras que los RMZ en esa wallet
-                    actúan como el saldo de membresía.
-                  </p>
-                </div>
-                <div
-                  class="bg-amber-50 p-6 rounded-xl border border-amber-200 shadow-sm"
-                >
-                  <h4 class="font-bold text-amber-900 mb-2">
-                    Token Oficial Xolos RMZ
-                  </h4>
-                  <div
-                    class="bg-white p-3 rounded border border-amber-100 text-xs text-stone-600 break-all font-mono mb-2"
-                  >
-                    c923bd0f09c630c5e9980cf518c8d34b6353802a3cb7c3f34fa7cc85c9305908
+                    <div>
+                      <div>
+                        <div id="prototype-list"></div>
+                      </div>
+                      <div>
+                        <div id="prototype-details">
+                          <div>
+                            <div>👈</div>
+                            <p>Selecciona un prototipo para ver los detalles</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <p class="text-sm text-amber-800">
-                    Este ID es validado directamente on-chain por nuestro nodo
-                    propio: <br /><code>chronik.xolosarmy.xyz</code>
-                  </p>
-                </div>
+                </section>
+
+                <section id="view-economia" class="view-section">
+                  <div>
+                    <div>
+                      <h2>Economía y Membresía (RMZ)</h2>
+                      <p>
+                        El pivote más importante del proyecto: RMZ pasó de ser
+                        opcional a ser la membresía obligatoria. Esta sección
+                        visualiza los niveles de membresía propuestos. RMZ no es
+                        simbólico; financia servidores, nodo Chronik,
+                        mantenimiento y desarrollo.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3>Tiers de Membresía (RMZ requeridos)</h3>
+                      <div class="chart-container">
+                        <canvas id="rmzChart"></canvas>
+                      </div>
+                      <div>
+                        <p>Conversión técnica: 1 RMZ = 10,000 atoms.</p>
+                        <p>
+                          Mínimo producción inicial propuesto: 2,500 RMZ
+                          (25,000,000 atoms).
+                        </p>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <h4>¿Por qué este modelo?</h4>
+                        <p>
+                          Al exigir RMZ retenido (verificado vía Chronik), la
+                          comunidad xolosArmy asegura un flujo de valor real
+                          para sostener la infraestructura. La wallet de Tonalli
+                          actúa como la llave de acceso, mientras que los RMZ en
+                          esa wallet actúan como el saldo de membresía.
+                        </p>
+                      </div>
+                      <div>
+                        <h4>Token Oficial Xolos RMZ</h4>
+                        <div>
+                          c923bd0f09c630c5e9980cf518c8d34b6353802a3cb7c3f34fa7cc85c9305908
+                        </div>
+                        <p>
+                          Este ID es validado directamente on-chain por nuestro
+                          nodo propio: <br /><code>chronik.xolosarmy.xyz</code>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section id="view-roadmap" class="view-section">
+                  <div>
+                    <div>
+                      <h2>Roadmap & Preparación para Producción</h2>
+                      <p>
+                        Con la arquitectura base demostrada, el proyecto entra
+                        en fase de consolidación y preparación para el mundo
+                        real. Esta sección organiza las tareas inmediatas para
+                        la campaña y los hitos técnicos necesarios antes del
+                        lanzamiento en producción.
+                      </p>
+                    </div>
+
+                    <div>
+                      <div>
+                        <h3>Acciones Inmediatas (Campaña Teyolia)</h3>
+                        <div id="immediate-tasks"></div>
+                      </div>
+
+                      <div>
+                        <h3>Hitos Hacia Producción Real</h3>
+                        <div id="prod-tasks"></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
             </div>
-          </section>
-
-          <section
-            id="view-roadmap"
-            class="view-section hidden animate-fade-in"
-          >
-            <div class="max-w-5xl mx-auto">
-              <div class="mb-8">
-                <h2 class="text-3xl font-bold text-stone-900 mb-2">
-                  Roadmap & Preparación para Producción
-                </h2>
-                <p class="text-stone-600 text-lg leading-relaxed">
-                  Con la arquitectura base demostrada, el proyecto entra en fase
-                  de consolidación y preparación para el mundo real. Esta
-                  sección organiza las tareas inmediatas para la campaña y los
-                  hitos técnicos necesarios antes del lanzamiento en producción.
-                </p>
-              </div>
-
-              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <h3
-                    class="text-xl font-bold mb-4 text-stone-800 border-b pb-2"
-                  >
-                    Acciones Inmediatas (Campaña Teyolia)
-                  </h3>
-                  <div class="space-y-3" id="immediate-tasks"></div>
-                </div>
-
-                <div>
-                  <h3
-                    class="text-xl font-bold mb-4 text-stone-800 border-b pb-2"
-                  >
-                    Hitos Hacia Producción Real
-                  </h3>
-                  <div class="space-y-4" id="prod-tasks"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
       </div>
-    </div>
-
+    </footer>
     <script>
       const dataPrototypes = [
         {
@@ -689,6 +561,7 @@
         mobileSelect.addEventListener("change", (e) => {
           switchView(e.target.value);
         });
+        switchView(state.activeView);
       }
 
       function initArchitectureHover() {
@@ -716,7 +589,7 @@
 
         dataPrototypes.forEach((proto, index) => {
           const item = document.createElement("div");
-          item.className = `p-4 border-b border-stone-200 cursor-pointer hover:bg-stone-50 transition-colors ${index === 0 ? "bg-stone-50" : ""}`;
+          item.className = `article-proto${index === 0 ? " is-selected" : ""}`;
           item.innerHTML = `
                     <div class="flex items-center gap-3">
                         <div class="text-2xl">${proto.icon}</div>
@@ -729,9 +602,9 @@
 
           item.addEventListener("click", () => {
             Array.from(listContainer.children).forEach((c) =>
-              c.classList.remove("bg-stone-50"),
+              c.classList.remove("is-selected"),
             );
-            item.classList.add("bg-stone-50");
+            item.classList.add("is-selected");
 
             const detailsContainer =
               document.getElementById("prototype-details");
@@ -819,9 +692,10 @@
               x: {
                 beginAtZero: true,
                 grid: {
-                  color: "#e5e7eb",
+                  color: "#29404e",
                 },
                 ticks: {
+                  color: "#a4b7c6",
                   callback: function (value) {
                     return value.toLocaleString();
                   },
@@ -832,6 +706,7 @@
                   display: false,
                 },
                 ticks: {
+                  color: "#a4b7c6",
                   font: {
                     weight: "bold",
                   },
@@ -846,8 +721,7 @@
         const immediateContainer = document.getElementById("immediate-tasks");
         dataImmediateTasks.forEach((task) => {
           const el = document.createElement("div");
-          el.className =
-            "flex items-start gap-3 p-3 bg-white rounded border border-stone-200 shadow-sm";
+          el.className = "article-task";
           const icon =
             task.status === "done"
               ? '<span class="text-green-500 mt-0.5">✅</span>'
@@ -862,7 +736,7 @@
         const prodContainer = document.getElementById("prod-tasks");
         dataProdTasks.forEach((cat) => {
           const card = document.createElement("div");
-          card.className = "bg-stone-50 border border-stone-200 rounded-lg p-4";
+          card.className = "article-panel";
 
           let itemsHtml = cat.items
             .map(
