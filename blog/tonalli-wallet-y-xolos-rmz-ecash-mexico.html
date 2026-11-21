@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecosistema eCash México: Tonalli Wallet y RMZ</title>
     <meta
@@ -51,119 +52,17 @@
       name="twitter:description"
       content="Descubre cómo Tonalli Wallet y el eToken Xolos RMZ fortalecen la autocustodia, la identidad cultural y el acceso soberano en eCash México."
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap");
-
-      :root {
-        --aztec-gold: #ffcc00;
-        --cypher-neon: #00abe7;
-        --deep-obsidian: #05070a;
-        --temple-blue: #001e62;
-        --emerald: #34d399;
-      }
-
-      body {
-        font-family: "Lexend", sans-serif;
-        background-color: var(--deep-obsidian);
-        color: #e2e8f0;
-        overflow-x: hidden;
-      }
-
-      .space-mono {
-        font-family: "Space Mono", monospace;
-      }
-
-      /* Efectos visuales de ecash.mx */
-      .scanline {
-        width: 100%;
-        height: 100px;
-        z-index: 99;
-        background: linear-gradient(
-          0deg,
-          rgba(0, 171, 231, 0) 0%,
-          rgba(0, 171, 231, 0.1) 50%,
-          rgba(0, 171, 231, 0) 100%
-        );
-        opacity: 0.18;
-        position: fixed;
-        bottom: 100%;
-        pointer-events: none;
-        animation: scanline 8s linear infinite;
-      }
-
-      @keyframes scanline {
-        0% {
-          bottom: 100%;
-        }
-        100% {
-          bottom: -100%;
-        }
-      }
-
-      .aztec-grid {
-        background-image:
-          linear-gradient(rgba(0, 171, 231, 0.08) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0, 171, 231, 0.08) 1px, transparent 1px);
-        background-size: 64px 64px;
-        mask-image: radial-gradient(circle at center, black, transparent 72%);
-      }
-
-      .neon-border {
-        border: 1px solid rgba(0, 171, 231, 0.5);
-        box-shadow:
-          0 0 10px rgba(0, 171, 231, 0.3),
-          inset 0 0 10px rgba(0, 171, 231, 0.2);
-      }
-
-      .neon-border-gold {
-        border: 1px solid rgba(255, 204, 0, 0.45);
-        box-shadow:
-          0 0 18px rgba(255, 204, 0, 0.14),
-          inset 0 0 16px rgba(255, 204, 0, 0.08);
-      }
-
-      .neon-text-gold {
-        text-shadow: 0 0 16px rgba(255, 204, 0, 0.55);
-      }
-
-      .neon-text-cyan {
-        text-shadow: 0 0 18px rgba(0, 171, 231, 0.6);
-      }
-
-      .card-blur {
-        background: rgba(15, 23, 42, 0.62);
-        backdrop-filter: blur(14px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .chart-container {
-        position: relative;
-        width: 100%;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 350px;
-        max-height: 400px;
-      }
-      @media (min-width: 768px) {
-        .chart-container {
-          height: 400px;
-        }
-      }
-
-      .interactive-card {
-        transition: all 0.4s ease;
-      }
-      .interactive-card:hover {
-        transform: translateY(-5px);
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/network.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -212,329 +111,183 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="min-h-screen relative">
-    <div class="scanline" aria-hidden="true"></div>
-
-    <div
-      class="aztec-grid absolute inset-0 opacity-60 pointer-events-none fixed"
-      aria-hidden="true"
-    ></div>
-    <div
-      class="absolute top-0 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none fixed"
-      aria-hidden="true"
-    ></div>
-
-    <div class="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8 relative z-10">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="text-center mb-20 pt-10">
-        <div
-          class="inline-block px-4 py-1 border border-cyan-500/30 rounded-full bg-cyan-500/10 text-cyan-400 text-[10px] uppercase tracking-[0.3em] space-mono mb-6 animate-pulse"
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-          Iniciativa Comunitaria Soberana
-        </div>
-        <h1
-          class="text-4xl md:text-6xl font-extrabold text-white tracking-tighter mb-6 italic leading-tight"
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
         >
-          eCash México:<br />
-          <span class="text-[#00abe7] neon-text-cyan">Identidad</span> y
-          <span class="text-[#ffcc00] neon-text-gold">Autocustodia</span>
-        </h1>
-        <p
-          class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto italic leading-relaxed"
-        >
-          Explora cómo
-          <span class="font-bold text-[#00abe7]">Tonalli Wallet</span> y el
-          <span class="font-bold text-[#ffcc00]">eToken RMZ</span> funcionan de
-          manera complementaria como los pilares de la autocustodia, el acceso y
-          la identidad digital soberana en el ecosistema.
-        </p>
-      </header>
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell article-shell-wide">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div class="article-meta">Iniciativa Comunitaria Soberana</div>
+              <h1>
+                eCash México:<br />
+                <span>Identidad</span> y
+                <span>Autocustodia</span>
+              </h1>
+              <p class="article-lead">
+                Explora cómo
+                <span>Tonalli Wallet</span> y el
+                <span>eToken RMZ</span> funcionan de manera complementaria como
+                los pilares de la autocustodia, el acceso y la identidad digital
+                soberana en el ecosistema.
+              </p>
+            </header>
 
-      <section class="mb-28">
-        <div class="text-center mb-12">
-          <span
-            class="text-[#00abe7] font-bold text-xs uppercase tracking-[0.3em] space-mono"
-            >Ecosistema xolosArmy</span
-          >
-          <h2
-            class="text-3xl md:text-4xl font-bold text-white mb-4 italic mt-2"
-          >
-            Los Dos Pilares
-          </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto">
-            Selecciona cada componente a continuación para descubrir su rol
-            específico. Esta sección desglosa las funciones de la
-            infraestructura técnica frente al activo digital que actúa como
-            credencial.
-          </p>
-        </div>
+            <section>
+              <div>
+                <span>Ecosistema xolosArmy</span>
+                <h2>Los Dos Pilares</h2>
+                <p>
+                  Selecciona cada componente a continuación para descubrir su
+                  rol específico. Esta sección desglosa las funciones de la
+                  infraestructura técnica frente al activo digital que actúa
+                  como credencial.
+                </p>
+              </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-          <button
-            id="btn-tonalli"
-            class="interactive-card text-left p-8 rounded-2xl card-blur border border-white/10 transition-all hover:border-cyan-500/50 focus:outline-none"
-            onclick="selectPillar('tonalli')"
-          >
-            <div
-              class="text-[#00abe7] font-bold text-xs uppercase mb-4 tracking-tighter space-mono"
-            >
-              Infraestructura de Acceso
-            </div>
-            <div class="flex items-center justify-between mb-4">
-              <h3
-                class="text-2xl font-bold text-white group-hover:text-[#00abe7]"
-              >
-                Tonalli Wallet
-              </h3>
-              <i class="fas fa-wallet text-3xl text-[#00abe7]"></i>
-            </div>
-            <p class="text-gray-400 text-sm">
-              La Bóveda de Autocustodia y la puerta de entrada principal a la
-              red.
-            </p>
-          </button>
+              <div class="article-cards">
+                <button
+                  id="btn-tonalli"
+                  onclick="selectPillar('tonalli')"
+                  class="interactive-card"
+                >
+                  <div>Infraestructura de Acceso</div>
+                  <div>
+                    <h3>Tonalli Wallet</h3>
+                  </div>
+                  <p>
+                    La Bóveda de Autocustodia y la puerta de entrada principal a
+                    la red.
+                  </p>
+                </button>
 
-          <button
-            id="btn-rmz"
-            class="interactive-card text-left p-8 rounded-2xl card-blur border border-white/10 transition-all hover:border-[#ffcc00]/50 focus:outline-none"
-            onclick="selectPillar('rmz')"
-          >
-            <div
-              class="text-[#ffcc00] font-bold text-xs uppercase mb-4 tracking-tighter space-mono"
-            >
-              Capa Cultural
-            </div>
-            <div class="flex items-center justify-between mb-4">
-              <h3
-                class="text-2xl font-bold text-white group-hover:text-[#ffcc00]"
-              >
-                eToken Xolos RMZ
-              </h3>
-              <i class="fas fa-key text-3xl text-[#ffcc00]"></i>
-            </div>
-            <p class="text-gray-400 text-sm">
-              La Llave de Acceso, Identidad y Cultura Convertida en Utilidad
-              on-chain.
-            </p>
-          </button>
-        </div>
+                <button
+                  id="btn-rmz"
+                  onclick="selectPillar('rmz')"
+                  class="interactive-card"
+                >
+                  <div>Capa Cultural</div>
+                  <div>
+                    <h3>eToken Xolos RMZ</h3>
+                  </div>
+                  <p>
+                    La Llave de Acceso, Identidad y Cultura Convertida en
+                    Utilidad on-chain.
+                  </p>
+                </button>
+              </div>
 
-        <div
-          id="details-pane"
-          class="card-blur rounded-2xl p-8 md:p-12 shadow-2xl hidden opacity-0 transition-opacity duration-500 border"
-        >
-          <div class="flex flex-col md:flex-row gap-10 items-start">
-            <div class="w-full md:w-1/3 text-center md:text-left">
-              <div
-                id="detail-icon"
-                class="text-5xl mb-6 inline-flex items-center justify-center w-24 h-24 rounded-full border bg-black/40 shadow-inner"
-              ></div>
-              <h3
-                id="detail-title"
-                class="text-3xl font-bold mb-2 text-white italic"
-              ></h3>
-              <p
-                id="detail-subtitle"
-                class="text-sm font-bold uppercase tracking-widest space-mono mb-6"
-              ></p>
-            </div>
-            <div class="w-full md:w-2/3">
-              <ul id="detail-list" class="space-y-4"></ul>
-            </div>
+              <div id="details-pane" class="opacity-0">
+                <div>
+                  <div>
+                    <div id="detail-icon"></div>
+                    <h3 id="detail-title"></h3>
+                    <p id="detail-subtitle"></p>
+                  </div>
+                  <div>
+                    <ul id="detail-list"></ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="initial-prompt" class="article-callout">
+                <p>
+                  Selecciona un pilar arriba para explorar sus características.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <div>
+                <span>Protocolo de Verificación</span>
+                <h2>El Flujo "Token-Gated"</h2>
+                <p>
+                  Esta sección ilustra cómo la teoría se convierte en práctica.
+                  Observa el proceso técnico mediante el cual un usuario utiliza
+                  la infraestructura (<span>Tonalli</span>) para demostrar la
+                  posesión de la credencial (<span>RMZ</span>) y obtener acceso
+                  a un espacio comunitario.
+                </p>
+              </div>
+
+              <div>
+                <div>
+                  <h4>1. Interfaz</h4>
+                  <p>Usuario abre Tonalli Wallet.</p>
+                </div>
+
+                <div>
+                  <h4>2. Firma</h4>
+                  <p>Firma criptográfica de posesión RMZ.</p>
+                </div>
+
+                <div>
+                  <h4>3. Validación</h4>
+                  <p>Guardianía Bot usa @tonalli-core.</p>
+                </div>
+
+                <div>
+                  <h4>4. Acceso</h4>
+                  <p>Ingreso al grupo oficial y roles on-chain.</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div>
+                <span>Análisis Global</span>
+                <h2>Sinergia del Ecosistema</h2>
+                <p>
+                  El siguiente gráfico ilustra cómo Tonalli y RMZ se
+                  complementan. Mientras que la wallet maximiza la autocustodia
+                  y el onboarding, el token RMZ aporta los mecanismos de
+                  identidad y la cohesión comunitaria.
+                </p>
+              </div>
+
+              <div>
+                <div class="chart-container">
+                  <canvas id="synergyChart"></canvas>
+                </div>
+                <div>
+                  <span>Conclusión del Modelo:</span>
+                  "Mientras que RMZ actúa como la credencial o llave digital de
+                  pertenencia al ecosistema, Tonalli Wallet es la
+                  infraestructura que resguarda esa llave y permite al usuario
+                  ejercer su soberanía y validar su acceso a la red."
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-
-        <div
-          id="initial-prompt"
-          class="text-center p-12 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 border-dashed"
-        >
-          <i
-            class="fas fa-hand-pointer text-3xl text-gray-500 mb-4 animate-bounce"
-          ></i>
-          <p
-            class="text-gray-400 text-sm font-bold uppercase tracking-widest space-mono"
-          >
-            Selecciona un pilar arriba para explorar sus características.
-          </p>
-        </div>
-      </section>
-
-      <section
-        class="mb-28 card-blur rounded-3xl p-8 md:p-14 shadow-2xl relative overflow-hidden border-t border-white/10"
-      >
-        <div
-          class="absolute top-0 right-0 p-8 opacity-5 text-[#00abe7]"
-          aria-hidden="true"
-        >
-          <i class="fas fa-microchip text-9xl"></i>
-        </div>
-
-        <div class="relative z-10 mb-14 text-center md:text-left">
-          <span
-            class="text-emerald-400 font-bold text-xs uppercase tracking-[0.3em] space-mono"
-            >Protocolo de Verificación</span
-          >
-          <h2
-            class="text-3xl md:text-4xl font-bold text-white mb-4 italic mt-2"
-          >
-            El Flujo "Token-Gated"
-          </h2>
-          <p class="text-gray-400 max-w-3xl leading-relaxed">
-            Esta sección ilustra cómo la teoría se convierte en práctica.
-            Observa el proceso técnico mediante el cual un usuario utiliza la
-            infraestructura (<span class="text-[#00abe7]">Tonalli</span>) para
-            demostrar la posesión de la credencial (<span class="text-[#ffcc00]"
-              >RMZ</span
-            >) y obtener acceso a un espacio comunitario.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 relative px-4"
-        >
-          <div
-            class="hidden md:block absolute top-[40px] left-16 right-16 h-0.5 bg-gray-800 z-0"
-          ></div>
-
-          <div class="relative z-10 flex flex-col items-center group">
-            <div
-              class="w-20 h-20 bg-black/80 border border-[#00abe7]/50 rounded-full flex items-center justify-center text-2xl text-[#00abe7] mb-4 group-hover:scale-110 transition-all shadow-[0_0_15px_rgba(0,171,231,0.3)] group-hover:shadow-[0_0_25px_rgba(0,171,231,0.6)]"
-            >
-              <i class="fas fa-mobile-screen"></i>
-            </div>
-            <h4
-              class="font-bold text-white text-sm uppercase tracking-wider space-mono"
-            >
-              1. Interfaz
-            </h4>
-            <p class="text-xs text-gray-500 text-center mt-2 max-w-[120px]">
-              Usuario abre Tonalli Wallet.
-            </p>
-          </div>
-
-          <div class="text-gray-600 text-lg md:hidden">
-            <i class="fas fa-arrow-down"></i>
-          </div>
-          <div
-            class="hidden md:block text-gray-600 text-sm z-10 bg-[var(--deep-obsidian)] px-2"
-          >
-            <i class="fas fa-chevron-right"></i>
-          </div>
-
-          <div class="relative z-10 flex flex-col items-center group">
-            <div
-              class="w-20 h-20 bg-black/80 border border-[#ffcc00]/50 rounded-full flex items-center justify-center text-2xl text-[#ffcc00] mb-4 group-hover:scale-110 transition-all shadow-[0_0_15px_rgba(255,204,0,0.3)] group-hover:shadow-[0_0_25px_rgba(255,204,0,0.6)]"
-            >
-              <i class="fas fa-signature"></i>
-            </div>
-            <h4
-              class="font-bold text-white text-sm uppercase tracking-wider space-mono"
-            >
-              2. Firma
-            </h4>
-            <p class="text-xs text-gray-500 text-center mt-2 max-w-[120px]">
-              Firma criptográfica de posesión RMZ.
-            </p>
-          </div>
-
-          <div class="text-gray-600 text-lg md:hidden">
-            <i class="fas fa-arrow-down"></i>
-          </div>
-          <div
-            class="hidden md:block text-gray-600 text-sm z-10 bg-[var(--deep-obsidian)] px-2"
-          >
-            <i class="fas fa-chevron-right"></i>
-          </div>
-
-          <div class="relative z-10 flex flex-col items-center group">
-            <div
-              class="w-20 h-20 bg-black/80 border border-purple-500/50 rounded-full flex items-center justify-center text-2xl text-purple-400 mb-4 group-hover:scale-110 transition-all shadow-[0_0_15px_rgba(168,85,247,0.3)] group-hover:shadow-[0_0_25px_rgba(168,85,247,0.6)]"
-            >
-              <i class="fas fa-robot"></i>
-            </div>
-            <h4
-              class="font-bold text-white text-sm uppercase tracking-wider space-mono"
-            >
-              3. Validación
-            </h4>
-            <p class="text-xs text-gray-500 text-center mt-2 max-w-[120px]">
-              Guardianía Bot usa @tonalli-core.
-            </p>
-          </div>
-
-          <div class="text-gray-600 text-lg md:hidden">
-            <i class="fas fa-arrow-down"></i>
-          </div>
-          <div
-            class="hidden md:block text-gray-600 text-sm z-10 bg-[var(--deep-obsidian)] px-2"
-          >
-            <i class="fas fa-chevron-right"></i>
-          </div>
-
-          <div class="relative z-10 flex flex-col items-center group">
-            <div
-              class="w-20 h-20 bg-black/80 border border-emerald-500/50 rounded-full flex items-center justify-center text-2xl text-emerald-400 mb-4 group-hover:scale-110 transition-all shadow-[0_0_15px_rgba(52,211,153,0.3)] group-hover:shadow-[0_0_25px_rgba(52,211,153,0.6)]"
-            >
-              <i class="fas fa-check-circle"></i>
-            </div>
-            <h4
-              class="font-bold text-white text-sm uppercase tracking-wider space-mono"
-            >
-              4. Acceso
-            </h4>
-            <p class="text-xs text-gray-500 text-center mt-2 max-w-[120px]">
-              Ingreso al grupo oficial y roles on-chain.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-16">
-        <div class="text-center mb-12">
-          <span
-            class="text-purple-400 font-bold text-xs uppercase tracking-[0.3em] space-mono"
-            >Análisis Global</span
-          >
-          <h2
-            class="text-3xl md:text-4xl font-bold text-white mb-4 italic mt-2"
-          >
-            Sinergia del Ecosistema
-          </h2>
-          <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            El siguiente gráfico ilustra cómo Tonalli y RMZ se complementan.
-            Mientras que la wallet maximiza la autocustodia y el onboarding, el
-            token RMZ aporta los mecanismos de identidad y la cohesión
-            comunitaria.
-          </p>
-        </div>
-
-        <div
-          class="card-blur p-8 md:p-10 rounded-2xl border border-white/10 relative"
-        >
-          <div class="chart-container">
-            <canvas id="synergyChart"></canvas>
-          </div>
-          <div
-            class="text-center mt-8 text-xs text-gray-400 bg-black/40 border border-white/5 p-5 rounded-xl space-mono leading-relaxed max-w-4xl mx-auto"
-          >
-            <span
-              class="font-bold text-white block mb-2 uppercase tracking-widest"
-              >Conclusión del Modelo:</span
-            >
-            "Mientras que RMZ actúa como la credencial o llave digital de
-            pertenencia al ecosistema, Tonalli Wallet es la infraestructura que
-            resguarda esa llave y permite al usuario ejercer su soberanía y
-            validar su acceso a la red."
-          </div>
-        </div>
-      </section>
-    </div>
-
+      </article>
+    </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
     <script>
       const data = {
         tonalli: {
@@ -594,26 +347,12 @@
         const btnR = document.getElementById("btn-rmz");
 
         // Reset styles
-        btnT.className =
-          "interactive-card text-left p-8 rounded-2xl card-blur border border-white/10 transition-all hover:border-cyan-500/50 focus:outline-none";
-        btnR.className =
-          "interactive-card text-left p-8 rounded-2xl card-blur border border-white/10 transition-all hover:border-[#ffcc00]/50 focus:outline-none";
-
-        // Add active styles based on selection
+        btnT.className = "interactive-card";
+        btnR.className = "interactive-card";
         if (pillarId === "tonalli") {
-          btnT.classList.remove("border-white/10");
-          btnT.classList.add(
-            "border-[#00abe7]",
-            "bg-[#00abe7]/10",
-            "shadow-[0_0_20px_rgba(0,171,231,0.2)]",
-          );
+          btnT.classList.add("is-selected");
         } else {
-          btnR.classList.remove("border-white/10");
-          btnR.classList.add(
-            "border-[#ffcc00]",
-            "bg-[#ffcc00]/10",
-            "shadow-[0_0_20px_rgba(255,204,0,0.2)]",
-          );
+          btnR.classList.add("is-selected");
         }
 
         document.getElementById("initial-prompt").classList.add("hidden");
@@ -663,7 +402,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         const ctx = document.getElementById("synergyChart").getContext("2d");
 
-        Chart.defaults.color = "#94a3b8"; // text-slate-400
+        Chart.defaults.color = "#a4b7c6"; // text-slate-400
         Chart.defaults.font.family = "'Lexend', sans-serif";
 
         new Chart(ctx, {
@@ -682,11 +421,11 @@
                 data: [100, 95, 100, 40, 60],
                 fill: true,
                 backgroundColor: "rgba(0, 171, 231, 0.15)",
-                borderColor: "#00abe7",
-                pointBackgroundColor: "#00abe7",
+                borderColor: "#5de6dd",
+                pointBackgroundColor: "#5de6dd",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "#00abe7",
+                pointHoverBorderColor: "#5de6dd",
                 borderWidth: 2,
               },
               {
@@ -694,11 +433,11 @@
                 data: [30, 60, 20, 100, 100],
                 fill: true,
                 backgroundColor: "rgba(255, 204, 0, 0.15)",
-                borderColor: "#ffcc00",
-                pointBackgroundColor: "#ffcc00",
+                borderColor: "#f0d285",
+                pointBackgroundColor: "#f0d285",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "#ffcc00",
+                pointHoverBorderColor: "#f0d285",
                 borderWidth: 2,
               },
             ],
@@ -715,11 +454,11 @@
                 grid: { color: "rgba(255, 255, 255, 0.1)" },
                 pointLabels: {
                   font: {
-                    family: "'Space Mono', monospace",
+                    family: "'Lexend', sans-serif",
                     size: 11,
                     weight: "bold",
                   },
-                  color: "#cbd5e1",
+                  color: "#f2f7fa",
                 },
                 ticks: {
                   display: false,
@@ -734,12 +473,12 @@
                 labels: {
                   padding: 20,
                   font: {
-                    family: "'Space Mono', monospace",
+                    family: "'Lexend', sans-serif",
                     size: 12,
                     weight: "bold",
                   },
                   usePointStyle: true,
-                  color: "#cbd5e1",
+                  color: "#f2f7fa",
                 },
               },
               tooltip: {

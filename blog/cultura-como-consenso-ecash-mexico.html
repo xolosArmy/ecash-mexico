@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Cultura como consenso: la visión de eCash México | eCash México
@@ -53,301 +54,17 @@
       name="twitter:description"
       content="Una columna editorial de eCash México sobre cultura, consenso social, soberanía tecnológica y la construcción de una economía digital alternativa peer-to-peer."
     />
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
 
-    <style>
-      :root {
-        --bg: #07120d;
-        --bg-soft: #0d1c14;
-        --card: #10251a;
-        --green: #00e676;
-        --green-soft: #8fffc1;
-        --gold: #f2c94c;
-        --text: #f4fff8;
-        --muted: #b8c9bf;
-        --line: rgba(255, 255, 255, 0.12);
-        --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
-        --max-width: 920px;
-      }
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          sans-serif;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(0, 230, 118, 0.14),
-            transparent 34%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(242, 201, 76, 0.12),
-            transparent 32%
-          ),
-          var(--bg);
-        color: var(--text);
-        line-height: 1.7;
-      }
-
-      a {
-        color: var(--green-soft);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .page {
-        width: min(100%, var(--max-width));
-        margin: 0 auto;
-        padding: 32px 20px 72px;
-      }
-
-      .hero {
-        padding: 72px 28px 48px;
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background:
-          linear-gradient(
-            135deg,
-            rgba(0, 230, 118, 0.12),
-            rgba(242, 201, 76, 0.08)
-          ),
-          rgba(16, 37, 26, 0.82);
-        box-shadow: var(--shadow);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-          linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0.035) 1px,
-            transparent 1px
-          );
-        background-size: 34px 34px;
-        mask-image: linear-gradient(to bottom, black, transparent 80%);
-        pointer-events: none;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 22px;
-        padding: 7px 14px;
-        border: 1px solid rgba(0, 230, 118, 0.35);
-        border-radius: 999px;
-        color: var(--green-soft);
-        background: rgba(0, 230, 118, 0.08);
-        font-size: 0.88rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        position: relative;
-        z-index: 1;
-      }
-
-      h1 {
-        margin: 0;
-        max-width: 760px;
-        font-size: clamp(2.25rem, 7vw, 5rem);
-        line-height: 0.96;
-        letter-spacing: -0.06em;
-        position: relative;
-        z-index: 1;
-      }
-
-      .subtitle {
-        margin: 28px 0 0;
-        max-width: 760px;
-        color: var(--muted);
-        font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-        position: relative;
-        z-index: 1;
-      }
-
-      .meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 34px;
-        color: var(--muted);
-        font-size: 0.95rem;
-        position: relative;
-        z-index: 1;
-      }
-
-      .meta span {
-        padding: 6px 12px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.16);
-      }
-
-      article {
-        margin-top: 38px;
-        padding: 34px 28px;
-        border: 1px solid var(--line);
-        border-radius: 26px;
-        background: rgba(13, 28, 20, 0.86);
-        box-shadow: var(--shadow);
-      }
-
-      article p {
-        margin: 0 0 1.35rem;
-        color: #e9fff0;
-        font-size: 1.08rem;
-      }
-
-      article p.lead {
-        font-size: clamp(1.2rem, 2.4vw, 1.55rem);
-        line-height: 1.55;
-        color: var(--text);
-      }
-
-      h2 {
-        margin: 2.3rem 0 1rem;
-        font-size: clamp(1.55rem, 3vw, 2.25rem);
-        line-height: 1.12;
-        letter-spacing: -0.035em;
-        color: var(--green-soft);
-      }
-
-      .pullquote {
-        margin: 34px 0;
-        padding: 28px;
-        border-left: 5px solid var(--gold);
-        border-radius: 0 22px 22px 0;
-        background: linear-gradient(
-          135deg,
-          rgba(242, 201, 76, 0.12),
-          rgba(0, 230, 118, 0.06)
-        );
-        color: var(--text);
-        font-size: clamp(1.25rem, 3vw, 1.75rem);
-        line-height: 1.35;
-        font-weight: 800;
-        letter-spacing: -0.03em;
-      }
-
-      .principles {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-        margin: 34px 0;
-      }
-
-      .principle {
-        padding: 22px;
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        background: rgba(255, 255, 255, 0.035);
-      }
-
-      .principle strong {
-        display: block;
-        margin-bottom: 8px;
-        color: var(--gold);
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
-      }
-
-      .principle span {
-        color: var(--muted);
-        font-size: 0.98rem;
-      }
-
-      .signature {
-        margin-top: 42px;
-        padding-top: 28px;
-        border-top: 1px solid var(--line);
-        color: var(--muted);
-      }
-
-      .signature strong {
-        display: block;
-        color: var(--text);
-        font-size: 1.05rem;
-      }
-
-      .cta {
-        margin-top: 38px;
-        padding: 28px;
-        border: 1px solid rgba(0, 230, 118, 0.25);
-        border-radius: 24px;
-        background:
-          radial-gradient(
-            circle at top right,
-            rgba(0, 230, 118, 0.16),
-            transparent 40%
-          ),
-          var(--card);
-      }
-
-      .cta h3 {
-        margin: 0 0 10px;
-        font-size: 1.5rem;
-        color: var(--green-soft);
-      }
-
-      .cta p {
-        margin-bottom: 18px;
-        color: var(--muted);
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 13px 18px;
-        border-radius: 999px;
-        background: var(--green);
-        color: #031008;
-        font-weight: 900;
-        text-decoration: none;
-        box-shadow: 0 12px 30px rgba(0, 230, 118, 0.22);
-      }
-
-      .button:hover {
-        text-decoration: none;
-        transform: translateY(-1px);
-      }
-
-      @media (max-width: 760px) {
-        .hero {
-          padding: 52px 22px 36px;
-        }
-
-        article {
-          padding: 28px 20px;
-        }
-
-        .principles {
-          grid-template-columns: 1fr;
-        }
-
-        .pullquote {
-          padding: 22px;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -396,323 +113,363 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div class="article-meta">Editorial eCash México</div>
 
-  <body>
-    <main class="page">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="hero">
-        <div class="eyebrow">Editorial eCash México</div>
+              <h1>Cultura como consenso: la visión de eCash México</h1>
 
-        <h1>Cultura como consenso: la visión de eCash México</h1>
+              <p class="article-lead">
+                Una moneda no vive solamente en los nodos, en los bloques o en
+                los mercados. Vive en las personas que deciden usarla,
+                defenderla, enseñarla y convertirla en parte de su vida
+                cotidiana.
+              </p>
 
-        <p class="subtitle">
-          Una moneda no vive solamente en los nodos, en los bloques o en los
-          mercados. Vive en las personas que deciden usarla, defenderla,
-          enseñarla y convertirla en parte de su vida cotidiana.
-        </p>
+              <div class="article-meta">
+                <span>eCash México</span>
+                <span>Columna editorial</span>
+                <span>Soberanía digital</span>
+              </div>
+            </header>
 
-        <div class="meta">
-          <span>eCash México</span>
-          <span>Columna editorial</span>
-          <span>Soberanía digital</span>
-        </div>
-      </header>
+            <article>
+              <p class="article-lead">
+                En el mundo de las criptomonedas se habla mucho de consenso
+                técnico: reglas de validación, nodos, firmas, bloques,
+                bifurcaciones, incentivos y arquitectura de red. Todo eso es
+                indispensable. Sin consenso técnico no hay dinero electrónico
+                confiable. Pero en eCash México creemos que existe otro nivel de
+                consenso igual de importante: el consenso cultural.
+              </p>
 
-      <article>
-        <p class="lead">
-          En el mundo de las criptomonedas se habla mucho de consenso técnico:
-          reglas de validación, nodos, firmas, bloques, bifurcaciones,
-          incentivos y arquitectura de red. Todo eso es indispensable. Sin
-          consenso técnico no hay dinero electrónico confiable. Pero en eCash
-          México creemos que existe otro nivel de consenso igual de importante:
-          el consenso cultural.
-        </p>
+              <p>
+                El consenso cultural es la decisión colectiva de otorgarle
+                significado a una herramienta. Es el momento en que una
+                tecnología deja de ser una abstracción para convertirse en
+                práctica social. Una moneda puede tener una gran arquitectura,
+                pero si no existe una comunidad que la entienda, la use, la
+                explique y la integre a su realidad, esa moneda permanece
+                incompleta.
+              </p>
 
-        <p>
-          El consenso cultural es la decisión colectiva de otorgarle significado
-          a una herramienta. Es el momento en que una tecnología deja de ser una
-          abstracción para convertirse en práctica social. Una moneda puede
-          tener una gran arquitectura, pero si no existe una comunidad que la
-          entienda, la use, la explique y la integre a su realidad, esa moneda
-          permanece incompleta.
-        </p>
+              <p>
+                eCash no es solamente una red para mover valor. Es una propuesta
+                de dinero electrónico peer-to-peer que busca recuperar una idea
+                poderosa: que las personas puedan intercambiar valor de manera
+                directa, rápida, accesible y sin pedir permiso a intermediarios
+                innecesarios. Esa visión técnica necesita una expresión
+                cultural. En México, esa expresión tiene raíces profundas.
+              </p>
 
-        <p>
-          eCash no es solamente una red para mover valor. Es una propuesta de
-          dinero electrónico peer-to-peer que busca recuperar una idea poderosa:
-          que las personas puedan intercambiar valor de manera directa, rápida,
-          accesible y sin pedir permiso a intermediarios innecesarios. Esa
-          visión técnica necesita una expresión cultural. En México, esa
-          expresión tiene raíces profundas.
-        </p>
+              <h2>El dinero también es una narrativa</h2>
 
-        <h2>El dinero también es una narrativa</h2>
+              <p>
+                Toda forma de dinero es una historia compartida. El papel
+                moneda, las monedas metálicas, las cuentas bancarias y los
+                sistemas digitales funcionan porque millones de personas aceptan
+                un acuerdo simbólico: esto representa valor, esto puede
+                circular, esto puede liquidar una deuda, esto puede convertirse
+                en confianza.
+              </p>
 
-        <p>
-          Toda forma de dinero es una historia compartida. El papel moneda, las
-          monedas metálicas, las cuentas bancarias y los sistemas digitales
-          funcionan porque millones de personas aceptan un acuerdo simbólico:
-          esto representa valor, esto puede circular, esto puede liquidar una
-          deuda, esto puede convertirse en confianza.
-        </p>
+              <p>
+                Por eso la cultura importa. Porque la cultura es el lenguaje
+                mediante el cual una comunidad entiende el valor. No basta con
+                decir que una red es rápida o barata. Hay que explicar por qué
+                eso importa para un comerciante, para una familia, para un
+                creador, para una comunidad local, para una persona que nunca ha
+                usado una wallet y que, sin embargo, ya entiende perfectamente
+                lo que significa trabajar, ahorrar, vender, comprar y proteger
+                su esfuerzo.
+              </p>
 
-        <p>
-          Por eso la cultura importa. Porque la cultura es el lenguaje mediante
-          el cual una comunidad entiende el valor. No basta con decir que una
-          red es rápida o barata. Hay que explicar por qué eso importa para un
-          comerciante, para una familia, para un creador, para una comunidad
-          local, para una persona que nunca ha usado una wallet y que, sin
-          embargo, ya entiende perfectamente lo que significa trabajar, ahorrar,
-          vender, comprar y proteger su esfuerzo.
-        </p>
+              <div class="article-quote">
+                El consenso técnico valida transacciones. El consenso cultural
+                valida significado.
+              </div>
 
-        <div class="pullquote">
-          El consenso técnico valida transacciones. El consenso cultural valida
-          significado.
-        </div>
+              <h2>La visión mexicana de eCash</h2>
 
-        <h2>La visión mexicana de eCash</h2>
+              <p>
+                eCash México nace de una intuición simple: la adopción no se
+                impone, se cultiva. No se construye únicamente con gráficas,
+                exchanges o discursos abstractos de inversión. Se construye con
+                educación, ejemplos reales, herramientas útiles, comercios que
+                aceptan pagos, usuarios que aprenden a custodiar su dinero y
+                comunidades que encuentran una razón propia para participar.
+              </p>
 
-        <p>
-          eCash México nace de una intuición simple: la adopción no se impone,
-          se cultiva. No se construye únicamente con gráficas, exchanges o
-          discursos abstractos de inversión. Se construye con educación,
-          ejemplos reales, herramientas útiles, comercios que aceptan pagos,
-          usuarios que aprenden a custodiar su dinero y comunidades que
-          encuentran una razón propia para participar.
-        </p>
+              <p>
+                En nuestro caso, esa razón no es copiar la narrativa financiera
+                de otros lugares. Es construir una visión desde México: una
+                visión donde la tecnología no aparece como algo frío, lejano o
+                reservado para especialistas, sino como una herramienta viva que
+                puede acompañar proyectos productivos, redes comunitarias,
+                economías locales y nuevas formas de soberanía digital.
+              </p>
 
-        <p>
-          En nuestro caso, esa razón no es copiar la narrativa financiera de
-          otros lugares. Es construir una visión desde México: una visión donde
-          la tecnología no aparece como algo frío, lejano o reservado para
-          especialistas, sino como una herramienta viva que puede acompañar
-          proyectos productivos, redes comunitarias, economías locales y nuevas
-          formas de soberanía digital.
-        </p>
+              <p>
+                México entiende profundamente el valor de la comunidad. Entiende
+                el tianguis, el comercio directo, la palabra dada, la familia,
+                el oficio, el intercambio y la cooperación. En ese terreno
+                cultural, el dinero electrónico peer-to-peer puede encontrar una
+                traducción natural. No como moda especulativa, sino como
+                infraestructura para una economía más directa, más humana y más
+                abierta.
+              </p>
 
-        <p>
-          México entiende profundamente el valor de la comunidad. Entiende el
-          tianguis, el comercio directo, la palabra dada, la familia, el oficio,
-          el intercambio y la cooperación. En ese terreno cultural, el dinero
-          electrónico peer-to-peer puede encontrar una traducción natural. No
-          como moda especulativa, sino como infraestructura para una economía
-          más directa, más humana y más abierta.
-        </p>
+              <h2>Más allá del precio</h2>
 
-        <h2>Más allá del precio</h2>
+              <p>
+                Uno de los errores más comunes en el ecosistema cripto es
+                reducirlo todo al precio. Cuando una moneda sube, parece tener
+                valor. Cuando baja, parece perderlo. Pero una red monetaria no
+                se mide únicamente por su cotización. Se mide también por su
+                capacidad de resolver problemas, de sostener actividad, de
+                facilitar pagos, de crear herramientas y de formar comunidades
+                que no desaparecen con la volatilidad.
+              </p>
 
-        <p>
-          Uno de los errores más comunes en el ecosistema cripto es reducirlo
-          todo al precio. Cuando una moneda sube, parece tener valor. Cuando
-          baja, parece perderlo. Pero una red monetaria no se mide únicamente
-          por su cotización. Se mide también por su capacidad de resolver
-          problemas, de sostener actividad, de facilitar pagos, de crear
-          herramientas y de formar comunidades que no desaparecen con la
-          volatilidad.
-        </p>
+              <p>
+                La visión de eCash México no niega los mercados. Los mercados
+                existen y son parte del proceso. Pero la cultura no puede quedar
+                subordinada al gráfico de corto plazo. Una comunidad que solo
+                existe cuando el precio sube no es una comunidad: es una
+                multitud temporal. Una comunidad real construye incluso cuando
+                el mercado no aplaude.
+              </p>
 
-        <p>
-          La visión de eCash México no niega los mercados. Los mercados existen
-          y son parte del proceso. Pero la cultura no puede quedar subordinada
-          al gráfico de corto plazo. Una comunidad que solo existe cuando el
-          precio sube no es una comunidad: es una multitud temporal. Una
-          comunidad real construye incluso cuando el mercado no aplaude.
-        </p>
+              <p>
+                Por eso hablamos de cultura como consenso. Porque el verdadero
+                avance ocurre cuando las personas dejan de preguntar únicamente
+                “¿cuánto vale?” y empiezan a preguntar “¿qué podemos construir
+                con esto?”.
+              </p>
 
-        <p>
-          Por eso hablamos de cultura como consenso. Porque el verdadero avance
-          ocurre cuando las personas dejan de preguntar únicamente “¿cuánto
-          vale?” y empiezan a preguntar “¿qué podemos construir con esto?”.
-        </p>
+              <h2>Los tres consensos de eCash México</h2>
 
-        <h2>Los tres consensos de eCash México</h2>
+              <div class="article-cards">
+                <div class="article-panel">
+                  <strong>Consenso técnico</strong>
+                  <span>
+                    La red, los nodos, las reglas, la seguridad, la velocidad y
+                    la capacidad de liquidar valor de manera confiable.
+                  </span>
+                </div>
 
-        <div class="principles">
-          <div class="principle">
-            <strong>Consenso técnico</strong>
-            <span>
-              La red, los nodos, las reglas, la seguridad, la velocidad y la
-              capacidad de liquidar valor de manera confiable.
-            </span>
+                <div class="article-panel">
+                  <strong>Consenso económico</strong>
+                  <span>
+                    Los usuarios, comercios, ahorradores, desarrolladores y
+                    proyectos que deciden utilizar eCash como herramienta de
+                    intercambio.
+                  </span>
+                </div>
+
+                <div class="article-panel">
+                  <strong>Consenso cultural</strong>
+                  <span>
+                    La narrativa, los símbolos, la educación y la identidad que
+                    convierten una tecnología en movimiento social.
+                  </span>
+                </div>
+              </div>
+
+              <p>
+                Estos tres consensos no compiten entre sí. Se necesitan. El
+                consenso técnico da confianza. El consenso económico da
+                circulación. El consenso cultural da permanencia. Cuando los
+                tres se alinean, una red deja de ser solamente código y se
+                convierte en infraestructura civilizatoria.
+              </p>
+
+              <h2>Una infraestructura con alma</h2>
+
+              <p>
+                La palabra “infraestructura” suele sonar fría. Se piensa en
+                servidores, protocolos, cables, llaves privadas, APIs,
+                exploradores de bloques y wallets. Todo eso es real. Pero
+                también existe una infraestructura invisible: la confianza
+                social, la educación, la narrativa, la estética, el sentido de
+                pertenencia y la memoria compartida.
+              </p>
+
+              <p>
+                eCash México busca unir ambas dimensiones. Queremos herramientas
+                funcionales, sí. Queremos wallets simples, tutoriales claros,
+                nodos accesibles, pagos rápidos y una experiencia que cualquier
+                persona pueda entender. Pero también queremos una cultura que
+                explique por qué todo esto importa.
+              </p>
+
+              <p>
+                La tecnología sin cultura se vuelve mercancía genérica. La
+                cultura sin tecnología se queda en intención. Pero cuando
+                cultura y tecnología se unen, aparece algo más fuerte: una red
+                con propósito.
+              </p>
+
+              <h2>Una visión solarpunk para el dinero electrónico</h2>
+
+              <p>
+                La visión de eCash México no es oscura ni nihilista. No se trata
+                de imaginar un futuro de aislamiento, miedo o pura supervivencia
+                individual. Nuestra visión es más cercana a una sensibilidad
+                solarpunk: tecnología al servicio de comunidades vivas,
+                infraestructura abierta, economías locales fortalecidas,
+                educación compartida y soberanía práctica.
+              </p>
+
+              <p>
+                En ese horizonte, eCash puede ser una herramienta para que más
+                personas participen en una economía digital sin depender
+                completamente de plataformas cerradas. Puede servir para pagos
+                cotidianos, para proyectos comunitarios, para creadores, para
+                comercios, para donaciones, para experimentos de financiamiento
+                y para nuevas formas de coordinación social.
+              </p>
+
+              <p>
+                No estamos hablando de una utopía abstracta. Estamos hablando de
+                empezar con acciones concretas: abrir una wallet, recibir una
+                pequeña cantidad de XEC, hacer una primera transacción, explicar
+                a otra persona cómo funciona, aceptar pagos en un proyecto real,
+                documentar el proceso y construir una red de aprendizaje.
+              </p>
+
+              <h2>La adopción como acto cultural</h2>
+
+              <p>
+                Adoptar una tecnología no es solamente instalar una aplicación.
+                Es cambiar una costumbre. Es aprender un nuevo gesto. Es confiar
+                en una nueva forma de coordinar valor. Por eso la adopción de
+                eCash debe pensarse también como un proceso cultural.
+              </p>
+
+              <p>
+                Cada tutorial, cada comercio que acepta XEC, cada conversación,
+                cada meme, cada artículo, cada video y cada usuario que enseña a
+                otro usuario es parte de ese consenso. La adopción no ocurre de
+                golpe. Se acumula. Se transmite. Se vuelve familiar. Después se
+                vuelve normal.
+              </p>
+
+              <p>
+                Y cuando una tecnología se vuelve normal, cambia el mundo de
+                manera silenciosa.
+              </p>
+
+              <div class="article-quote">
+                No queremos una comunidad que solo observe el futuro del dinero.
+                Queremos una comunidad que lo practique.
+              </div>
+
+              <h2>La tarea de eCash México</h2>
+
+              <p>
+                Nuestra tarea es construir puentes. Entre el código y la calle.
+                Entre los desarrolladores y los usuarios. Entre la teoría
+                monetaria y el pago cotidiano. Entre la soberanía digital y la
+                vida real.
+              </p>
+
+              <p>
+                eCash México no existe únicamente para repetir información
+                técnica. Existe para traducir esa tecnología en una visión
+                comprensible, cercana y útil. Existe para formar usuarios, para
+                documentar avances, para impulsar infraestructura y para
+                demostrar que México puede participar en la economía
+                peer-to-peer no como espectador, sino como creador de cultura.
+              </p>
+
+              <p>
+                Porque una red monetaria verdaderamente abierta no se construye
+                desde un solo centro. Se construye desde muchos lugares, muchas
+                voces y muchas comunidades. México tiene algo que aportar: una
+                sensibilidad comunitaria, una potencia simbólica, una tradición
+                comercial viva y una capacidad histórica para transformar crisis
+                en creatividad.
+              </p>
+
+              <h2>Conclusión: consenso para construir</h2>
+
+              <p>
+                Cultura como consenso significa entender que la adopción de
+                eCash no depende solamente de convencer a las personas con
+                argumentos técnicos. Depende de crear significado. Depende de
+                mostrar utilidad. Depende de formar hábitos. Depende de
+                construir una comunidad que no solo compre una moneda, sino que
+                participe en una visión.
+              </p>
+
+              <p>
+                La visión de eCash México es clara: queremos que el dinero
+                electrónico peer-to-peer tenga raíces culturales, herramientas
+                prácticas y presencia real en la vida cotidiana. Queremos que
+                eCash sea entendido, usado y construido desde México con
+                identidad propia.
+              </p>
+
+              <p>
+                El consenso técnico ya ocurre en la red. El consenso económico
+                ocurre cada vez que alguien intercambia valor. El consenso
+                cultural ocurre cuando una comunidad decide que esta herramienta
+                merece ser parte de su futuro.
+              </p>
+
+              <p>Ahí empieza nuestra tarea.</p>
+
+              <section>
+                <h3>Empieza con eCash México</h3>
+                <p>
+                  Aprende a usar eCash, explora herramientas, descubre
+                  tutoriales y forma parte de una cultura de dinero electrónico
+                  peer-to-peer construida desde México.
+                </p>
+                <a href="https://ecash.mx/" class="button">Visitar eCash.mx</a>
+              </section>
+
+              <section class="article-note">
+                <strong>eCash México</strong>
+                Cultura, infraestructura y soberanía digital para una economía
+                peer-to-peer.
+              </section>
+            </article>
           </div>
-
-          <div class="principle">
-            <strong>Consenso económico</strong>
-            <span>
-              Los usuarios, comercios, ahorradores, desarrolladores y proyectos
-              que deciden utilizar eCash como herramienta de intercambio.
-            </span>
-          </div>
-
-          <div class="principle">
-            <strong>Consenso cultural</strong>
-            <span>
-              La narrativa, los símbolos, la educación y la identidad que
-              convierten una tecnología en movimiento social.
-            </span>
-          </div>
         </div>
-
-        <p>
-          Estos tres consensos no compiten entre sí. Se necesitan. El consenso
-          técnico da confianza. El consenso económico da circulación. El
-          consenso cultural da permanencia. Cuando los tres se alinean, una red
-          deja de ser solamente código y se convierte en infraestructura
-          civilizatoria.
-        </p>
-
-        <h2>Una infraestructura con alma</h2>
-
-        <p>
-          La palabra “infraestructura” suele sonar fría. Se piensa en
-          servidores, protocolos, cables, llaves privadas, APIs, exploradores de
-          bloques y wallets. Todo eso es real. Pero también existe una
-          infraestructura invisible: la confianza social, la educación, la
-          narrativa, la estética, el sentido de pertenencia y la memoria
-          compartida.
-        </p>
-
-        <p>
-          eCash México busca unir ambas dimensiones. Queremos herramientas
-          funcionales, sí. Queremos wallets simples, tutoriales claros, nodos
-          accesibles, pagos rápidos y una experiencia que cualquier persona
-          pueda entender. Pero también queremos una cultura que explique por qué
-          todo esto importa.
-        </p>
-
-        <p>
-          La tecnología sin cultura se vuelve mercancía genérica. La cultura sin
-          tecnología se queda en intención. Pero cuando cultura y tecnología se
-          unen, aparece algo más fuerte: una red con propósito.
-        </p>
-
-        <h2>Una visión solarpunk para el dinero electrónico</h2>
-
-        <p>
-          La visión de eCash México no es oscura ni nihilista. No se trata de
-          imaginar un futuro de aislamiento, miedo o pura supervivencia
-          individual. Nuestra visión es más cercana a una sensibilidad
-          solarpunk: tecnología al servicio de comunidades vivas,
-          infraestructura abierta, economías locales fortalecidas, educación
-          compartida y soberanía práctica.
-        </p>
-
-        <p>
-          En ese horizonte, eCash puede ser una herramienta para que más
-          personas participen en una economía digital sin depender completamente
-          de plataformas cerradas. Puede servir para pagos cotidianos, para
-          proyectos comunitarios, para creadores, para comercios, para
-          donaciones, para experimentos de financiamiento y para nuevas formas
-          de coordinación social.
-        </p>
-
-        <p>
-          No estamos hablando de una utopía abstracta. Estamos hablando de
-          empezar con acciones concretas: abrir una wallet, recibir una pequeña
-          cantidad de XEC, hacer una primera transacción, explicar a otra
-          persona cómo funciona, aceptar pagos en un proyecto real, documentar
-          el proceso y construir una red de aprendizaje.
-        </p>
-
-        <h2>La adopción como acto cultural</h2>
-
-        <p>
-          Adoptar una tecnología no es solamente instalar una aplicación. Es
-          cambiar una costumbre. Es aprender un nuevo gesto. Es confiar en una
-          nueva forma de coordinar valor. Por eso la adopción de eCash debe
-          pensarse también como un proceso cultural.
-        </p>
-
-        <p>
-          Cada tutorial, cada comercio que acepta XEC, cada conversación, cada
-          meme, cada artículo, cada video y cada usuario que enseña a otro
-          usuario es parte de ese consenso. La adopción no ocurre de golpe. Se
-          acumula. Se transmite. Se vuelve familiar. Después se vuelve normal.
-        </p>
-
-        <p>
-          Y cuando una tecnología se vuelve normal, cambia el mundo de manera
-          silenciosa.
-        </p>
-
-        <div class="pullquote">
-          No queremos una comunidad que solo observe el futuro del dinero.
-          Queremos una comunidad que lo practique.
-        </div>
-
-        <h2>La tarea de eCash México</h2>
-
-        <p>
-          Nuestra tarea es construir puentes. Entre el código y la calle. Entre
-          los desarrolladores y los usuarios. Entre la teoría monetaria y el
-          pago cotidiano. Entre la soberanía digital y la vida real.
-        </p>
-
-        <p>
-          eCash México no existe únicamente para repetir información técnica.
-          Existe para traducir esa tecnología en una visión comprensible,
-          cercana y útil. Existe para formar usuarios, para documentar avances,
-          para impulsar infraestructura y para demostrar que México puede
-          participar en la economía peer-to-peer no como espectador, sino como
-          creador de cultura.
-        </p>
-
-        <p>
-          Porque una red monetaria verdaderamente abierta no se construye desde
-          un solo centro. Se construye desde muchos lugares, muchas voces y
-          muchas comunidades. México tiene algo que aportar: una sensibilidad
-          comunitaria, una potencia simbólica, una tradición comercial viva y
-          una capacidad histórica para transformar crisis en creatividad.
-        </p>
-
-        <h2>Conclusión: consenso para construir</h2>
-
-        <p>
-          Cultura como consenso significa entender que la adopción de eCash no
-          depende solamente de convencer a las personas con argumentos técnicos.
-          Depende de crear significado. Depende de mostrar utilidad. Depende de
-          formar hábitos. Depende de construir una comunidad que no solo compre
-          una moneda, sino que participe en una visión.
-        </p>
-
-        <p>
-          La visión de eCash México es clara: queremos que el dinero electrónico
-          peer-to-peer tenga raíces culturales, herramientas prácticas y
-          presencia real en la vida cotidiana. Queremos que eCash sea entendido,
-          usado y construido desde México con identidad propia.
-        </p>
-
-        <p>
-          El consenso técnico ya ocurre en la red. El consenso económico ocurre
-          cada vez que alguien intercambia valor. El consenso cultural ocurre
-          cuando una comunidad decide que esta herramienta merece ser parte de
-          su futuro.
-        </p>
-
-        <p>Ahí empieza nuestra tarea.</p>
-
-        <section class="cta">
-          <h3>Empieza con eCash México</h3>
-          <p>
-            Aprende a usar eCash, explora herramientas, descubre tutoriales y
-            forma parte de una cultura de dinero electrónico peer-to-peer
-            construida desde México.
-          </p>
-          <a class="button" href="https://ecash.mx/">Visitar eCash.mx</a>
-        </section>
-
-        <footer class="signature">
-          <strong>eCash México</strong>
-          Cultura, infraestructura y soberanía digital para una economía
-          peer-to-peer.
-        </footer>
       </article>
     </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
   </body>
 </html>

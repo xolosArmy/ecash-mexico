@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
-    <!-- Google tag (gtag.js) -->
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -12,11 +12,9 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-0C5SHBHW2P");
     </script>
 
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qué es eCash y qué es XEC | Guía para México | eCash México</title>
     <meta
@@ -49,36 +47,16 @@
       content="Entiende qué es eCash, cómo funciona XEC y por qué sirve para pagos rápidos y autocustodia libre de intermediarios desde México."
     />
 
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
-    <link rel="stylesheet" href="articulos.css" />
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Lexend", sans-serif;
-        scroll-behavior: smooth;
-      }
-      .hero-gradient {
-        background: linear-gradient(135deg, #001e62 0%, #004a99 100%);
-      }
-      .accent-border {
-        border-left: 4px solid #00abe7;
-      }
-      .step-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 1rem;
-        border: 1px solid #e2e8f0;
-        transition: all 0.3s ease;
-      }
-      .step-card:hover {
-        border-color: #00abe7;
-        transform: translateY(-3px);
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/network.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -127,344 +105,224 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="bg-slate-50 text-slate-900 leading-relaxed italic">
-    <nav
-      class="p-5 max-w-7xl mx-auto flex justify-between items-center border-b border-slate-200 bg-white sticky top-0 z-50 shadow-sm"
-    >
-      <a href="/" class="flex items-center gap-3">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo eCash México"
-          class="h-10 w-auto rounded-full border border-slate-100"
-        />
-        <div class="flex items-center gap-2 text-xl font-bold text-[#001e62]">
-          <span>eCash</span><span class="text-[#00abe7]">México</span>
-        </div>
-      </a>
-      <div
-        class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wider"
-      >
-        <a href="/" class="hover:text-[#00abe7] transition">Inicio</a>
-        <a href="../index.html#blog" class="hover:text-[#00abe7] transition"
-          >Blog</a
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-        <a
-          href="https://cartera.xolosarmy.xyz"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="bg-[#00abe7] text-white px-4 py-2 rounded-lg hover:bg-[#001e62] transition shadow-md"
-          >Tonalli Wallet</a
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
         >
       </div>
-    </nav>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <div class="article-meta">
+                <span>Fundamentos Soberanos</span>
+                <span>Mayo 2026</span>
+              </div>
+              <h1>¿Qué es eCash y qué es XEC?</h1>
+              <p class="article-lead">
+                Una guía para entender el dinero electrónico, la infraestructura
+                abierta y por qué importa construir comunidad desde México.
+              </p>
+            </header>
 
-    <div
-      class="md:hidden grid grid-cols-2 gap-3 w-full max-w-full px-4 py-3 bg-white border-b border-slate-200 overflow-x-hidden"
-      aria-label="Acciones rápidas"
-    >
-      <a
-        href="../index.html#blog"
-        class="min-w-0 py-3 px-3 text-center text-sm font-bold text-[#001e62] border border-slate-200 rounded-lg"
-        >Ver guías →</a
-      >
-      <a
-        href="https://cartera.xolosarmy.xyz"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="min-w-0 py-3 px-3 text-center text-sm font-bold text-white bg-[#00abe7] rounded-lg"
-        >Abrir Tonalli →</a
-      >
-    </div>
+            <div class="article-split">
+              <div>
+                <p>
+                  <strong>eCash</strong> no es solo una criptomoneda; es un
+                  ecosistema diseñado para escalar pagos rápidos y accesibles.
+                  <strong>XEC</strong> es la unidad que da vida a esta red
+                  soberana.
+                </p>
+                <p class="article-quote">
+                  "Sin cultura no hay adopción. Sin comunidad no hay red. Sin
+                  infraestructura no hay soberanía."
+                </p>
+              </div>
+              <aside>
+                <h2>Guía de navegación</h2>
+                <nav>
+                  <a href="#idea"> La idea central</a>
+                  <a href="#xec"> Qué es XEC</a>
+                  <a href="#autocustodia"> Autocustodia</a>
+                  <a href="#mexico"> Por qué México</a>
+                </nav>
+              </aside>
+            </div>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span
-            class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-tighter"
-            >Fundamentos Soberanos</span
-          >
-          <span
-            class="text-slate-400 text-[10px] font-bold uppercase tracking-tighter"
-            >Mayo 2026</span
-          >
+            <article>
+              <section id="idea">
+                <h2>1. ¿Qué es eCash y cómo funciona XEC?</h2>
+                <p>
+                  eCash es una red de efectivo electrónico peer-to-peer diseñada
+                  para realizar pagos digitales rápidos y de muy bajo costo. XEC
+                  es su unidad monetaria nativa y puede mantenerse en una wallet
+                  de autocustodia sin depender de que un banco o exchange
+                  controle las llaves.
+                </p>
+                <div>
+                  <p>
+                    Para empezar, consulta cómo
+                    <a href="comprar-xec-en-mexico.html"
+                      >comprar XEC en México</a
+                    >
+                    y configurar
+                    <a href="tutorial-tonalli-wallet.html">Tonalli Wallet</a>.
+                    Después puedes usar XEC en
+                    <a href="pagos-con-ecash.html">pagos cotidianos</a>, conocer
+                    el
+                    <a href="teyolia-crowdfunding-xec.html"
+                      >crowdfunding con Teyolia</a
+                    >
+                    y revisar la
+                    <a href="integracion-ecash-thorchain.html"
+                      >integración de eCash con THORChain</a
+                    >.
+                  </p>
+                </div>
+              </section>
+
+              <section id="xec">
+                <h2>2. ¿Qué representa XEC?</h2>
+                <p>
+                  XEC es la moneda nativa de la red eCash. Su diseño técnico
+                  permite que sea usada para pagos directos, comercio local y
+                  coordinación comunitaria sin depender de rails financieros
+                  tradicionales.
+                </p>
+                <div class="article-cards">
+                  <div class="article-panel">
+                    <h3>Velocidad</h3>
+                    <p>
+                      Transacciones casi instantáneas ideales para el comercio
+                      diario.
+                    </p>
+                  </div>
+                  <div class="article-panel">
+                    <h3>Bajos Costos</h3>
+                    <p>
+                      Comisiones que son solo fracciones de centavo en
+                      condiciones normales.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="autocustodia">
+                <h2>3. Autocustodia: La base de la libertad</h2>
+                <p>
+                  En eCash México, la autocustodia es obligatoria para la
+                  soberanía. Significa que tú eres el único dueño de tus llaves
+                  privadas a través de herramientas como
+                  <strong>Tonalli Wallet</strong>.
+                </p>
+                <div>
+                  <p class="article-quote">
+                    "La diferencia entre usar y poseer radica en quién controla
+                    las llaves. Si no son tus llaves, no es tu dinero."
+                  </p>
+                </div>
+              </section>
+
+              <section id="mexico">
+                <h2>4. La Ruta para México</h2>
+                <p>
+                  eCash México es una iniciativa comunitaria independiente
+                  enfocada en la adopción real e infraestructura abierta. No
+                  representamos a entidades globales; construimos cultura local
+                  para usuarios, negocios y builders mexicanos.
+                </p>
+                <ul>
+                  <li>Educación accesible para todos.</li>
+                  <li>Infraestructura técnica propia (Chronik, Explorer).</li>
+                  <li>
+                    Comunidad basada en la identidad y el linaje xoloitzcuintle.
+                  </li>
+                </ul>
+              </section>
+            </article>
+
+            <section aria-labelledby="continua-camino-soberano">
+              <h2 id="continua-camino-soberano">Continúa tu camino soberano</h2>
+              <div class="article-cards">
+                <a
+                  href="comprar-xec-en-mexico.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Compra XEC en México</h3>
+                  <p>Aprende rutas seguras para adquirir eCash desde México.</p>
+                </a>
+                <a
+                  href="tutorial-tonalli-wallet.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Crea tu Tonalli Wallet</h3>
+                  <p>Configura autocustodia y protege tu frase semilla.</p>
+                </a>
+                <a
+                  href="pagos-con-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Pagos con eCash</h3>
+                  <p>Envía, recibe y cobra con XEC en la vida diaria.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <section class="article-callout">
+            <div>
+              <h2>Siguiente Paso: Adopción</h2>
+              <p>
+                Ahora que entiendes los fundamentos, aprende cómo adquirir tus
+                primeros XEC y moverlos a tu propia wallet de autocustodia.
+              </p>
+              <a href="comprar-xec-en-mexico.html" class="button">
+                Leer guía de compra
+              </a>
+
+              <div>
+                <p>
+                  Iniciativa Independiente impulsada por xolosArmy Network.<br />
+                  Contenido educativo bajo Licencia MIT. No es asesoría
+                  financiera.
+                </p>
+              </div>
+            </div>
+          </section>
         </div>
-        <h1
-          class="text-4xl md:text-5xl font-extrabold text-[#001e62] mb-6 tracking-tight leading-tight italic text-pretty"
-        >
-          ¿Qué es eCash y qué es XEC?
-        </h1>
-        <p class="text-xl text-slate-600 italic">
-          Una guía para entender el dinero electrónico, la infraestructura
-          abierta y por qué importa construir comunidad desde México.
+        <p class="article-support">
+          <a
+            class="button"
+            href="https://cartera.xolosarmy.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Tonalli Wallet</a
+          >
         </p>
-      </header>
-
-      <div class="grid md:grid-cols-3 gap-8 mb-16 italic">
-        <div
-          class="md:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-slate-100"
-        >
-          <p class="text-lg text-slate-700 leading-relaxed mb-4">
-            <strong>eCash</strong> no es solo una criptomoneda; es un ecosistema
-            diseñado para escalar pagos rápidos y accesibles.
-            <strong>XEC</strong> es la unidad que da vida a esta red soberana.
-          </p>
-          <p class="text-slate-600 font-semibold italic">
-            "Sin cultura no hay adopción. Sin comunidad no hay red. Sin
-            infraestructura no hay soberanía."
-          </p>
-        </div>
-        <aside
-          class="bg-slate-100 p-6 rounded-2xl border border-slate-200 self-start"
-        >
-          <h2
-            class="font-bold text-[#001e62] uppercase text-xs tracking-widest mb-4 italic"
-          >
-            Guía de navegación
-          </h2>
-          <nav
-            class="flex flex-col gap-3 text-sm font-medium text-slate-600 italic"
-          >
-            <a
-              href="#idea"
-              class="hover:text-[#00abe7] transition flex items-center gap-2"
-              ><i class="fas fa-dot-circle text-[8px]"></i> La idea central</a
-            >
-            <a
-              href="#xec"
-              class="hover:text-[#00abe7] transition flex items-center gap-2"
-              ><i class="fas fa-dot-circle text-[8px]"></i> Qué es XEC</a
-            >
-            <a
-              href="#autocustodia"
-              class="hover:text-[#00abe7] transition flex items-center gap-2"
-              ><i class="fas fa-dot-circle text-[8px]"></i> Autocustodia</a
-            >
-            <a
-              href="#mexico"
-              class="hover:text-[#00abe7] transition flex items-center gap-2"
-              ><i class="fas fa-dot-circle text-[8px]"></i> Por qué México</a
-            >
-          </nav>
-        </aside>
-      </div>
-
-      <article class="prose prose-slate max-w-none space-y-12 italic">
-        <section id="idea">
-          <h2
-            class="text-2xl font-bold text-[#001e62] border-l-4 border-[#00abe7] pl-4 italic"
-          >
-            1. ¿Qué es eCash y cómo funciona XEC?
-          </h2>
-          <p>
-            eCash es una red de efectivo electrónico peer-to-peer diseñada para
-            realizar pagos digitales rápidos y de muy bajo costo. XEC es su
-            unidad monetaria nativa y puede mantenerse en una wallet de
-            autocustodia sin depender de que un banco o exchange controle las
-            llaves.
-          </p>
-          <div
-            class="bg-blue-50 p-6 rounded-2xl border border-blue-100 shadow-inner"
-          >
-            <p class="text-blue-900 italic font-medium">
-              Para empezar, consulta cómo
-              <a
-                href="comprar-xec-en-mexico.html"
-                class="font-bold text-[#001e62] hover:text-[#00abe7] underline"
-                >comprar XEC en México</a
-              >
-              y configurar
-              <a
-                href="tutorial-tonalli-wallet.html"
-                class="font-bold text-[#001e62] hover:text-[#00abe7] underline"
-                >Tonalli Wallet</a
-              >. Después puedes usar XEC en
-              <a
-                href="pagos-con-ecash.html"
-                class="font-bold text-[#001e62] hover:text-[#00abe7] underline"
-                >pagos cotidianos</a
-              >, conocer el
-              <a
-                href="teyolia-crowdfunding-xec.html"
-                class="font-bold text-[#001e62] hover:text-[#00abe7] underline"
-                >crowdfunding con Teyolia</a
-              >
-              y revisar la
-              <a
-                href="integracion-ecash-thorchain.html"
-                class="font-bold text-[#001e62] hover:text-[#00abe7] underline"
-                >integración de eCash con THORChain</a
-              >.
-            </p>
-          </div>
-        </section>
-
-        <section id="xec">
-          <h2
-            class="text-2xl font-bold text-[#001e62] border-l-4 border-[#00abe7] pl-4 italic"
-          >
-            2. ¿Qué representa XEC?
-          </h2>
-          <p>
-            XEC es la moneda nativa de la red eCash. Su diseño técnico permite
-            que sea usada para pagos directos, comercio local y coordinación
-            comunitaria sin depender de rails financieros tradicionales.
-          </p>
-          <div class="grid sm:grid-cols-2 gap-4 mt-6">
-            <div class="step-card">
-              <i class="fas fa-bolt text-[#00abe7] mb-2"></i>
-              <h3 class="font-bold text-[#001e62] italic">Velocidad</h3>
-              <p class="text-sm text-slate-600 italic">
-                Transacciones casi instantáneas ideales para el comercio diario.
-              </p>
-            </div>
-            <div class="step-card">
-              <i class="fas fa-coins text-[#00abe7] mb-2"></i>
-              <h3 class="font-bold text-[#001e62] italic">Bajos Costos</h3>
-              <p class="text-sm text-slate-600 italic">
-                Comisiones que son solo fracciones de centavo en condiciones
-                normales.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="autocustodia">
-          <h2
-            class="text-2xl font-bold text-[#001e62] border-l-4 border-[#00abe7] pl-4 italic uppercase tracking-tighter"
-          >
-            3. Autocustodia: La base de la libertad
-          </h2>
-          <p>
-            En eCash México, la autocustodia es obligatoria para la soberanía.
-            Significa que tú eres el único dueño de tus llaves privadas a través
-            de herramientas como <strong>Tonalli Wallet</strong>.
-          </p>
-          <div class="bg-slate-100 p-6 rounded-2xl border-l-4 border-slate-400">
-            <p class="text-sm italic">
-              "La diferencia entre usar y poseer radica en quién controla las
-              llaves. Si no son tus llaves, no es tu dinero."
-            </p>
-          </div>
-        </section>
-
-        <section id="mexico">
-          <h2
-            class="text-2xl font-bold text-[#001e62] border-l-4 border-[#00abe7] pl-4 italic uppercase tracking-tighter"
-          >
-            4. La Ruta para México
-          </h2>
-          <p>
-            eCash México es una iniciativa comunitaria independiente enfocada en
-            la adopción real e infraestructura abierta. No representamos a
-            entidades globales; construimos cultura local para usuarios,
-            negocios y builders mexicanos.
-          </p>
-          <ul class="list-none space-y-4 text-slate-700">
-            <li class="flex items-center gap-3 italic">
-              <i class="fas fa-check text-green-500"></i> Educación accesible
-              para todos.
-            </li>
-            <li class="flex items-center gap-3 italic">
-              <i class="fas fa-check text-green-500"></i> Infraestructura
-              técnica propia (Chronik, Explorer).
-            </li>
-            <li class="flex items-center gap-3 italic">
-              <i class="fas fa-check text-green-500"></i> Comunidad basada en la
-              identidad y el linaje xoloitzcuintle.
-            </li>
-          </ul>
-        </section>
       </article>
-
-      <section
-        class="mt-16 border-t border-slate-200 pt-10"
-        aria-labelledby="continua-camino-soberano"
-      >
-        <h2
-          id="continua-camino-soberano"
-          class="text-2xl font-bold text-[#001e62] mb-6 italic border-l-4 border-[#00abe7] pl-4"
-        >
-          Continúa tu camino soberano
-        </h2>
-        <div class="grid md:grid-cols-3 gap-5 italic">
-          <a
-            href="comprar-xec-en-mexico.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Compra XEC en México
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Aprende rutas seguras para adquirir eCash desde México.
-            </p>
-          </a>
-          <a
-            href="tutorial-tonalli-wallet.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Crea tu Tonalli Wallet
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Configura autocustodia y protege tu frase semilla.
-            </p>
-          </a>
-          <a
-            href="pagos-con-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Pagos con eCash
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Envía, recibe y cobra con XEC en la vida diaria.
-            </p>
-          </a>
-        </div>
-      </section>
     </main>
-
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6 mt-20 italic">
-      <div class="max-w-4xl mx-auto text-center">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo"
-          class="h-12 mx-auto mb-6 rounded-full opacity-80 border border-slate-700"
-        />
-        <h2
-          class="text-2xl font-bold text-white mb-4 italic tracking-tight uppercase tracking-widest"
-        >
-          Siguiente Paso: Adopción
-        </h2>
-        <p class="text-sm leading-relaxed mb-8 max-w-2xl mx-auto italic">
-          Ahora que entiendes los fundamentos, aprende cómo adquirir tus
-          primeros XEC y moverlos a tu propia wallet de autocustodia.
-        </p>
-        <a
-          href="comprar-xec-en-mexico.html"
-          class="bg-[#00abe7] text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-[#001e62] transition shadow-lg inline-flex items-center"
-        >
-          Leer guía de compra <i class="fas fa-arrow-right ml-2"></i>
-        </a>
-
-        <div class="mt-12 pt-8 border-t border-slate-800">
-          <p class="text-[10px] uppercase tracking-widest leading-loose">
-            Iniciativa Independiente impulsada por xolosArmy Network.<br />
-            Contenido educativo bajo Licencia MIT. No es asesoría financiera.
-          </p>
-        </div>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
       </div>
     </footer>
   </body>

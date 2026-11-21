@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       eCash en THORChain: del código listo a la liquidez soberana | eCash México
@@ -53,289 +54,17 @@
       name="twitter:description"
       content="Análisis de la integración de eCash XEC con THORChain para liquidez nativa, swaps sin wrappers y soberanía financiera comunitaria."
     />
-    <style>
-      /* --- CSS GENERAL DE LA REVISTA --- */
-      :root {
-        --ecash-cyan: #00abe7;
-        --ecash-blue: #003366;
-        --bg-dark: #090909;
-        --bg-panel: #111111;
-        --text-main: #e0e0e0;
-        --text-muted: #aaaaaa;
-        --white: #ffffff;
-        --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        --font-body: "Georgia", Times, serif; /* Serif para lectura larga */
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-      body {
-        background-color: var(--bg-dark);
-        color: var(--text-main);
-        font-family: var(--font-body);
-        line-height: 1.8;
-        font-size: 18px;
-        padding-bottom: 100px;
-      }
-
-      /* --- LAYOUT UTILITIES --- */
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* --- ESTILOS DE REVISTA (EMG) --- */
-      .emg-article-header {
-        padding: 80px 0 40px 0;
-        text-align: center;
-        border-bottom: 1px solid #222;
-        background: radial-gradient(
-          circle at center,
-          #1a1a1a 0%,
-          var(--bg-dark) 70%
-        );
-      }
-
-      .emg-kicker {
-        font-family: var(--font-heading);
-        font-weight: 700;
-        text-transform: uppercase;
-        color: var(--ecash-cyan);
-        letter-spacing: 2px;
-        font-size: 14px;
-        margin-bottom: 15px;
-        display: block;
-      }
-
-      h1.emg-title {
-        font-family: var(--font-heading);
-        font-size: 48px;
-        font-weight: 800;
-        color: var(--white);
-        line-height: 1.1;
-        margin-bottom: 20px;
-        letter-spacing: -1px;
-      }
-
-      .emg-bajada {
-        font-family: var(--font-heading);
-        font-size: 22px;
-        color: var(--text-muted);
-        font-weight: 300;
-        max-width: 700px;
-        margin: 0 auto 30px auto;
-        line-height: 1.4;
-      }
-
-      .emg-meta {
-        font-family: var(--font-heading);
-        font-size: 14px;
-        color: #555;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      /* --- CONTENIDO DEL ARTÍCULO --- */
-      .emg-article-content {
-        padding: 60px 0;
-      }
-
-      .emg-article-content p {
-        margin-bottom: 25px;
-      }
-
-      .emg-article-content h2 {
-        font-family: var(--font-heading);
-        font-size: 32px;
-        font-weight: 700;
-        color: var(--white);
-        margin: 50px 0 20px 0;
-        letter-spacing: -0.5px;
-        display: flex;
-        align-items: center;
-      }
-
-      .emg-article-content h2::before {
-        content: "";
-        display: inline-block;
-        width: 30px;
-        height: 4px;
-        background-color: var(--ecash-cyan);
-        margin-right: 15px;
-      }
-
-      /* Resumen corto estilo panel */
-      .emg-summary-box {
-        background-color: var(--bg-panel);
-        padding: 30px;
-        border-radius: 4px;
-        border-left: 4px solid var(--ecash-cyan);
-        margin-bottom: 40px;
-        font-family: var(--font-heading);
-        font-size: 17px;
-        color: var(--text-main);
-      }
-
-      .emg-summary-box p {
-        margin-bottom: 15px;
-      }
-      .emg-summary-box p:last-child {
-        margin-bottom: 0;
-      }
-
-      .emg-source-microlink {
-        font-size: 14px;
-        color: var(--text-muted);
-        font-style: italic;
-        border-top: 1px solid #222;
-        padding-top: 10px;
-        display: block;
-      }
-
-      .emg-source-microlink a {
-        color: var(--ecash-cyan);
-        text-decoration: none;
-      }
-
-      /* Video Responsive */
-      .emg-video-wrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-        overflow: hidden;
-        margin: 40px 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        border: 2px solid #222;
-      }
-
-      .emg-video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-
-      /* Destacados / Mantras */
-      .emg-pullquote {
-        font-family: var(--font-heading);
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--ecash-cyan);
-        text-align: center;
-        margin: 50px auto;
-        max-width: 600px;
-        line-height: 1.3;
-        position: relative;
-        padding: 20px 0;
-      }
-
-      .emg-pullquote::before,
-      .emg-pullquote::after {
-        content: '"';
-        font-size: 60px;
-        position: absolute;
-        opacity: 0.2;
-        font-family: serif;
-      }
-
-      .emg-pullquote::before {
-        top: -20px;
-        left: -30px;
-      }
-
-      .emg-pullquote::after {
-        bottom: -40px;
-        right: -30px;
-      }
-
-      /* Sección de cierre estratégica */
-      .emg-strategy-section {
-        background-color: var(--bg-panel);
-        padding: 40px;
-        margin-top: 50px;
-        border-radius: 4px;
-        border: 1px solid #222;
-      }
-
-      .emg-list-roadmap {
-        list-style: none;
-        font-family: var(--font-heading);
-        margin-top: 20px;
-      }
-
-      .emg-list-roadmap li {
-        margin-bottom: 15px;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      .emg-list-roadmap li::before {
-        content: "✓";
-        color: var(--ecash-cyan);
-        margin-right: 15px;
-        font-weight: bold;
-      }
-
-      /* Extracto para compartir */
-      .emg-share-box {
-        background-color: var(--ecash-blue);
-        color: var(--white);
-        padding: 30px;
-        margin-top: 60px;
-        border-radius: 4px;
-        font-family: var(--font-heading);
-        text-align: center;
-      }
-
-      .emg-share-box h3 {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 16px;
-        margin-bottom: 20px;
-        opacity: 0.8;
-      }
-
-      .emg-share-text {
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-
-      .emg-social-mantra {
-        font-weight: 700;
-        color: var(--ecash-cyan);
-        margin-top: 15px;
-        display: block;
-      }
-
-      /* RESPONSIVE */
-      @media (max-width: 768px) {
-        h1.emg-title {
-          font-size: 32px;
-        }
-        .emg-bajada {
-          font-size: 18px;
-        }
-        .emg-article-content h2 {
-          font-size: 26px;
-        }
-        body {
-          font-size: 17px;
-        }
-        .emg-pullquote {
-          font-size: 20px;
-          margin: 40px auto;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -384,278 +113,308 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body>
-    <!-- CABECERA DEL ARTÍCULO (Área de Portada) -->
-    <header class="emg-article-header">
-      <div class="container">
-        <span class="emg-kicker">[Crónica / Análisis]</span>
-        <h1 class="emg-title">
-          eCash en THORChain: del código listo a la liquidez soberana
-        </h1>
-        <p class="emg-bajada">
-          Presentación de la visión detrás de la integración nativa: una ruta
-          para llevar XEC a liquidez descentralizada, sin wrappers, sin
-          custodios y con infraestructura comunitaria.
-        </p>
-        <div class="emg-meta">
-          Por EMG Technical Team | 2026 (Tiempo de Red)
-        </div>
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
+        >
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
+        >
       </div>
     </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <header class="article-header">
+            <div>
+              <span class="eyebrow">[Crónica / Análisis]</span>
+              <h1>
+                eCash en THORChain: del código listo a la liquidez soberana
+              </h1>
+              <p class="article-lead">
+                Presentación de la visión detrás de la integración nativa: una
+                ruta para llevar XEC a liquidez descentralizada, sin wrappers,
+                sin custodios y con infraestructura comunitaria.
+              </p>
+              <div class="article-meta">
+                Por EMG Technical Team | 2026 (Tiempo de Red)
+              </div>
+            </div>
+          </header>
 
-    <!-- CUERPO DEL ARTÍCULO -->
-    <main class="emg-article-content">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <div class="container">
-        <!-- CAJA DE RESUMEN -->
-        <aside class="emg-summary-box">
-          <p>
-            La conversación entre la comunidad de THORChain y Fernando,
-            representante de xolosArmy, marcó un nuevo punto de madurez para la
-            integración de eCash (XEC) en el ecosistema de liquidez cross-chain.
-          </p>
-          <p>
-            El mensaje central fue claro: el código del cliente de cadena para
-            eCash ya fue trabajado y revisado técnicamente; ahora el siguiente
-            reto es económico y comunitario: sembrar la liquidez inicial
-            necesaria para activar un pool nativo XEC/RUNE.
-          </p>
-          <span class="emg-source-microlink"
-            >Fuente:
-            <a
-              href="https://www.youtube.com/watch?v=4eO4hWRv4x0"
-              target="_blank"
-              >Podcast THORChain #210 - YouTube</a
-            ></span
-          >
-        </aside>
+          <div class="article-body">
+            <div class="article-split">
+              <aside class="article-callout">
+                <p>
+                  La conversación entre la comunidad de THORChain y Fernando,
+                  representante de xolosArmy, marcó un nuevo punto de madurez
+                  para la integración de eCash (XEC) en el ecosistema de
+                  liquidez cross-chain.
+                </p>
+                <p>
+                  El mensaje central fue claro: el código del cliente de cadena
+                  para eCash ya fue trabajado y revisado técnicamente; ahora el
+                  siguiente reto es económico y comunitario: sembrar la liquidez
+                  inicial necesaria para activar un pool nativo XEC/RUNE.
+                </p>
+                <span
+                  >Fuente:
+                  <a
+                    href="https://www.youtube.com/watch?v=4eO4hWRv4x0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Podcast THORChain #210 - YouTube</a
+                  ></span
+                >
+              </aside>
 
-        <h2>Del podcast al protocolo</h2>
-        <p>
-          Durante el episodio #210 del podcast de THORChain, la conversación
-          pasó rápidamente de la presentación comunitaria a una pregunta de
-          fondo: ¿qué necesita eCash para tener liquidez soberana fuera de los
-          exchanges centralizados?
-        </p>
-        <p>
-          Fernando explicó que xolosArmy no nació como una empresa tradicional
-          ni como un custodio. Su papel es el de una comunidad constructora
-          alrededor de eCash, enfocada en cultura, wallets, identidad digital,
-          NFTs, infraestructura y herramientas para que XEC pueda usarse como
-          dinero electrónico P2P.
-        </p>
-        <p>
-          Ese punto importa porque la integración con THORChain no se planteó
-          como una simple lista de mercado. La conversación giró alrededor de
-          una idea más profunda: permitir que eCash tenga una ruta de entrada y
-          salida de liquidez sin depender exclusivamente de CEX, KYC o versiones
-          envueltas del activo.
-        </p>
+              <h2>Del podcast al protocolo</h2>
+              <p>
+                Durante el episodio #210 del podcast de THORChain, la
+                conversación pasó rápidamente de la presentación comunitaria a
+                una pregunta de fondo: ¿qué necesita eCash para tener liquidez
+                soberana fuera de los exchanges centralizados?
+              </p>
+              <p>
+                Fernando explicó que xolosArmy no nació como una empresa
+                tradicional ni como un custodio. Su papel es el de una comunidad
+                constructora alrededor de eCash, enfocada en cultura, wallets,
+                identidad digital, NFTs, infraestructura y herramientas para que
+                XEC pueda usarse como dinero electrónico P2P.
+              </p>
+              <p>
+                Ese punto importa porque la integración con THORChain no se
+                planteó como una simple lista de mercado. La conversación giró
+                alrededor de una idea más profunda: permitir que eCash tenga una
+                ruta de entrada y salida de liquidez sin depender exclusivamente
+                de CEX, KYC o versiones envueltas del activo.
+              </p>
 
-        <span
-          class="emg-source-microlink"
-          style="margin-top: -10px; margin-bottom: 20px; display: block"
-          >Contexto:
-          <a
-            href="https://twitter.com/THORChain/status/1782417336162521319"
-            target="_blank"
-            >Anuncio de la sesión en X (Twitter)</a
-          ></span
-        >
+              <span
+                >Contexto:
+                <a
+                  href="https://twitter.com/THORChain/status/1782417336162521319"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Anuncio de la sesión en X (Twitter)</a
+                ></span
+              >
 
-        <h2>¿Por qué THORChain?</h2>
-        <p>
-          THORChain es relevante para eCash porque permite intercambios
-          cross-chain desde liquidez nativa. En lugar de depender de tokens
-          envueltos, puentes custodiales o representaciones sintéticas, la tesis
-          discutida en el podcast fue avanzar hacia un escenario donde XEC pueda
-          moverser como XEC.
-        </p>
-        <p>
-          Para usuarios fuera de los grandes mercados o sin acceso cómodo a
-          exchanges centralizados, esto tiene una implicación práctica: la
-          liquidez deja de ser una puerta controlada por terceros y se convierte
-          en infraestructura abierta.
-        </p>
-        <p>
-          La conversación colocó a THORChain como una posible pieza clave para
-          la soberanía de mercado de eCash: un lugar donde el activo pueda
-          encontrar pares de intercambio, profundidad y utilidad sin pedir
-          permiso a intermediarios.
-        </p>
+              <h2>¿Por qué THORChain?</h2>
+              <p>
+                THORChain es relevante para eCash porque permite intercambios
+                cross-chain desde liquidez nativa. En lugar de depender de
+                tokens envueltos, puentes custodiales o representaciones
+                sintéticas, la tesis discutida en el podcast fue avanzar hacia
+                un escenario donde XEC pueda moverser como XEC.
+              </p>
+              <p>
+                Para usuarios fuera de los grandes mercados o sin acceso cómodo
+                a exchanges centralizados, esto tiene una implicación práctica:
+                la liquidez deja de ser una puerta controlada por terceros y se
+                convierte en infraestructura abierta.
+              </p>
+              <p>
+                La conversación colocó a THORChain como una posible pieza clave
+                para la soberanía de mercado de eCash: un lugar donde el activo
+                pueda encontrar pares de intercambio, profundidad y utilidad sin
+                pedir permiso a intermediarios.
+              </p>
 
-        <h2>eCash: UTXO, Avalanche y finalidad rápida</h2>
-        <p>
-          Fernando también explicó las características técnicas que hacen
-          particular a eCash. XEC es una cadena basada en el modelo UTXO,
-          heredera de la tradición de Bitcoin y Bitcoin Cash, pero con una
-          evolución propia: el uso de Avalanche para finalidad rápida.
-        </p>
-        <p>
-          En términos simples, esto permite que la red avance hacia
-          confirmaciones más ágiles y una experiencia de pago más cercana al
-          dinero electrónico cotidiano. En el podcast, esta idea se conectó con
-          la visión original de dinero P2P: pagos rápidos, baratos y
-          verificables, pero sin renunciar a la arquitectura de una cadena
-          abierta.
-        </p>
-        <p>
-          La conversación también mencionó infraestructura desarrollada
-          alrededor del ecosistema, como Tonalli Wallet, herramientas de
-          identidad, NFTs registrados con IPFS y mecanismos comunitarios de
-          financiamiento como Teyolia.
-        </p>
+              <h2>eCash: UTXO, Avalanche y finalidad rápida</h2>
+              <p>
+                Fernando también explicó las características técnicas que hacen
+                particular a eCash. XEC es una cadena basada en el modelo UTXO,
+                heredera de la tradición de Bitcoin y Bitcoin Cash, pero con una
+                evolución propia: el uso de Avalanche para finalidad rápida.
+              </p>
+              <p>
+                En términos simples, esto permite que la red avance hacia
+                confirmaciones más ágiles y una experiencia de pago más cercana
+                al dinero electrónico cotidiano. En el podcast, esta idea se
+                conectó con la visión original de dinero P2P: pagos rápidos,
+                baratos y verificables, pero sin renunciar a la arquitectura de
+                una cadena abierta.
+              </p>
+              <p>
+                La conversación también mencionó infraestructura desarrollada
+                alrededor del ecosistema, como Tonalli Wallet, herramientas de
+                identidad, NFTs registrados con IPFS y mecanismos comunitarios
+                de financiamiento como Teyolia.
+              </p>
 
-        <h2>El estado técnico: el cliente de cadena ya está en la mesa</h2>
-        <p>
-          Uno de los momentos más importantes del episodio fue la confirmación
-          del estado técnico. Según lo discutido, el cliente de cadena para
-          eCash ya está listo y fue revisado por StarSquid, una figura técnica
-          relevante dentro del proceso de integración de THORChain.
-        </p>
-        <p>
-          Eso no significa que XEC ya esté operando en THORChain, pero sí marca
-          un cambio de etapa. La integración deja de estar solamente en el
-          terreno de la intención y entra en una fase más concreta: código
-          revisado, coordinación técnica y preparación para el siguiente
-          requisito crítico.
-        </p>
+              <h2>
+                El estado técnico: el cliente de cadena ya está en la mesa
+              </h2>
+              <p>
+                Uno de los momentos más importantes del episodio fue la
+                confirmación del estado técnico. Según lo discutido, el cliente
+                de cadena para eCash ya está listo y fue revisado por StarSquid,
+                una figura técnica relevante dentro del proceso de integración
+                de THORChain.
+              </p>
+              <p>
+                Eso no significa que XEC ya esté operando en THORChain, pero sí
+                marca un cambio de etapa. La integración deja de estar solamente
+                en el terreno de la intención y entra en una fase más concreta:
+                código revisado, coordinación técnica y preparación para el
+                siguiente requisito crítico.
+              </p>
 
-        <p class="emg-pullquote">Ese requisito es la liquidez.</p>
+              <p class="article-quote">Ese requisito es la liquidez.</p>
 
-        <h2>La nueva frontera: sembrar el pool</h2>
-        <p>
-          Después del código viene el mercado. En el podcast se mencionó un
-          objetivo sugerido de alrededor de 50 mil dólares para iniciar la
-          liquidez necesaria del pool. La cifra no debe leerse como promesa de
-          rendimiento ni como garantía de activación inmediata, sino como
-          referencia operativa para dimensionar la fase que sigue.
-        </p>
-        <p>
-          Aquí entra la importancia de campañas comunitarias como Teyolia 2.0.
-          Teyolia no debe entenderse como un “dev grant” ni como una promesa
-          financiera. Su función estratégica es otra: preparar infraestructura y
-          liquidez comunitaria para que, cuando la integración nativa esté lista
-          para producción, exista una base real para activar el mercado
-          XEC/RUNE.
-        </p>
-        <p>
-          La diferencia es importante. No se trata de vender hype. Se trata de
-          organizar capital comunitario, coordinación técnica y narrativa
-          soberana alrededor de una necesidad concreta: liquidez nativa.
-        </p>
+              <h2>La nueva frontera: sembrar el pool</h2>
+              <p>
+                Después del código viene el mercado. En el podcast se mencionó
+                un objetivo sugerido de alrededor de 50 mil dólares para iniciar
+                la liquidez necesaria del pool. La cifra no debe leerse como
+                promesa de rendimiento ni como garantía de activación inmediata,
+                sino como referencia operativa para dimensionar la fase que
+                sigue.
+              </p>
+              <p>
+                Aquí entra la importancia de campañas comunitarias como Teyolia
+                2.0. Teyolia no debe entenderse como un “dev grant” ni como una
+                promesa financiera. Su función estratégica es otra: preparar
+                infraestructura y liquidez comunitaria para que, cuando la
+                integración nativa esté lista para producción, exista una base
+                real para activar el mercado XEC/RUNE.
+              </p>
+              <p>
+                La diferencia es importante. No se trata de vender hype. Se
+                trata de organizar capital comunitario, coordinación técnica y
+                narrativa soberana alrededor de una necesidad concreta: liquidez
+                nativa.
+              </p>
 
-        <h2>Sin wrappers: la tesis soberana</h2>
-        <p>
-          Uno de los puntos más fuertes de la conversación fue el rechazo
-          implícito a la dependencia de wrapped tokens. Para xolosArmy, el
-          objetivo no es que eCash tenga una versión representada en otra
-          cadena, sino que XEC exista como activo nativo dentro de una red de
-          liquidez cross-chain.
-        </p>
-        <p>
-          Esa distinción parece técnica, pero es política en el sentido más
-          amplio: define quién controla el activo, dónde vive la liquidez y qué
-          riesgos se aceptan. Un token envuelto puede servir para ciertos casos,
-          pero introduce intermediarios, contratos adicionales, riesgos de
-          custodia o dependencia de puentes. La ruta nativa busca reducir esas
-          capas.
-        </p>
+              <h2>Sin wrappers: la tesis soberana</h2>
+              <p>
+                Uno de los puntos más fuertes de la conversación fue el rechazo
+                implícito a la dependencia de wrapped tokens. Para xolosArmy, el
+                objetivo no es que eCash tenga una versión representada en otra
+                cadena, sino que XEC exista como activo nativo dentro de una red
+                de liquidez cross-chain.
+              </p>
+              <p>
+                Esa distinción parece técnica, pero es política en el sentido
+                más amplio: define quién controla el activo, dónde vive la
+                liquidez y qué riesgos se aceptan. Un token envuelto puede
+                servir para ciertos casos, pero introduce intermediarios,
+                contratos adicionales, riesgos de custodia o dependencia de
+                puentes. La ruta nativa busca reducir esas capas.
+              </p>
 
-        <p class="emg-pullquote">
-          Por eso, la integración con THORChain no es solo un asunto de trading.
-          Es una pieza de infraestructura para que eCash sea más útil como
-          dinero soberano.
-        </p>
+              <p class="article-quote">
+                Por eso, la integración con THORChain no es solo un asunto de
+                trading. Es una pieza de infraestructura para que eCash sea más
+                útil como dinero soberano.
+              </p>
 
-        <h2>México en la conversación global de eCash</h2>
-        <p>
-          El episodio también tiene una lectura cultural. Que una comunidad
-          mexicana como xolosArmy participe en una conversación técnica con
-          THORChain muestra que la adopción cripto no ocurre únicamente en
-          laboratorios, fondos o exchanges. También ocurre desde comunidades que
-          mezclan código, cultura, diseño, educación, wallets y narrativa.
-        </p>
+              <h2>México en la conversación global de eCash</h2>
+              <p>
+                El episodio también tiene una lectura cultural. Que una
+                comunidad mexicana como xolosArmy participe en una conversación
+                técnica con THORChain muestra que la adopción cripto no ocurre
+                únicamente en laboratorios, fondos o exchanges. También ocurre
+                desde comunidades que mezclan código, cultura, diseño,
+                educación, wallets y narrativa.
+              </p>
 
-        <!-- SECCIÓN DE CREADO DE ESTRATEGIA (PANEL) -->
-        <div class="emg-strategy-section">
-          <h3>Lo que sigue (Roadmap Estratégico)</h3>
-          <p>El podcast dejó una ruta clara para el ecosistema:</p>
-          <ul class="emg-list-roadmap">
-            <li>
-              Mantener la coordinación técnica para que el cliente de eCash
-              avance hacia integración oficial.
-            </li>
-            <li>
-              Organizar la liquidez inicial necesaria para que el pool pueda
-              existir con profundidad suficiente.
-            </li>
-            <li>
-              Comunicar con precisión: XEC todavía no está activo, pero la
-              conversación ya pasó del “sería interesante” al “qué falta para
-              hacerlo posible”.
-            </li>
-          </ul>
-          <p style="margin-top: 20px; font-weight: bold; color: var(--white)">
-            El código abre la puerta. La liquidez cruza el umbral. La comunidad
-            decide.
-          </p>
+              <div class="article-callout">
+                <h3>Lo que sigue (Roadmap Estratégico)</h3>
+                <p>El podcast dejó una ruta clara para el ecosistema:</p>
+                <ul>
+                  <li>
+                    Mantener la coordinación técnica para que el cliente de
+                    eCash avance hacia integración oficial.
+                  </li>
+                  <li>
+                    Organizar la liquidez inicial necesaria para que el pool
+                    pueda existir con profundidad suficiente.
+                  </li>
+                  <li>
+                    Comunicar con precisión: XEC todavía no está activo, pero la
+                    conversación ya pasó del “sería interesante” al “qué falta
+                    para hacerlo posible”.
+                  </li>
+                </ul>
+                <p>
+                  El código abre la puerta. La liquidez cruza el umbral. La
+                  comunidad decide.
+                </p>
+              </div>
+
+              <div class="article-video">
+                <iframe
+                  src="https://www.youtube.com/embed/4eO4hWRv4x0"
+                  title="THORChain Podcast #210"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                  "
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <h2>Cierre</h2>
+              <p>
+                El episodio #210 del podcast de THORChain no fue solo una
+                entrevista. Fue una señal de coordinación entre ecosistemas. Por
+                un lado, THORChain busca expandir su red de activos nativos. Por
+                otro, eCash necesita liquidez soberana para que su tesis de
+                dinero electrónico P2P no dependa únicamente de exchanges
+                centralizados.
+              </p>
+              <p>
+                La integración todavía requiere pasos concretos. No hay que
+                venderla como hecha. Pero el mensaje del podcast fue
+                contundente: eCash ya no está tocando la puerta desde afuera.
+                Está sentado en la mesa técnica.
+              </p>
+
+              <aside class="article-callout">
+                <h3>Extracto EMG</h3>
+                <p class="article-quote">
+                  "eCash no necesita una versión envuelta de sí mismo. Necesita
+                  liquidez nativa, verificable y soberana."
+                </p>
+                <p>
+                  El cliente de cadena para XEC está revisado; ahora el reto es
+                  sembrar la liquidez inicial.
+                </p>
+                <span>
+                  XEC es el dinero. <br />
+                  La liquidez es la frontera. <br />
+                  La cultura es la red.
+                </span>
+              </aside>
+            </div>
+          </div>
         </div>
-
-        <!-- VIDEO EMBED -->
-        <div class="emg-video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/4eO4hWRv4x0"
-            title="THORChain Podcast #210"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-            "
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <h2>Cierre</h2>
-        <p>
-          El episodio #210 del podcast de THORChain no fue solo una entrevista.
-          Fue una señal de coordinación entre ecosistemas. Por un lado,
-          THORChain busca expandir su red de activos nativos. Por otro, eCash
-          necesita liquidez soberana para que su tesis de dinero electrónico P2P
-          no dependa únicamente de exchanges centralizados.
-        </p>
-        <p>
-          La integración todavía requiere pasos concretos. No hay que venderla
-          como hecha. Pero el mensaje del podcast fue contundente: eCash ya no
-          está tocando la puerta desde afuera. Está sentado en la mesa técnica.
-        </p>
-
-        <!-- CAJA DE COMPARTIR -->
-        <aside class="emg-share-box">
-          <h3>Extracto EMG</h3>
-          <p class="emg-share-text">
-            "eCash no necesita una versión envuelta de sí mismo. Necesita
-            liquidez nativa, verificable y soberana."
-          </p>
-          <p>
-            El cliente de cadena para XEC está revisado; ahora el reto es
-            sembrar la liquidez inicial.
-          </p>
-          <span class="emg-social-mantra">
-            XEC es el dinero. <br />
-            La liquidez es la frontera. <br />
-            La cultura es la red.
-          </span>
-        </aside>
-      </div>
+      </article>
     </main>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teyolia: Crowdfunding No Custodial con XEC | eCash México</title>
     <meta
@@ -52,41 +53,16 @@
       content="Simulador educativo de Teyolia y guía técnica sobre contratos inteligentes no custodiales (Covenants) para financiamiento colectivo en la red eCash."
     />
 
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Lexend", sans-serif;
-        scroll-behavior: smooth;
-      }
-      .step-panel {
-        display: none;
-      }
-      .step-panel.active {
-        display: block;
-        animation: slideIn 0.4s ease-out;
-      }
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      .teyolia-gradient {
-        background: linear-gradient(135deg, #001e62 0%, #00abe7 100%);
-      }
-      .progress-bar {
-        transition: width 0.5s ease-in-out;
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/network.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -135,320 +111,235 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="bg-slate-50 text-slate-900 leading-relaxed italic">
-    <nav
-      class="p-5 max-w-7xl mx-auto flex justify-between items-center bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm"
-    >
-      <a href="/" class="flex items-center gap-3">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo eCash México"
-          class="h-10 w-auto rounded-full border border-slate-100"
-        />
-        <div class="flex items-center gap-2 text-xl font-bold text-[#001e62]">
-          <span>eCash</span><span class="text-[#00abe7]">México</span>
-        </div>
-      </a>
-      <a
-        href="../index.html#blog"
-        class="text-sm font-bold text-slate-500 hover:text-[#00abe7] transition"
-        >← Volver al Blog</a
-      >
-    </nav>
-
-    <main class="max-w-4xl mx-auto px-6 py-12">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="text-center mb-12">
-        <span
-          class="bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest"
-          >Infraestructura Comunitaria</span
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-        <h1
-          class="text-4xl font-extrabold text-[#001e62] mt-4 mb-4 italic tracking-tight"
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
         >
-          Teyolia: El Corazón de la Coordinación
-        </h1>
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          Descubre cómo financiar proyectos sin entregar el control de tus XEC a
-          terceros. Transparencia, soberanía y comunidad.
-        </p>
-      </header>
+      </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <span>Infraestructura Comunitaria</span>
+              <h1>Teyolia: El Corazón de la Coordinación</h1>
+              <p class="article-lead">
+                Descubre cómo financiar proyectos sin entregar el control de tus
+                XEC a terceros. Transparencia, soberanía y comunidad.
+              </p>
+            </header>
 
-      <div
-        class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden max-w-2xl mx-auto"
-      >
-        <div class="teyolia-gradient p-8 text-white">
-          <div class="flex items-center gap-4 mb-6">
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="https://i.imgur.com/UaAx4EK.png"
+                    alt="Xolo Guardián"
+                  />
+                  <div>
+                    <h2>Simulador Teyolia</h2>
+                    <p>Crowdfunding No Custodial</p>
+                  </div>
+                </div>
+                <div aria-label="Progreso de la campaña">
+                  <div
+                    id="campaign-progress"
+                    style="width: 35%"
+                    class="article-meter"
+                  ></div>
+                </div>
+                <div>
+                  <span
+                    >Recaudado:
+                    <span id="current-amount">350,000</span> XEC</span
+                  >
+                  <span>Meta: 1,000,000 XEC</span>
+                </div>
+              </div>
+
+              <div>
+                <div id="step-1" class="step-panel active">
+                  <h3>¿Qué es el Crowdfunding No Custodial?</h3>
+                  <p>
+                    A diferencia de plataformas tradicionales, en Teyolia los
+                    fondos no pasan por las manos de un administrador. Se
+                    utilizan
+                    <strong>Covenants</strong> (contratos inteligentes nativos
+                    de eCash) que aseguran que el dinero solo se libere si se
+                    cumple la meta.
+                  </p>
+                  <div>
+                    "Si la meta no se alcanza, tus XEC regresan automáticamente
+                    a tu wallet".
+                  </div>
+                </div>
+
+                <div id="step-2" class="step-panel">
+                  <h3>Paso 1: Elige una Causa</h3>
+                  <p>
+                    En Teyolia, la comunidad propone infraestructura, educación
+                    o arte.
+                  </p>
+                  <div>
+                    <div>
+                      <span>Educación XEC para Negocios</span>
+                    </div>
+                    <div class="opacity-50">
+                      <span>Preservación del Linaje Xolo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="step-3" class="step-panel">
+                  <h3>Paso 2: Aporta con Soberanía</h3>
+                  <p>
+                    Usas tu <strong>Tonalli Wallet</strong> para firmar una
+                    contribución. No envías el dinero a un extraño: lo
+                    comprometes a un contrato transparente.
+                  </p>
+                  <div>
+                    <button
+                      type="button"
+                      onclick="simulateContribution()"
+                      class="button"
+                    >
+                      Simular Aporte de 150,000 XEC
+                    </button>
+                  </div>
+                </div>
+
+                <div id="step-4" class="step-panel">
+                  <h3>Coordinación Exitosa</h3>
+                  <p>
+                    Cuando muchos builders se unen, la infraestructura florece.
+                    Teyolia es una herramienta para que eCash México sea
+                    financiado por su propia gente.
+                  </p>
+                  <a
+                    href="https://teyolia.cash"
+                    target="_blank"
+                    class="button"
+                    rel="noopener noreferrer"
+                    >Explorar Teyolia Real</a
+                  >
+                </div>
+
+                <div>
+                  <button
+                    id="prev-btn"
+                    type="button"
+                    onclick="prevStep()"
+                    class="opacity-0 pointer-events-none"
+                  >
+                    Atrás
+                  </button>
+                  <button
+                    id="next-btn"
+                    type="button"
+                    onclick="nextStep()"
+                    class="button"
+                  >
+                    <span>Siguiente</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <section>
+              <h2>Pilares de Teyolia</h2>
+              <div>
+                <div>
+                  <h4>No Custodial</h4>
+                  <p>
+                    Nadie toca tus XEC excepto el contrato final o tú mismo en
+                    caso de reembolso.
+                  </p>
+                </div>
+                <div>
+                  <h4>Transparencia</h4>
+                  <p>
+                    Todas las aportaciones pueden verificarse públicamente en
+                    exploradores compatibles con eCash.
+                  </p>
+                </div>
+                <div>
+                  <h4>Identidad</h4>
+                  <p>
+                    Impulsamos proyectos con alma mexicana y cultura xolosArmy.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="continua-camino-soberano">
+              <h2 id="continua-camino-soberano">Continúa tu camino soberano</h2>
+              <div class="article-cards">
+                <a
+                  href="tutorial-tonalli-wallet.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Crea tu Tonalli Wallet</h3>
+                  <p>Prepara autocustodia antes de participar en campañas.</p>
+                </a>
+                <a
+                  href="pagos-con-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Pagos con eCash</h3>
+                  <p>Aprende a aportar y cobrar con transacciones rápidas.</p>
+                </a>
+                <a
+                  href="chronik-builders-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Infraestructura Chronik</h3>
+                  <p>
+                    Comprende la indexación detrás de herramientas abiertas.
+                  </p>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <section class="article-callout">
             <img
               src="https://i.imgur.com/UaAx4EK.png"
-              alt="Xolo Guardián"
-              class="h-16 w-16 rounded-full border-2 border-white/50 shadow-lg"
+              alt="Xolo"
+              class="opacity-50"
             />
-            <div>
-              <h2 class="text-2xl font-bold italic">Simulador Teyolia</h2>
-              <p
-                class="text-blue-100 text-xs uppercase tracking-widest font-semibold"
-              >
-                Crowdfunding No Custodial
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-white/20 h-4 rounded-full overflow-hidden mb-2"
-            aria-label="Progreso de la campaña"
-          >
-            <div
-              id="campaign-progress"
-              class="progress-bar bg-white h-full shadow-[0_0_15px_rgba(255,255,255,0.5)]"
-              style="width: 35%"
-            ></div>
-          </div>
-          <div
-            class="flex justify-between text-[10px] font-bold uppercase tracking-tighter"
-          >
-            <span>Recaudado: <span id="current-amount">350,000</span> XEC</span>
-            <span>Meta: 1,000,000 XEC</span>
-          </div>
+            <p>eCash México | Teyolia | Soberanía Digital</p>
+            <p>
+              Iniciativa independiente para la reconstrucción de la cultura
+              eCash. Contenido educativo bajo Licencia MIT. No constituye
+              asesoría financiera.
+            </p>
+          </section>
         </div>
-
-        <div class="p-8 min-h-[400px] flex flex-col justify-between">
-          <div id="step-1" class="step-panel active">
-            <h3 class="text-2xl font-bold text-[#001e62] mb-4 italic">
-              ¿Qué es el Crowdfunding No Custodial?
-            </h3>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              A diferencia de plataformas tradicionales, en Teyolia los fondos
-              no pasan por las manos de un administrador. Se utilizan
-              <strong>Covenants</strong> (contratos inteligentes nativos de
-              eCash) que aseguran que el dinero solo se libere si se cumple la
-              meta.
-            </p>
-            <div
-              class="bg-blue-50 p-4 rounded-2xl border-l-4 border-[#00abe7] text-sm text-blue-900 italic"
-            >
-              <i class="fas fa-shield-alt mr-2"></i> "Si la meta no se alcanza,
-              tus XEC regresan automáticamente a tu wallet".
-            </div>
-          </div>
-
-          <div id="step-2" class="step-panel">
-            <h3 class="text-2xl font-bold text-[#001e62] mb-4 italic">
-              Paso 1: Elige una Causa
-            </h3>
-            <p class="text-slate-600 mb-6">
-              En Teyolia, la comunidad propone infraestructura, educación o
-              arte.
-            </p>
-            <div class="grid grid-cols-1 gap-3">
-              <div
-                class="p-4 border-2 border-[#00abe7] rounded-xl bg-blue-50/50 flex items-center gap-3"
-              >
-                <i class="fas fa-book text-[#00abe7]"></i>
-                <span class="text-sm font-bold text-[#001e62]"
-                  >Educación XEC para Negocios</span
-                >
-              </div>
-              <div
-                class="p-4 border border-slate-200 rounded-xl opacity-50 flex items-center gap-3"
-              >
-                <i class="fas fa-dog text-slate-400"></i>
-                <span class="text-sm font-bold text-slate-500 italic"
-                  >Preservación del Linaje Xolo</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <div id="step-3" class="step-panel">
-            <h3
-              class="text-2xl font-bold text-[#001e62] mb-4 italic text-pretty"
-            >
-              Paso 2: Aporta con Soberanía
-            </h3>
-            <p class="text-slate-600 mb-6">
-              Usas tu <strong>Tonalli Wallet</strong> para firmar una
-              contribución. No envías el dinero a un extraño: lo comprometes a
-              un contrato transparente.
-            </p>
-            <div class="flex flex-col items-center py-4">
-              <button
-                type="button"
-                onclick="simulateContribution()"
-                class="bg-[#00abe7] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all"
-              >
-                Simular Aporte de 150,000 XEC
-              </button>
-            </div>
-          </div>
-
-          <div id="step-4" class="step-panel text-center">
-            <i
-              class="fas fa-users text-6xl text-[#00abe7] mb-4 drop-shadow-md"
-            ></i>
-            <h3 class="text-2xl font-bold text-[#001e62] mb-2 italic">
-              Coordinación Exitosa
-            </h3>
-            <p class="text-slate-600 mb-6 italic text-sm">
-              Cuando muchos builders se unen, la infraestructura florece.
-              Teyolia es una herramienta para que eCash México sea financiado
-              por su propia gente.
-            </p>
-            <a
-              href="https://teyolia.cash"
-              target="_blank"
-              rel="noopener"
-              class="block bg-[#001e62] text-white py-4 rounded-2xl font-bold hover:bg-[#00abe7] transition shadow-xl uppercase tracking-widest text-xs"
-              >Explorar Teyolia Real</a
-            >
-          </div>
-
-          <div class="mt-8 flex justify-between items-center">
-            <button
-              id="prev-btn"
-              type="button"
-              onclick="prevStep()"
-              class="text-slate-400 font-bold text-sm hover:text-[#001e62] opacity-0 pointer-events-none transition"
-            >
-              Atrás
-            </button>
-            <button
-              id="next-btn"
-              type="button"
-              onclick="nextStep()"
-              class="bg-[#00abe7] text-white px-10 py-3 rounded-xl font-bold shadow-md flex items-center gap-2"
-            >
-              <span>Siguiente</span>
-              <i class="fas fa-chevron-right text-xs"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <section class="mt-20 border-t border-slate-200 pt-12 italic">
-        <h2
-          class="text-2xl font-bold text-[#001e62] mb-8 italic uppercase tracking-tighter border-l-4 border-[#00abe7] pl-4"
-        >
-          Pilares de Teyolia
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6 text-sm">
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              No Custodial
-            </h4>
-            <p class="text-slate-500">
-              Nadie toca tus XEC excepto el contrato final o tú mismo en caso de
-              reembolso.
-            </p>
-          </div>
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              Transparencia
-            </h4>
-            <p class="text-slate-500">
-              Todas las aportaciones pueden verificarse públicamente en
-              exploradores compatibles con eCash.
-            </p>
-          </div>
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              Identidad
-            </h4>
-            <p class="text-slate-500">
-              Impulsamos proyectos con alma mexicana y cultura xolosArmy.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="mt-16 border-t border-slate-200 pt-10"
-        aria-labelledby="continua-camino-soberano"
-      >
-        <h2
-          id="continua-camino-soberano"
-          class="text-2xl font-bold text-[#001e62] mb-6 italic border-l-4 border-[#00abe7] pl-4"
-        >
-          Continúa tu camino soberano
-        </h2>
-        <div class="grid md:grid-cols-3 gap-5 italic">
-          <a
-            href="tutorial-tonalli-wallet.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Crea tu Tonalli Wallet
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Prepara autocustodia antes de participar en campañas.
-            </p>
-          </a>
-          <a
-            href="pagos-con-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Pagos con eCash
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Aprende a aportar y cobrar con transacciones rápidas.
-            </p>
-          </a>
-          <a
-            href="chronik-builders-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Infraestructura Chronik
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Comprende la indexación detrás de herramientas abiertas.
-            </p>
-          </a>
-        </div>
-      </section>
+      </article>
     </main>
-
-    <footer
-      class="bg-slate-900 text-slate-500 py-16 px-6 mt-20 italic text-center"
-    >
-      <img
-        src="https://i.imgur.com/UaAx4EK.png"
-        alt="Xolo"
-        class="h-10 mx-auto mb-4 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer"
-      />
-      <p class="text-[10px] uppercase tracking-widest mb-4">
-        eCash México | Teyolia | Soberanía Digital
-      </p>
-      <p class="text-xs max-w-lg mx-auto leading-loose opacity-60 uppercase">
-        Iniciativa independiente para la reconstrucción de la cultura eCash.
-        Contenido educativo bajo Licencia MIT. No constituye asesoría
-        financiera.
-      </p>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
     </footer>
-
     <script>
       let currentStep = 1;
       const totalSteps = 4;

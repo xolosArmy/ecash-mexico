@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="es-MX">
   <head>
+    <meta charset="UTF-8" />
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0C5SHBHW2P"
@@ -13,7 +14,7 @@
       gtag("js", new Date());
       gtag("config", "G-0C5SHBHW2P");
     </script>
-    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mensajes on-chain en eCash con Tonalli Wallet | eCash México</title>
     <meta
@@ -52,40 +53,16 @@
       content="Aprende cómo funcionan los mensajes incensurables on-chain con la función OP_RETURN en eCash y cómo usar el simulador de Tonalli Wallet."
     />
 
-    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <meta name="theme-color" content="#07121b" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="articulos.css" />
+    <link rel="stylesheet" href="/assets/css/network.css" />
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap");
-      body {
-        font-family: "Lexend", sans-serif;
-        scroll-behavior: smooth;
-      }
-      .step-panel {
-        display: none;
-      }
-      .step-panel.active {
-        display: block;
-        animation: slideIn 0.4s ease-out;
-      }
-      @keyframes slideIn {
-        from {
-          opacity: 0;
-          transform: translateX(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      .tonalli-gradient {
-        background: linear-gradient(135deg, #001e62 0%, #00abe7 100%);
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -134,304 +111,225 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="/assets/css/reading.css" />
   </head>
-  <body class="bg-slate-50 text-slate-900 leading-relaxed italic">
-    <nav
-      class="p-5 max-w-7xl mx-auto flex justify-between items-center bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm"
-    >
-      <a href="/" class="flex items-center gap-3">
-        <img
-          src="https://i.imgur.com/UaAx4EK.png"
-          alt="Logo eCash México"
-          class="h-10 w-auto rounded-full border border-slate-100"
-        />
-        <div class="flex items-center gap-2 text-xl font-bold text-[#001e62]">
-          <span>eCash</span><span class="text-[#00abe7]">México</span>
-        </div>
-      </a>
-      <a
-        href="index.html"
-        class="text-sm font-bold text-slate-500 hover:text-[#00abe7] transition"
-        >← Volver al Blog</a
-      >
-    </nav>
-
-    <main class="max-w-4xl mx-auto px-6 py-12">
-      <nav class="reading-path" aria-label="Ruta de lectura">
-        <a href="/">eCash México</a><span aria-hidden="true">/</span
-        ><a href="/blog/">Blog</a>
-      </nav>
-      <header class="text-center mb-12">
-        <span
-          class="bg-blue-100 text-blue-700 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest"
-          >App Interactiva</span
+  <body class="network-page">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="eCash México, inicio"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span>eCash <span class="text-accent">México</span></span></a
         >
-        <h1
-          class="text-4xl font-extrabold text-[#001e62] mt-4 mb-4 italic tracking-tight"
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="/#aprende">Aprende</a><a href="/#construye">Ecosistema</a
+          ><a href="/#comunidad">Comunidad</a
+          ><a href="/blog/" aria-current="page">Blog</a
+          ><a href="https://magazine.ecash.mx">Revista</a>
+        </nav>
+        <a class="button button-small" href="/onboarding/"
+          >Empezar <span aria-hidden="true">↗</span></a
         >
-          Mensajes Tonalli: Comunicación on-chain
-        </h1>
-        <p class="text-slate-600 max-w-2xl mx-auto">
-          Descubre cómo enviar mensajes incensurables y eternos usando OP_RETURN
-          en la red eCash.
-        </p>
-      </header>
-
-      <div
-        class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden max-w-2xl mx-auto"
-      >
-        <div class="tonalli-gradient p-8 text-white relative">
-          <div class="flex items-center gap-4 mb-2">
-            <i class="fas fa-comment-code text-4xl text-white opacity-80"></i>
-            <div>
-              <h2 class="text-2xl font-bold italic">Simulador de Mensajes</h2>
-              <p
-                class="text-blue-100 text-xs uppercase tracking-widest font-semibold"
-              >
-                OP_RETURN Interactivo
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-8 min-h-[400px] flex flex-col justify-between">
-          <div id="step-1" class="step-panel active">
-            <h3 class="text-2xl font-bold text-[#001e62] mb-4 italic">
-              ¿Qué es un Mensaje Tonalli?
-            </h3>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              En la blockchain de eCash, puedes adjuntar pequeños textos a tus
-              transacciones usando una instrucción especial llamada
-              <code>OP_RETURN</code>.
-            </p>
-            <p class="text-slate-600 mb-6 leading-relaxed">
-              Para diferenciar los mensajes comunes de los mensajes de nuestra
-              comunidad, Tonalli Wallet inserta un prefijo hexadecimal especial:
-              <strong class="text-[#00abe7]">6d02</strong>. Así sabemos que el
-              mensaje fue enviado desde el ecosistema xolosArmy.
-            </p>
-          </div>
-
-          <div id="step-2" class="step-panel">
-            <h3 class="text-2xl font-bold text-[#001e62] mb-4 italic">
-              Escribe tu Mensaje
-            </h3>
-            <p class="text-slate-600 mb-6">
-              Escribe un mensaje corto. Recuerda que quedará grabado en piedra
-              digital para siempre.
-            </p>
-            <textarea
-              id="user-message"
-              class="w-full p-4 rounded-xl border-2 border-slate-200 focus:border-[#00abe7] focus:outline-none mb-4"
-              rows="3"
-              placeholder="Ej: Viva el eCash y la soberanía tecnológica..."
-              maxlength="140"
-            ></textarea>
-            <p class="text-xs text-slate-500 text-right">
-              <span id="char-count">0</span> / 140
-            </p>
-          </div>
-
-          <div id="step-3" class="step-panel">
-            <h3
-              class="text-2xl font-bold text-[#001e62] mb-4 italic text-pretty"
-            >
-              Firmando la Transacción
-            </h3>
-            <p class="text-slate-600 mb-6">
-              La billetera convierte tu texto a código hexadecimal y le añade el
-              prefijo de la comunidad.
-            </p>
-
-            <div
-              class="bg-slate-900 p-4 rounded-xl text-green-400 font-mono text-xs break-all mb-6"
-            >
-              <span class="text-slate-500">// Hexadecimal generado:</span><br />
-              <span class="text-yellow-400">6a</span>
-              <span class="text-blue-400">6d02</span
-              ><span id="hex-output" class="text-green-400">...</span>
-            </div>
-
-            <div class="flex flex-col items-center py-4">
-              <button
-                type="button"
-                onclick="simulateBroadcast()"
-                class="bg-[#00abe7] text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#001e62] transition-all"
-              >
-                Transmitir a la Red
-              </button>
-            </div>
-          </div>
-
-          <div id="step-4" class="step-panel text-center">
-            <i
-              class="fas fa-check-circle text-6xl text-green-500 mb-4 drop-shadow-md"
-            ></i>
-            <h3 class="text-2xl font-bold text-[#001e62] mb-2 italic">
-              Mensaje Inmortalizado
-            </h3>
-            <p class="text-slate-600 mb-6 italic text-sm">
-              Tu mensaje ha sido transmitido. Ahora vivirá para siempre en el
-              explorador de bloques, libre de censura.
-            </p>
-            <div
-              class="bg-blue-50 p-4 rounded-xl border border-blue-200 text-sm text-blue-900 mb-6 text-left"
-            >
-              <strong>Tu mensaje:</strong>
-              <span id="final-message" class="italic"></span>
-            </div>
-            <a
-              href="https://cartera.xolosarmy.xyz"
-              target="_blank"
-              rel="noopener"
-              class="block bg-[#001e62] text-white py-4 rounded-2xl font-bold hover:bg-[#00abe7] transition shadow-xl uppercase tracking-widest text-xs"
-              >Enviar un Mensaje Real</a
-            >
-          </div>
-
-          <div class="mt-8 flex justify-between items-center">
-            <button
-              id="prev-btn"
-              type="button"
-              onclick="prevStep()"
-              class="text-slate-400 font-bold text-sm hover:text-[#001e62] opacity-0 pointer-events-none transition"
-            >
-              Atrás
-            </button>
-            <button
-              id="next-btn"
-              type="button"
-              onclick="nextStep()"
-              class="bg-[#00abe7] text-white px-8 py-3 rounded-xl font-bold shadow-md flex items-center gap-2 transition hover:bg-[#001e62]"
-            >
-              <span>Siguiente</span>
-              <i class="fas fa-chevron-right text-xs"></i>
-            </button>
-          </div>
-        </div>
       </div>
+    </header>
+    <main class="container article-layout" id="contenido" tabindex="-1">
+      <article class="article-shell">
+        <a class="text-link article-back" href="/blog/">Volver al blog</a>
+        <div>
+          <div>
+            <header class="article-header">
+              <span>App Interactiva</span>
+              <h1>Mensajes Tonalli: Comunicación on-chain</h1>
+              <p class="article-lead">
+                Descubre cómo enviar mensajes incensurables y eternos usando
+                OP_RETURN en la red eCash.
+              </p>
+            </header>
 
-      <section class="mt-20 border-t border-slate-200 pt-12 italic">
-        <h2
-          class="text-2xl font-bold text-[#001e62] mb-8 italic uppercase tracking-tighter border-l-4 border-[#00abe7] pl-4"
-        >
-          Casos de Uso
-        </h2>
-        <div class="grid md:grid-cols-3 gap-6 text-sm">
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              Prueba de Existencia
-            </h4>
-            <p class="text-slate-500">
-              Demuestra que una información existía en un momento exacto del
-              tiempo usando el timestamp de la blockchain.
-            </p>
-          </div>
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              Libertad de Expresión
-            </h4>
-            <p class="text-slate-500">
-              Los mensajes en eCash no pueden ser borrados ni alterados por
-              gobiernos o corporaciones tecnológicas.
-            </p>
-          </div>
-          <div
-            class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm"
-          >
-            <h4
-              class="font-bold mb-2 text-[#00abe7] uppercase tracking-widest text-[10px]"
-            >
-              Linaje Comunitario
-            </h4>
-            <p class="text-slate-500">
-              Con el prefijo Tonalli, los exploradores de la comunidad pueden
-              filtrar e indexar estos mensajes específicos.
-            </p>
-          </div>
-        </div>
-      </section>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <h2>Simulador de Mensajes</h2>
+                    <p>OP_RETURN Interactivo</p>
+                  </div>
+                </div>
+              </div>
 
-      <section
-        class="mt-16 border-t border-slate-200 pt-10"
-        aria-labelledby="continua-camino-soberano"
-      >
-        <h2
-          id="continua-camino-soberano"
-          class="text-2xl font-bold text-[#001e62] mb-6 italic border-l-4 border-[#00abe7] pl-4"
-        >
-          Continúa tu camino soberano
-        </h2>
-        <div class="grid md:grid-cols-3 gap-5 italic">
-          <a
-            href="tutorial-tonalli-wallet.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Crea tu Tonalli Wallet
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Empieza con autocustodia antes de usar funciones avanzadas.
+              <div>
+                <div id="step-1" class="step-panel active">
+                  <h3>¿Qué es un Mensaje Tonalli?</h3>
+                  <p>
+                    En la blockchain de eCash, puedes adjuntar pequeños textos a
+                    tus transacciones usando una instrucción especial llamada
+                    <code>OP_RETURN</code>.
+                  </p>
+                  <p>
+                    Para diferenciar los mensajes comunes de los mensajes de
+                    nuestra comunidad, Tonalli Wallet inserta un prefijo
+                    hexadecimal especial:
+                    <strong>6d02</strong>. Así sabemos que el mensaje fue
+                    enviado desde el ecosistema xolosArmy.
+                  </p>
+                </div>
+
+                <div id="step-2" class="step-panel">
+                  <h3>Escribe tu Mensaje</h3>
+                  <p>
+                    Escribe un mensaje corto. Recuerda que quedará grabado en
+                    piedra digital para siempre.
+                  </p>
+                  <textarea
+                    id="user-message"
+                    rows="3"
+                    placeholder="Ej: Viva el eCash y la soberanía tecnológica..."
+                    maxlength="140"
+                  ></textarea>
+                  <p><span id="char-count">0</span> / 140</p>
+                </div>
+
+                <div id="step-3" class="step-panel">
+                  <h3>Firmando la Transacción</h3>
+                  <p>
+                    La billetera convierte tu texto a código hexadecimal y le
+                    añade el prefijo de la comunidad.
+                  </p>
+
+                  <div>
+                    <span>// Hexadecimal generado:</span><br />
+                    <span>6a</span>
+                    <span>6d02</span><span id="hex-output">...</span>
+                  </div>
+
+                  <div>
+                    <button
+                      type="button"
+                      onclick="simulateBroadcast()"
+                      class="button"
+                    >
+                      Transmitir a la Red
+                    </button>
+                  </div>
+                </div>
+
+                <div id="step-4" class="step-panel">
+                  <h3>Mensaje Inmortalizado</h3>
+                  <p>
+                    Tu mensaje ha sido transmitido. Ahora vivirá para siempre en
+                    el explorador de bloques, libre de censura.
+                  </p>
+                  <div>
+                    <strong>Tu mensaje:</strong>
+                    <span id="final-message"></span>
+                  </div>
+                  <a
+                    href="https://cartera.xolosarmy.xyz"
+                    target="_blank"
+                    class="button"
+                    rel="noopener noreferrer"
+                    >Enviar un Mensaje Real</a
+                  >
+                </div>
+
+                <div>
+                  <button
+                    id="prev-btn"
+                    type="button"
+                    onclick="prevStep()"
+                    class="opacity-0 pointer-events-none"
+                  >
+                    Atrás
+                  </button>
+                  <button
+                    id="next-btn"
+                    type="button"
+                    onclick="nextStep()"
+                    class="button"
+                  >
+                    <span>Siguiente</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <section>
+              <h2>Casos de Uso</h2>
+              <div>
+                <div>
+                  <h4>Prueba de Existencia</h4>
+                  <p>
+                    Demuestra que una información existía en un momento exacto
+                    del tiempo usando el timestamp de la blockchain.
+                  </p>
+                </div>
+                <div>
+                  <h4>Libertad de Expresión</h4>
+                  <p>
+                    Los mensajes en eCash no pueden ser borrados ni alterados
+                    por gobiernos o corporaciones tecnológicas.
+                  </p>
+                </div>
+                <div>
+                  <h4>Linaje Comunitario</h4>
+                  <p>
+                    Con el prefijo Tonalli, los exploradores de la comunidad
+                    pueden filtrar e indexar estos mensajes específicos.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="continua-camino-soberano">
+              <h2 id="continua-camino-soberano">Continúa tu camino soberano</h2>
+              <div class="article-cards">
+                <a
+                  href="tutorial-tonalli-wallet.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Crea tu Tonalli Wallet</h3>
+                  <p>
+                    Empieza con autocustodia antes de usar funciones avanzadas.
+                  </p>
+                </a>
+                <a
+                  href="chronik-builders-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Infraestructura Chronik</h3>
+                  <p>Explora cómo se leen datos on-chain en eCash.</p>
+                </a>
+                <a
+                  href="pagos-con-ecash.html"
+                  class="depth-card article-link-card"
+                >
+                  <h3>Pagos con eCash</h3>
+                  <p>Conecta mensajería y pagos rápidos con XEC.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <section class="article-callout">
+            <img
+              src="https://i.imgur.com/UaAx4EK.png"
+              alt="Xolo"
+              class="opacity-50"
+            />
+            <p>eCash México | Tonalli Wallet | OP_RETURN</p>
+            <p>
+              Iniciativa independiente impulsada por xolosArmy Network.
+              Contenido educativo bajo Licencia MIT.
             </p>
-          </a>
-          <a
-            href="chronik-builders-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Infraestructura Chronik
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Explora cómo se leen datos on-chain en eCash.
-            </p>
-          </a>
-          <a
-            href="pagos-con-ecash.html"
-            class="block p-5 bg-white border border-slate-200 rounded-2xl shadow-sm hover:border-[#00abe7] hover:-translate-y-1 hover:shadow-lg transition-all group"
-          >
-            <h3
-              class="font-bold text-[#001e62] group-hover:text-[#00abe7] transition-colors mb-2"
-            >
-              Pagos con eCash
-            </h3>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Conecta mensajería y pagos rápidos con XEC.
-            </p>
-          </a>
+          </section>
         </div>
-      </section>
+      </article>
     </main>
-
-    <footer
-      class="bg-slate-900 text-slate-500 py-16 px-6 mt-20 italic text-center"
-    >
-      <img
-        src="https://i.imgur.com/UaAx4EK.png"
-        alt="Xolo"
-        class="h-10 mx-auto mb-4 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all cursor-pointer"
-      />
-      <p class="text-[10px] uppercase tracking-widest mb-4">
-        eCash México | Tonalli Wallet | OP_RETURN
-      </p>
-      <p class="text-xs max-w-lg mx-auto leading-loose opacity-60 uppercase">
-        Iniciativa independiente impulsada por xolosArmy Network. Contenido
-        educativo bajo Licencia MIT.
-      </p>
+    <footer class="archive-back">
+      <div class="container footer-bottom">
+        <a class="text-link" href="/">Volver a eCash México</a
+        ><a class="text-link" href="/onboarding/">Recibir mis primeros XEC ↗</a
+        ><span>© 2026 RMZ Technologies</span>
+      </div>
     </footer>
-
     <script>
       let currentStep = 1;
       const totalSteps = 4;
