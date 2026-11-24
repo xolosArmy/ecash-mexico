@@ -5,6 +5,7 @@ module.exports = {
     "./identidad/**/*.html",
     "./onboarding/**/*.html",
     "./asamblea/**/*.html",
+    "./comprar-xec/**/*.html",
   ],
   theme: {
     extend: {},
