@@ -7,6 +7,7 @@ export const pagePatterns = [
   "onboarding/**/*.html",
   "identidad/**/*.html",
   "asamblea/**/*.html",
+  "comprar-xec/**/*.html",
 ];
 
 export function sitePages() {
